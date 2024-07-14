@@ -409,10 +409,22 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Encoder.h">
 			<Option target="control.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Motor.cpp">
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Motor.h">
 			<Option target="control.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Motor.h">
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.cpp">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.h">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/PID.cpp">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/PID.h">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/config.h">
 			<Option target="control.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/device.h">

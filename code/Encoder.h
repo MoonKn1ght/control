@@ -15,12 +15,16 @@
 #ifndef CONTROL_ENCODER_H
 #define CONTROL_ENCODER_H
 
+#include "hal.h"
 
 class Encoder{
 public:
-    float ang;
+    int32_t pulse; //几个脉冲
 
+    Encoder(TIM_HandleTypeDef* htim);
     void Handler(); //更新角度
+private:
+    TIM_HandleTypeDef* htim;
 };
 
 

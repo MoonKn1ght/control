@@ -13,3 +13,11 @@
 **/
 
 #include "Encoder.h"
+
+void Encoder::Handler() {
+
+}
+
+Encoder::Encoder(TIM_HandleTypeDef *htim) {
+    this->htim = htim;
+}

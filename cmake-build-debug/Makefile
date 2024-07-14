@@ -1150,32 +1150,59 @@ code/Encoder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Encoder.cpp.s
 .PHONY : code/Encoder.cpp.s
 
-code/Motor.obj: code/Motor.cpp.obj
+code/N20_Motor.obj: code/N20_Motor.cpp.obj
 
-.PHONY : code/Motor.obj
+.PHONY : code/N20_Motor.obj
 
 # target to build an object file
-code/Motor.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Motor.cpp.obj
-.PHONY : code/Motor.cpp.obj
+code/N20_Motor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj
+.PHONY : code/N20_Motor.cpp.obj
 
-code/Motor.i: code/Motor.cpp.i
+code/N20_Motor.i: code/N20_Motor.cpp.i
 
-.PHONY : code/Motor.i
+.PHONY : code/N20_Motor.i
 
 # target to preprocess a source file
-code/Motor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Motor.cpp.i
-.PHONY : code/Motor.cpp.i
+code/N20_Motor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/N20_Motor.cpp.i
+.PHONY : code/N20_Motor.cpp.i
 
-code/Motor.s: code/Motor.cpp.s
+code/N20_Motor.s: code/N20_Motor.cpp.s
 
-.PHONY : code/Motor.s
+.PHONY : code/N20_Motor.s
 
 # target to generate assembly for a file
-code/Motor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Motor.cpp.s
-.PHONY : code/Motor.cpp.s
+code/N20_Motor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/N20_Motor.cpp.s
+.PHONY : code/N20_Motor.cpp.s
+
+code/PID.obj: code/PID.cpp.obj
+
+.PHONY : code/PID.obj
+
+# target to build an object file
+code/PID.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/PID.cpp.obj
+.PHONY : code/PID.cpp.obj
+
+code/PID.i: code/PID.cpp.i
+
+.PHONY : code/PID.i
+
+# target to preprocess a source file
+code/PID.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/PID.cpp.i
+.PHONY : code/PID.cpp.i
+
+code/PID.s: code/PID.cpp.s
+
+.PHONY : code/PID.s
+
+# target to generate assembly for a file
+code/PID.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/PID.cpp.s
+.PHONY : code/PID.cpp.s
 
 code/task.obj: code/task.cpp.obj
 
@@ -1325,9 +1352,12 @@ help:
 	@echo ... code/Encoder.obj
 	@echo ... code/Encoder.i
 	@echo ... code/Encoder.s
-	@echo ... code/Motor.obj
-	@echo ... code/Motor.i
-	@echo ... code/Motor.s
+	@echo ... code/N20_Motor.obj
+	@echo ... code/N20_Motor.i
+	@echo ... code/N20_Motor.s
+	@echo ... code/PID.obj
+	@echo ... code/PID.i
+	@echo ... code/PID.s
 	@echo ... code/task.obj
 	@echo ... code/task.i
 	@echo ... code/task.s
