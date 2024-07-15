@@ -106,6 +106,9 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/Core/Inc/can.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/Core/Inc/dma.h">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/Core/Inc/gpio.h">
 			<Option target="control.elf"/>
 		</Unit>
@@ -134,6 +137,9 @@
 			<Option target="control.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/Core/Src/can.c">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/Core/Src/dma.c">
 			<Option target="control.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/Core/Src/gpio.c">

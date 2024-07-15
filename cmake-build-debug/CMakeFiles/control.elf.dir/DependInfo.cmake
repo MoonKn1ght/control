@@ -29,6 +29,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/asus/Desktop/contest2024/control/Core/Src/adc.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Core/Src/adc.c.obj"
   "C:/Users/asus/Desktop/contest2024/control/Core/Src/can.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Core/Src/can.c.obj"
+  "C:/Users/asus/Desktop/contest2024/control/Core/Src/dma.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Core/Src/dma.c.obj"
   "C:/Users/asus/Desktop/contest2024/control/Core/Src/gpio.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Core/Src/gpio.c.obj"
   "C:/Users/asus/Desktop/contest2024/control/Core/Src/i2c.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Core/Src/i2c.c.obj"
   "C:/Users/asus/Desktop/contest2024/control/Core/Src/main.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Core/Src/main.c.obj"

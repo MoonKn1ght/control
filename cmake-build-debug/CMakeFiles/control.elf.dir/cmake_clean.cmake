@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/control.elf.dir/Core/Src/adc.c.obj"
   "CMakeFiles/control.elf.dir/Core/Src/can.c.obj"
+  "CMakeFiles/control.elf.dir/Core/Src/dma.c.obj"
   "CMakeFiles/control.elf.dir/Core/Src/gpio.c.obj"
   "CMakeFiles/control.elf.dir/Core/Src/i2c.c.obj"
   "CMakeFiles/control.elf.dir/Core/Src/main.c.obj"

@@ -368,6 +368,10 @@ stm32f4xx_hal_def.h
 stm32f4xx.h
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx.h
 
+C:/Users/asus/Desktop/contest2024/control/code/Encoder.cpp
+Encoder.h
+C:/Users/asus/Desktop/contest2024/control/code/Encoder.h
+
 C:/Users/asus/Desktop/contest2024/control/code/Encoder.h
 hal.h
 C:/Users/asus/Desktop/contest2024/control/code/hal.h
@@ -383,6 +387,14 @@ C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.h
 C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.h
 device.h
 C:/Users/asus/Desktop/contest2024/control/code/device.h
+
+C:/Users/asus/Desktop/contest2024/control/code/PID.cpp
+PID.h
+C:/Users/asus/Desktop/contest2024/control/code/PID.h
+
+C:/Users/asus/Desktop/contest2024/control/code/PID.h
+config.h
+C:/Users/asus/Desktop/contest2024/control/code/config.h
 
 C:/Users/asus/Desktop/contest2024/control/code/config.h
 math.h
@@ -417,4 +429,18 @@ C:/Users/asus/Desktop/contest2024/control/code/config.h
 C:/Users/asus/Desktop/contest2024/control/code/module.h
 Encoder.h
 C:/Users/asus/Desktop/contest2024/control/code/Encoder.h
+
+C:/Users/asus/Desktop/contest2024/control/code/task.cpp
+task.h
+C:/Users/asus/Desktop/contest2024/control/code/task.h
+hal.h
+C:/Users/asus/Desktop/contest2024/control/code/hal.h
+module.h
+C:/Users/asus/Desktop/contest2024/control/code/module.h
+device.h
+C:/Users/asus/Desktop/contest2024/control/code/device.h
+
+C:/Users/asus/Desktop/contest2024/control/code/task.h
+hal.h
+C:/Users/asus/Desktop/contest2024/control/code/hal.h
 

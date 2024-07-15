@@ -14,7 +14,7 @@
 
 #ifndef CONTROL_TASK_H
 #define CONTROL_TASK_H
-
+#include "hal.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -25,7 +25,7 @@ void loop();
 
 void task_handler();
 
-void TIM2_handler();
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim);
 #ifdef __cplusplus
 }
 #endif

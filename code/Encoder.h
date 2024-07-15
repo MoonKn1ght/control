@@ -19,15 +19,17 @@
 
 class Encoder{
 public:
-    int32_t pulse; //几个脉冲
-    float circle_CNT;
+    int32_t pulse = 0; //几个脉冲
     Encoder(TIM_HandleTypeDef* htim);
-    void Handler(); //更新角度
-    void circle_get();
+
+    void init();
+    void Handler(); //更新角度，放在主程序任务轮询中断里
+    void overflow_update(); //放在定时器update中断里
 private:
-    int32_t temp_pulse;
-    uint8_t cir_direction;
     TIM_HandleTypeDef* htim;
+
+    int carry_flag = 0;
+    uint32_t prev_cnt = 0;
 };
 
 

@@ -87,6 +87,48 @@ CMakeFiles/control.elf.dir/Core/Src/can.c.obj: ../Drivers/STM32F4xx_HAL_Driver/I
 CMakeFiles/control.elf.dir/Core/Src/can.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
 CMakeFiles/control.elf.dir/Core/Src/can.c.obj: ../Core/Src/can.c
 
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Core/Inc/dma.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Core/Inc/main.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Include/cmsis_armcc.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Include/cmsis_armclang.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Include/cmsis_compiler.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Include/cmsis_gcc.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Include/cmsis_iccarm.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Include/cmsis_version.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Include/core_cm4.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/CMSIS/Include/mpu_armv7.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+CMakeFiles/control.elf.dir/Core/Src/dma.c.obj: ../Core/Src/dma.c
+
 CMakeFiles/control.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/gpio.h
 CMakeFiles/control.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/main.h
 CMakeFiles/control.elf.dir/Core/Src/gpio.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -173,6 +215,7 @@ CMakeFiles/control.elf.dir/Core/Src/i2c.c.obj: ../Core/Src/i2c.c
 
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Core/Inc/adc.h
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Core/Inc/can.h
+CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Core/Inc/dma.h
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Core/Inc/gpio.h
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Core/Inc/i2c.h
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Core/Inc/main.h
@@ -217,6 +260,8 @@ CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Drivers/STM32F4xx_HAL_Driver/
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../code/config.h
+CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../code/hal.h
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../code/task.h
 CMakeFiles/control.elf.dir/Core/Src/main.c.obj: ../Core/Src/main.c
 
@@ -303,9 +348,16 @@ CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Drivers/STM32F4x
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Src/stm32f4xx_hal_msp.c
 
+CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/adc.h
+CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/can.h
+CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/gpio.h
+CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/i2c.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/main.h
+CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/spi.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/stm32f4xx_hal_conf.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/stm32f4xx_it.h
+CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/tim.h
+CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Inc/usart.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -343,6 +395,8 @@ CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Drivers/STM32F4xx_HAL
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../code/config.h
+CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../code/hal.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../code/task.h
 CMakeFiles/control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Src/stm32f4xx_it.c
 
