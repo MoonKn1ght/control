@@ -1,0 +1,6 @@
+../code/task.cpp:34:6:void setup()	4	static
+../code/task.cpp:38:6:void loop()	8	static
+../code/task.cpp:43:6:void task_handler()	8	static
+../code/task.cpp:47:6:void TIM2_handler()	8	static
+../code/task.cpp:49:1:void __static_initialization_and_destruction_0(int, int)	24	static
+../code/task.cpp:49:1:cpp)	8	static

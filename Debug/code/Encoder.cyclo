@@ -1,0 +1,3 @@
+../code/Encoder.cpp:18:6:void Encoder::Handler()	7
+../code/Encoder.cpp:43:6:void Encoder::circle_get()	1
+../code/Encoder.cpp:49:1:Encoder::Encoder(TIM_HandleTypeDef*)	1

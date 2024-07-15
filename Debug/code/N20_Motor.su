@@ -1,0 +1,5 @@
+../code/N20_Motor.cpp:17:6:void N20_Motor::Handler()	16	static
+../code/N20_Motor.cpp:22:6:void N20_Motor::measure_parameter()	32	static
+../code/N20_Motor.cpp:35:6:void N20_Motor::pwm_set_duty(uint32_t, uint16_t)	24	static
+../code/N20_Motor.cpp:45:6:void N20_Motor::output_intensity()	16	static
+../code/N20_Motor.cpp:79:1:N20_Motor::N20_Motor(TIM_HandleTypeDef*, uint32_t, uint32_t, Encoder*, float, float, float)	40	static

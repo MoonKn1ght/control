@@ -41,6 +41,10 @@ void loop(){
 }
 
 void task_handler(){
+	left_encoder.circle_get();
+}
 
+void TIM2_handler(){
+	left_encoder.Handler();
 }
 

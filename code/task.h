@@ -25,6 +25,7 @@ void loop();
 
 void task_handler();
 
+void TIM2_handler();
 #ifdef __cplusplus
 }
 #endif
