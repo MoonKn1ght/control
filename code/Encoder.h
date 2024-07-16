@@ -30,6 +30,8 @@ private:
 
     int carry_flag = 0;
     uint32_t prev_cnt = 0;
+
+    bool init_flag = false;
 };
 
 

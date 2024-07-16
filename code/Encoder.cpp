@@ -33,6 +33,10 @@ void Encoder::init() {
 }
 
 void Encoder::overflow_update() {
+    if(!init_flag){
+        init_flag = true;
+        return;
+    }
     if((htim->Instance)->CNT < CNT_OVERFLOW / 2) carry_flag++;
     else carry_flag--;
 }

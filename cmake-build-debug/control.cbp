@@ -430,6 +430,9 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/PID.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/algorithm.h">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/config.h">
 			<Option target="control.elf"/>
 		</Unit>

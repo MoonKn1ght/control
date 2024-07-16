@@ -15,7 +15,7 @@
 #ifndef CONTROL_CONFIG_H
 #define CONTROL_CONFIG_H
 
-#include "math.h"
+//#include "math.h"
 
 #define MAIN_LOOP_FREQ 5000
 
@@ -26,6 +26,8 @@
 #define INRANGE(num, max)   if(num > max) num = max; else if(num < -max) num = -max;
 #define GETBIT(num, b)  ((num>>b) & 1)
 #define MAP(num, frommin, frommax, tomin, tomax) (((float)(num) - frommin) / (frommax - frommin) * (tomax - tomin) + tomin)
+#define ABS(n) ((n>=0)? n:-n)
 
 
+	
 #endif //CONTROL_CONFIG_H

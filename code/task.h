@@ -26,6 +26,8 @@ void loop();
 void task_handler();
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim);
+	
+void CCD_Handler();
 #ifdef __cplusplus
 }
 #endif

@@ -1551,9 +1551,7 @@ CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj
  C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.cpp
  C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.h
  C:/Users/asus/Desktop/contest2024/control/code/config.h
- C:/Users/asus/Desktop/contest2024/control/code/device.h
  C:/Users/asus/Desktop/contest2024/control/code/hal.h
- C:/Users/asus/Desktop/contest2024/control/code/module.h
 CMakeFiles/control.elf.dir/code/PID.cpp.obj
  C:/Users/asus/Desktop/contest2024/control/code/PID.cpp
  C:/Users/asus/Desktop/contest2024/control/code/PID.h

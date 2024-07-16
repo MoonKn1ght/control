@@ -375,8 +375,6 @@ stm32f4xx.h
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx.h
 
 ../code/config.h
-math.h
-../code/math.h
 
 ../code/hal.h
 main.h

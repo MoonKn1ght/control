@@ -43,6 +43,7 @@ void N20_Motor::pwm_set_duty(uint32_t channel, uint16_t duty){ //0-10000 TODO cu
 }
 
 void N20_Motor::output_intensity() {
+    INRANGE(this->intensity, PWM_DUTY_MAX);
     switch(this->state){
         case MOTOR_STOP: {
             this->intensity = 0;
@@ -53,16 +54,16 @@ void N20_Motor::output_intensity() {
 
         }break;
         case MOTOR_RUN: {
-            if(this->intensity >= 0){
+            if(this->intensity < 0){
                 //gpio_set_level(this->IN1_pin, 1);
                 //gpio_set_level(this->IN2_pin, 0);
-                pwm_set_duty(pwm_channel1, (int)MAP(abs(this->intensity), 0, PWM_DUTY_MAX, this->deadzone, PWM_DUTY_MAX));
-                pwm_set_duty(pwm_channel2, 0);
+                pwm_set_duty(pwm_channel1, PWM_DUTY_MAX - (int)MAP(ABS(this->intensity), 0, PWM_DUTY_MAX, this->deadzone, PWM_DUTY_MAX));
+                pwm_set_duty(pwm_channel2, PWM_DUTY_MAX - 1);
             }else{
                 //gpio_set_level(this->IN1_pin, 0);
                 //gpio_set_level(this->IN2_pin, 1);
-                pwm_set_duty(pwm_channel1, 0);
-                pwm_set_duty(pwm_channel2, (int)MAP(abs(this->intensity), 0, PWM_DUTY_MAX, this->deadzone, PWM_DUTY_MAX));
+                pwm_set_duty(pwm_channel1, PWM_DUTY_MAX - 1);
+                pwm_set_duty(pwm_channel2, PWM_DUTY_MAX - (int)MAP(ABS(this->intensity), 0, PWM_DUTY_MAX, this->deadzone, PWM_DUTY_MAX));
             }
 
         }break;
@@ -86,6 +87,11 @@ N20_Motor::N20_Motor(TIM_HandleTypeDef *htim, uint32_t pwm_channel1, uint32_t pw
     this->radius = radius;
     this->deadzone = deadzone;
 
+}
+
+void N20_Motor::init() {
+    HAL_TIM_PWM_Start(htim, pwm_channel1);
+    HAL_TIM_PWM_Start(htim, pwm_channel2);
 }
 
 

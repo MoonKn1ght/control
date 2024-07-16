@@ -377,16 +377,18 @@ hal.h
 C:/Users/asus/Desktop/contest2024/control/code/hal.h
 
 C:/Users/asus/Desktop/contest2024/control/code/Motor.h
-module.h
-C:/Users/asus/Desktop/contest2024/control/code/module.h
+hal.h
+C:/Users/asus/Desktop/contest2024/control/code/hal.h
 
 C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.cpp
 N20_Motor.h
 C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.h
 
 C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.h
-device.h
-C:/Users/asus/Desktop/contest2024/control/code/device.h
+Motor.h
+C:/Users/asus/Desktop/contest2024/control/code/Motor.h
+Encoder.h
+C:/Users/asus/Desktop/contest2024/control/code/Encoder.h
 
 C:/Users/asus/Desktop/contest2024/control/code/PID.cpp
 PID.h
@@ -397,14 +399,8 @@ config.h
 C:/Users/asus/Desktop/contest2024/control/code/config.h
 
 C:/Users/asus/Desktop/contest2024/control/code/config.h
-math.h
-C:/Users/asus/Desktop/contest2024/control/code/math.h
 
 C:/Users/asus/Desktop/contest2024/control/code/device.h
-Motor.h
-C:/Users/asus/Desktop/contest2024/control/code/Motor.h
-N20_Motor.h
-C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.h
 
 C:/Users/asus/Desktop/contest2024/control/code/hal.h
 main.h
@@ -429,6 +425,10 @@ C:/Users/asus/Desktop/contest2024/control/code/config.h
 C:/Users/asus/Desktop/contest2024/control/code/module.h
 Encoder.h
 C:/Users/asus/Desktop/contest2024/control/code/Encoder.h
+Motor.h
+C:/Users/asus/Desktop/contest2024/control/code/Motor.h
+N20_Motor.h
+C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.h
 
 C:/Users/asus/Desktop/contest2024/control/code/task.cpp
 task.h

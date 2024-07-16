@@ -15,7 +15,7 @@
 #ifndef CONTROL_MOTOR_H
 #define CONTROL_MOTOR_H
 
-#include "module.h"
+#include "hal.h"
 
 typedef enum{
     MOTOR_STOP = 0,
@@ -25,10 +25,10 @@ typedef enum{
 
 class Motor{
 public:
-    motor_state state;
-    int16_t intensity;
-    float ang;  // (degree)
-    float v;    // m/s
+    motor_state state = MOTOR_STOP;
+    int16_t intensity = 0;
+    float ang = 0;  // (degree)
+    float v = 0;    // m/s
 
 };
 

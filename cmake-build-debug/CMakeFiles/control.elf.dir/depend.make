@@ -1550,9 +1550,7 @@ CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj: ../code/Motor.h
 CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj: ../code/N20_Motor.cpp
 CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj: ../code/N20_Motor.h
 CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj: ../code/config.h
-CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj: ../code/device.h
 CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj: ../code/hal.h
-CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj: ../code/module.h
 
 CMakeFiles/control.elf.dir/code/PID.cpp.obj: ../code/PID.cpp
 CMakeFiles/control.elf.dir/code/PID.cpp.obj: ../code/PID.h

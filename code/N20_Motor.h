@@ -15,7 +15,8 @@
 #ifndef CONTROL_N20_MOTOR_H
 #define CONTROL_N20_MOTOR_H
 
-#include "device.h"
+#include "Motor.h"
+#include "Encoder.h"
 
 class N20_Motor: public Motor {
 public:
@@ -28,6 +29,7 @@ public:
     N20_Motor(TIM_HandleTypeDef* htim, uint32_t pwm_channel1, uint32_t pwm_channel2,
               Encoder* encoder,
               float reduction_rate, float radius, float deadzone);
+    void init();
     void Handler();
 
 private:
