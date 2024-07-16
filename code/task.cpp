@@ -33,6 +33,15 @@ N20_Motor left_motor(&htim1, TIM_CHANNEL_3, TIM_CHANNEL_4,
 );
 CCD ccd;
 
+float vpwr = 12, vpwr_th = 9;
+
+void get_vpwr(){
+	HAL_ADC_Start(&hadc2);
+	HAL_ADC_PollForConversion(&hadc2, 1000);
+	int val = HAL_ADC_GetValue(&hadc2);
+	HAL_ADC_Stop(&hadc2);
+	vpwr = (float)val / 4096 * 3.3 * 8;
+}
 
 void setup(){
     left_encoder.init();
@@ -49,6 +58,10 @@ void loop(){
 
 	HAL_UART_Transmit(&huart1, (uint8_t *)ccd.data, 128 * 2, 0xff);
 	HAL_UART_Transmit(&huart1, (uint8_t *)"\0\0", 2, 0xff);
+	
+	get_vpwr();
+	if(vpwr < vpwr_th && vpwr > 3) HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_SET);
+	else HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_RESET);
 }
 
 void task_handler(){
