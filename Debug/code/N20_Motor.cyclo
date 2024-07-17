@@ -1,5 +1,7 @@
 ../code/N20_Motor.cpp:17:6:void N20_Motor::Handler()	1
 ../code/N20_Motor.cpp:22:6:void N20_Motor::measure_parameter()	3
-../code/N20_Motor.cpp:35:6:void N20_Motor::pwm_set_duty(uint32_t, uint16_t)	5
-../code/N20_Motor.cpp:45:6:void N20_Motor::output_intensity()	6
-../code/N20_Motor.cpp:79:1:N20_Motor::N20_Motor(TIM_HandleTypeDef*, uint32_t, uint32_t, Encoder*, float, float, float)	1
+../code/N20_Motor.cpp:36:6:void N20_Motor::pwm_set_duty(uint32_t, uint16_t)	5
+../code/N20_Motor.cpp:46:6:void N20_Motor::output_intensity()	8
+../code/Motor.h:26:7:constexpr Motor::Motor()	1
+../code/N20_Motor.cpp:81:1:N20_Motor::N20_Motor(TIM_HandleTypeDef*, uint32_t, uint32_t, Encoder*, float, float, float)	1
+../code/N20_Motor.cpp:93:6:void N20_Motor::init()	1

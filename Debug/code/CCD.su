@@ -1,0 +1,7 @@
+../code/CCD.cpp:18:6:void CCD::SI_send()	16	static
+../code/CCD.cpp:33:6:void CCD::Handler()	16	static
+../code/CCD.cpp:37:6:void CCD::init()	16	static
+../code/CCD.cpp:42:6:void CCD::Binarization(uint16_t, uint16_t*, uint8_t*)	32	static
+../code/CCD.cpp:58:6:void CCD::Filter(uint8_t*)	24	static
+../code/CCD.cpp:74:10:uint16_t CCD::GetError(uint8_t*)	32	static
+../code/CCD.cpp:160:6:void CCD::Line_tracing()	32	static

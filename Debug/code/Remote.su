@@ -1,0 +1,3 @@
+../code/Remote.cpp:19:6:void Remote::process_data(uint16_t*)	16	static
+../code/Remote.cpp:27:1:Remote::Remote(UART_HandleTypeDef*)	16	static
+../code/Remote.cpp:32:6:void Remote::Handler()	16	static
