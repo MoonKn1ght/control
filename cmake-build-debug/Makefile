@@ -1231,6 +1231,33 @@ code/Encoder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Encoder.cpp.s
 .PHONY : code/Encoder.cpp.s
 
+code/IMU.obj: code/IMU.cpp.obj
+
+.PHONY : code/IMU.obj
+
+# target to build an object file
+code/IMU.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/IMU.cpp.obj
+.PHONY : code/IMU.cpp.obj
+
+code/IMU.i: code/IMU.cpp.i
+
+.PHONY : code/IMU.i
+
+# target to preprocess a source file
+code/IMU.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/IMU.cpp.i
+.PHONY : code/IMU.cpp.i
+
+code/IMU.s: code/IMU.cpp.s
+
+.PHONY : code/IMU.s
+
+# target to generate assembly for a file
+code/IMU.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/IMU.cpp.s
+.PHONY : code/IMU.cpp.s
+
 code/N20_Motor.obj: code/N20_Motor.cpp.obj
 
 .PHONY : code/N20_Motor.obj
@@ -1311,6 +1338,33 @@ code/Remote.s: code/Remote.cpp.s
 code/Remote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Remote.cpp.s
 .PHONY : code/Remote.cpp.s
+
+code/imu660.obj: code/imu660.c.obj
+
+.PHONY : code/imu660.obj
+
+# target to build an object file
+code/imu660.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/imu660.c.obj
+.PHONY : code/imu660.c.obj
+
+code/imu660.i: code/imu660.c.i
+
+.PHONY : code/imu660.i
+
+# target to preprocess a source file
+code/imu660.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/imu660.c.i
+.PHONY : code/imu660.c.i
+
+code/imu660.s: code/imu660.c.s
+
+.PHONY : code/imu660.s
+
+# target to generate assembly for a file
+code/imu660.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/imu660.c.s
+.PHONY : code/imu660.c.s
 
 code/task.obj: code/task.cpp.obj
 
@@ -1469,6 +1523,9 @@ help:
 	@echo ... code/Encoder.obj
 	@echo ... code/Encoder.i
 	@echo ... code/Encoder.s
+	@echo ... code/IMU.obj
+	@echo ... code/IMU.i
+	@echo ... code/IMU.s
 	@echo ... code/N20_Motor.obj
 	@echo ... code/N20_Motor.i
 	@echo ... code/N20_Motor.s
@@ -1478,6 +1535,9 @@ help:
 	@echo ... code/Remote.obj
 	@echo ... code/Remote.i
 	@echo ... code/Remote.s
+	@echo ... code/imu660.obj
+	@echo ... code/imu660.i
+	@echo ... code/imu660.s
 	@echo ... code/task.obj
 	@echo ... code/task.i
 	@echo ... code/task.s

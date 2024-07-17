@@ -39,6 +39,7 @@ N20_Motor left_motor(&htim1, TIM_CHANNEL_3, TIM_CHANNEL_4,
 );
 CCD ccd;
 Remote remote(&huart1);
+IMU imu;
 
 float vpwr = 12, vpwr_th = 9;
 int pwr_cnt = 0;
@@ -57,6 +58,7 @@ void setup(){
 	left_motor.init();
 	right_motor.init();
     ccd.init();
+    imu.init();
 
 	HAL_UART_Receive_IT(&huart1,(uint8_t *)(uart1_rx_buf), 1);//接收一个字节
 }
@@ -88,6 +90,7 @@ void task_handler(){
 	right_motor.Handler();
 	ccd.Handler();
 	remote.Handler();
+	imu.Handler();
 	
 	if(HAL_GetTick() % 500 == 0) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 

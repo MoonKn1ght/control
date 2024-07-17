@@ -124,6 +124,9 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/Core/Inc/stm32f4xx_hal_conf.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/Core/Inc/stm32f4xx_hal_conf.h_tmp">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/Core/Inc/stm32f4xx_it.h">
 			<Option target="control.elf"/>
 		</Unit>
@@ -427,6 +430,12 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Encoder.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/IMU.cpp">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/IMU.h">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Motor.h">
 			<Option target="control.elf"/>
 		</Unit>
@@ -460,6 +469,12 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/hal.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/imu660.c">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/imu660.h">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/module.h">
 			<Option target="control.elf"/>
 		</Unit>
@@ -467,6 +482,15 @@
 			<Option target="control.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/task.h">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/zf_device_config.a">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/zf_device_config.h">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/zf_device_config.lib">
 			<Option target="control.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/CMakeLists.txt">

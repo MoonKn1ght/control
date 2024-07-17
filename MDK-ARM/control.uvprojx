@@ -632,6 +632,16 @@
               <FileType>8</FileType>
               <FilePath>..\code\Remote.cpp</FilePath>
             </File>
+            <File>
+              <FileName>IMU.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\code\IMU.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>imu660.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\code\imu660.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
