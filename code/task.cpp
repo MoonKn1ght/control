@@ -32,11 +32,16 @@ N20_Motor right_motor(&htim1, TIM_CHANNEL_3, TIM_CHANNEL_4,
 );
 
 void setup(){
+  HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+  HAL_TIM_Base_Start_IT(&htim2);
+
+	CCD_init();
 
 }
 
 void loop(){
     HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+    CCD_scale_get();
     HAL_Delay(500);
 }
 
@@ -46,5 +51,9 @@ void task_handler(){
 
 void TIM2_handler(){
 	left_encoder.Handler();
+}
+
+void TIM4_handler(){
+	CCD_Handler();
 }
 

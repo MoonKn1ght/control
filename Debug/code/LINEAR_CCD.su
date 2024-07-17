@@ -1,0 +1,3 @@
+../code/LINEAR_CCD.cpp:7:6:void CCD_scale_get()	8	static
+../code/LINEAR_CCD.cpp:19:6:void CCD_init()	8	static
+../code/LINEAR_CCD.cpp:28:6:void CCD_Handler()	16	static

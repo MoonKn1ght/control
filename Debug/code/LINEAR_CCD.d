@@ -1,5 +1,6 @@
-code/task.o: ../code/task.cpp ../code/task.h ../code/hal.h \
- ../Core/Inc/main.h ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
+code/LINEAR_CCD.o: ../code/LINEAR_CCD.cpp ../code/LINEAR_CCD.h \
+ ../code/hal.h ../Core/Inc/main.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
@@ -36,10 +37,8 @@ code/task.o: ../code/task.cpp ../code/task.h ../code/hal.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Core/Inc/adc.h ../Core/Inc/main.h ../Core/Inc/can.h ../Core/Inc/i2c.h \
  ../Core/Inc/spi.h ../Core/Inc/tim.h ../Core/Inc/usart.h \
- ../Core/Inc/gpio.h ../code/config.h ../code/module.h ../code/Encoder.h \
- ../code/LINEAR_CCD.h ../code/device.h ../code/Motor.h \
- ../code/N20_Motor.h
-../code/task.h:
+ ../Core/Inc/gpio.h ../code/config.h
+../code/LINEAR_CCD.h:
 ../code/hal.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -86,9 +85,3 @@ code/task.o: ../code/task.cpp ../code/task.h ../code/hal.h \
 ../Core/Inc/usart.h:
 ../Core/Inc/gpio.h:
 ../code/config.h:
-../code/module.h:
-../code/Encoder.h:
-../code/LINEAR_CCD.h:
-../code/device.h:
-../code/Motor.h:
-../code/N20_Motor.h:

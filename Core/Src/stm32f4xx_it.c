@@ -216,7 +216,6 @@ void TIM1_TRG_COM_TIM11_IRQHandler(void)
   HAL_TIM_IRQHandler(&htim1);
   HAL_TIM_IRQHandler(&htim11);
   /* USER CODE BEGIN TIM1_TRG_COM_TIM11_IRQn 1 */
-
   /* USER CODE END TIM1_TRG_COM_TIM11_IRQn 1 */
 }
 
@@ -230,7 +229,7 @@ void TIM2_IRQHandler(void)
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
-  TIM2_handler();
+  //TIM2_handler();
   /* USER CODE END TIM2_IRQn 1 */
 }
 
@@ -258,6 +257,7 @@ void TIM4_IRQHandler(void)
   /* USER CODE END TIM4_IRQn 0 */
   HAL_TIM_IRQHandler(&htim4);
   /* USER CODE BEGIN TIM4_IRQn 1 */
+  TIM4_handler();
 
   /* USER CODE END TIM4_IRQn 1 */
 }

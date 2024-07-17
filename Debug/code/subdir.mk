@@ -6,18 +6,21 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../code/Encoder.cpp \
+../code/LINEAR_CCD.cpp \
 ../code/N20_Motor.cpp \
 ../code/PID.cpp \
 ../code/task.cpp 
 
 OBJS += \
 ./code/Encoder.o \
+./code/LINEAR_CCD.o \
 ./code/N20_Motor.o \
 ./code/PID.o \
 ./code/task.o 
 
 CPP_DEPS += \
 ./code/Encoder.d \
+./code/LINEAR_CCD.d \
 ./code/N20_Motor.d \
 ./code/PID.d \
 ./code/task.d 
@@ -30,7 +33,7 @@ code/%.o code/%.su code/%.cyclo: ../code/%.cpp code/subdir.mk
 clean: clean-code
 
 clean-code:
-	-$(RM) ./code/Encoder.cyclo ./code/Encoder.d ./code/Encoder.o ./code/Encoder.su ./code/N20_Motor.cyclo ./code/N20_Motor.d ./code/N20_Motor.o ./code/N20_Motor.su ./code/PID.cyclo ./code/PID.d ./code/PID.o ./code/PID.su ./code/task.cyclo ./code/task.d ./code/task.o ./code/task.su
+	-$(RM) ./code/Encoder.cyclo ./code/Encoder.d ./code/Encoder.o ./code/Encoder.su ./code/LINEAR_CCD.cyclo ./code/LINEAR_CCD.d ./code/LINEAR_CCD.o ./code/LINEAR_CCD.su ./code/N20_Motor.cyclo ./code/N20_Motor.d ./code/N20_Motor.o ./code/N20_Motor.su ./code/PID.cyclo ./code/PID.d ./code/PID.o ./code/PID.su ./code/task.cyclo ./code/task.d ./code/task.o ./code/task.su
 
 .PHONY: clean-code
 

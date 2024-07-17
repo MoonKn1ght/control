@@ -111,8 +111,7 @@ int main(void)
   MX_TIM11_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
-  HAL_TIM_Base_Start_IT(&htim2);
+  setup();
   /* USER CODE END 2 */
 
   /* Infinite loop */
