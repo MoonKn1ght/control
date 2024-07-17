@@ -39,6 +39,7 @@
 "control\encoder.o"
 "control\n20_motor.o"
 "control\ccd.o"
+"control\remote.o"
 "control\pid.o"
 --strict --scatter "control\control.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

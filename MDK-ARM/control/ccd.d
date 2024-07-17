@@ -44,4 +44,6 @@ control/ccd.o: ..\code\CCD.cpp ..\code\CCD.h ..\code\hal.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   ..\Core\Inc\adc.h ..\Core\Inc\main.h ..\Core\Inc\can.h \
   ..\Core\Inc\i2c.h ..\Core\Inc\spi.h ..\Core\Inc\tim.h \
-  ..\Core\Inc\usart.h ..\Core\Inc\gpio.h ..\code\config.h
+  ..\Core\Inc\usart.h ..\Core\Inc\gpio.h ..\code\config.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h

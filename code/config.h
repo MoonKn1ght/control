@@ -16,6 +16,7 @@
 #define CONTROL_CONFIG_H
 
 //#include "math.h"
+#include "string.h"
 
 #define MAIN_LOOP_FREQ 5000
 

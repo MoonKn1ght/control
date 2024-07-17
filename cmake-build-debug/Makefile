@@ -1150,6 +1150,60 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
 
+code/CCD.obj: code/CCD.cpp.obj
+
+.PHONY : code/CCD.obj
+
+# target to build an object file
+code/CCD.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/CCD.cpp.obj
+.PHONY : code/CCD.cpp.obj
+
+code/CCD.i: code/CCD.cpp.i
+
+.PHONY : code/CCD.i
+
+# target to preprocess a source file
+code/CCD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/CCD.cpp.i
+.PHONY : code/CCD.cpp.i
+
+code/CCD.s: code/CCD.cpp.s
+
+.PHONY : code/CCD.s
+
+# target to generate assembly for a file
+code/CCD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/CCD.cpp.s
+.PHONY : code/CCD.cpp.s
+
+code/Chassis.obj: code/Chassis.cpp.obj
+
+.PHONY : code/Chassis.obj
+
+# target to build an object file
+code/Chassis.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Chassis.cpp.obj
+.PHONY : code/Chassis.cpp.obj
+
+code/Chassis.i: code/Chassis.cpp.i
+
+.PHONY : code/Chassis.i
+
+# target to preprocess a source file
+code/Chassis.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Chassis.cpp.i
+.PHONY : code/Chassis.cpp.i
+
+code/Chassis.s: code/Chassis.cpp.s
+
+.PHONY : code/Chassis.s
+
+# target to generate assembly for a file
+code/Chassis.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Chassis.cpp.s
+.PHONY : code/Chassis.cpp.s
+
 code/Encoder.obj: code/Encoder.cpp.obj
 
 .PHONY : code/Encoder.obj
@@ -1230,6 +1284,33 @@ code/PID.s: code/PID.cpp.s
 code/PID.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/PID.cpp.s
 .PHONY : code/PID.cpp.s
+
+code/Remote.obj: code/Remote.cpp.obj
+
+.PHONY : code/Remote.obj
+
+# target to build an object file
+code/Remote.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Remote.cpp.obj
+.PHONY : code/Remote.cpp.obj
+
+code/Remote.i: code/Remote.cpp.i
+
+.PHONY : code/Remote.i
+
+# target to preprocess a source file
+code/Remote.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Remote.cpp.i
+.PHONY : code/Remote.cpp.i
+
+code/Remote.s: code/Remote.cpp.s
+
+.PHONY : code/Remote.s
+
+# target to generate assembly for a file
+code/Remote.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Remote.cpp.s
+.PHONY : code/Remote.cpp.s
 
 code/task.obj: code/task.cpp.obj
 
@@ -1379,6 +1460,12 @@ help:
 	@echo ... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.obj
 	@echo ... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.i
 	@echo ... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.s
+	@echo ... code/CCD.obj
+	@echo ... code/CCD.i
+	@echo ... code/CCD.s
+	@echo ... code/Chassis.obj
+	@echo ... code/Chassis.i
+	@echo ... code/Chassis.s
 	@echo ... code/Encoder.obj
 	@echo ... code/Encoder.i
 	@echo ... code/Encoder.s
@@ -1388,6 +1475,9 @@ help:
 	@echo ... code/PID.obj
 	@echo ... code/PID.i
 	@echo ... code/PID.s
+	@echo ... code/Remote.obj
+	@echo ... code/Remote.i
+	@echo ... code/Remote.s
 	@echo ... code/task.obj
 	@echo ... code/task.i
 	@echo ... code/task.s

@@ -409,6 +409,18 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/STM32F407VETX_FLASH.ld">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/CCD.cpp">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/CCD.h">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Chassis.cpp">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Chassis.h">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Encoder.cpp">
 			<Option target="control.elf"/>
 		</Unit>
@@ -428,6 +440,12 @@
 			<Option target="control.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/PID.h">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Remote.cpp">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Remote.h">
 			<Option target="control.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/algorithm.h">

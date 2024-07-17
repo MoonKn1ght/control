@@ -84,9 +84,12 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../code"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/asus/Desktop/contest2024/control/code/CCD.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/CCD.cpp.obj"
+  "C:/Users/asus/Desktop/contest2024/control/code/Chassis.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/Chassis.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/Encoder.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/Encoder.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/PID.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/PID.cpp.obj"
+  "C:/Users/asus/Desktop/contest2024/control/code/Remote.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/Remote.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/task.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/task.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

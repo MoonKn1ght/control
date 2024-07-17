@@ -627,6 +627,11 @@
               <FileType>8</FileType>
               <FilePath>..\code\CCD.cpp</FilePath>
             </File>
+            <File>
+              <FileName>Remote.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\code\Remote.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

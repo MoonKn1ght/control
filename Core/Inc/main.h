@@ -65,6 +65,8 @@ void Error_Handler(void);
 #define SPI2_CS_GPIO_Port GPIOC
 #define KEY_Pin GPIO_PIN_15
 #define KEY_GPIO_Port GPIOA
+#define REMOTE_LOCK_Pin GPIO_PIN_10
+#define REMOTE_LOCK_GPIO_Port GPIOC
 #define CCD_SI_Pin GPIO_PIN_0
 #define CCD_SI_GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */

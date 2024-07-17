@@ -46,4 +46,5 @@ control/n20_motor.o: ..\code\N20_Motor.cpp ..\code\N20_Motor.h \
   ..\Core\Inc\adc.h ..\Core\Inc\main.h ..\Core\Inc\can.h \
   ..\Core\Inc\i2c.h ..\Core\Inc\spi.h ..\Core\Inc\tim.h \
   ..\Core\Inc\usart.h ..\Core\Inc\gpio.h ..\code\config.h \
-  ..\code\Encoder.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h ..\code\Encoder.h

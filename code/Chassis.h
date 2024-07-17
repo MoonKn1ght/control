@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @FileName			    task.h
+  * @FileName			    Chassis.h
   * @Description
   * @author                 Yu Xinyi
   * @note
@@ -12,28 +12,13 @@
   ******************************************************************************
 **/
 
-#ifndef CONTROL_TASK_H
-#define CONTROL_TASK_H
-#include "hal.h"
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-void setup();
-
-void loop();
-
-void task_handler();
-
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim);
-	
-void CCD_Handler();
-
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
-
-#ifdef __cplusplus
-}
-#endif
+#ifndef CONTROL_CHASSIS_H
+#define CONTROL_CHASSIS_H
 
 
-#endif //CONTROL_TASK_H
+class Chassis {
+
+};
+
+
+#endif //CONTROL_CHASSIS_H
