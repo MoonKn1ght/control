@@ -19,14 +19,14 @@
 
 class PID {
 public:
-    float target;
+    float target = 0;
     float *feedback;
-    float err;
+    float err = 0;
 
-    float component_p;
-    float component_i;
-    float component_d;
-    float output;
+    float component_p = 0;
+    float component_i = 0;
+    float component_d = 0;
+    float output = 0;
 
     float kp;
     float ki;
@@ -36,6 +36,9 @@ public:
     float component_i_max;
     float component_d_max;
     float output_max;
+
+    PID(float kp, float ki, float kd,
+        float component_p_max, float component_i_max, float component_d_max, float output_max);
 
     float calc();
 };

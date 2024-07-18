@@ -20,7 +20,8 @@
 typedef enum{
     IMU_NOT_INIT,
     IMU_RUN,
-    IMU_ERR
+    IMU_ERR,
+    IMU_CALIBRATE
 } IMU_state;
 
 
@@ -41,6 +42,15 @@ public:
 
 private:
     float k_imu = 0;
+
+    float ax_offset = 0;
+    float ay_offset = 0;
+    float az_offset = 0;
+    float wx_offset = 0;
+    float wy_offset = 0;
+    float wz_offset = 0;
+
+    void get_data();
 
 };
 

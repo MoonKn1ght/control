@@ -34,7 +34,7 @@ public:
     Remote(UART_HandleTypeDef *huart);
 
     void Handler();
-    void process_data(uint16_t* data); //接收中断
+    void process_data(uint16_t* data, uint16_t len); //接收中断
 
 private:
     UART_HandleTypeDef *huart;

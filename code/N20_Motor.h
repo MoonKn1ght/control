@@ -37,6 +37,8 @@ private:
     uint32_t pwm_channel1;
     uint32_t pwm_channel2;
 
+    int32_t inc_pulse = 0;
+
 
     void pwm_set_duty(uint32_t channel, uint16_t duty);
 

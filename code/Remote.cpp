@@ -15,13 +15,30 @@
 #include "Remote.h"
 
 extern uint8_t* uart1_rx_buf;
+#define REMOTE_LEN 3
 
-void Remote::process_data(uint16_t* data) {
-    //解析数据
-    mode = data[0];
-    vertical = (float)(data[1] - 2048) / 4096 * 1;
-    horizontal = (float)(data[2] - 2048) / 4096 * 1;
+uint32_t remote_cnt = 0;
+uint16_t crc;
+uint16_t crc1 = 0;
+int crc_err = 0;
 
+void Remote::process_data(uint16_t* data, uint16_t len) {
+	if(len == REMOTE_LEN * 2 + 2 + 2){
+		//解析数据
+		uint16_t mode = data[0];
+		float vertical = (float)(data[2] - 2048) / 2048 * 1 - 0.07;
+		float horizontal = (float)(data[1] - 2048) / 2048 * 1 - 0.07;
+		crc = data[3];
+		crc1 = 0;
+		for(int i = 0; i < REMOTE_LEN; i++) crc1 += data[i];
+		remote_cnt++;
+		crc_err = crc1 - crc;
+		if(mode <= 2 && data[1] < 4096 && data[2] < 4096 && crc1 == crc){
+			this->mode = mode;
+			this->vertical = -vertical;
+			this->horizontal = -horizontal;
+		}
+	}
 }
 
 Remote::Remote(UART_HandleTypeDef *huart) {

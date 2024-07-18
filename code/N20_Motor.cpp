@@ -20,10 +20,10 @@ void N20_Motor::Handler() {
 }
 
 void N20_Motor::measure_parameter() {
-    float inc = encoder->pulse / this->reduction_rate * 360;
-	inc = -inc;
+    float inc = (float)encoder->pulse / this->reduction_rate * 360;
+    inc_pulse = encoder->pulse;
     encoder->pulse = 0;
-    this->v = this->v * 0.98 + inc / 180 * M_PI * MAIN_LOOP_FREQ * 0.02;
+    this->v = inc / 180 * M_PI * MAIN_LOOP_FREQ;
     this->ang += inc;
     if(this->ang >= 360){
         this->ang -= (int)(this->ang / 360) * 360;
@@ -55,7 +55,7 @@ void N20_Motor::output_intensity() {
 
         }break;
         case MOTOR_RUN: {
-            if(this->intensity >= 0){
+            if(this->intensity < 0){
                 //gpio_set_level(this->IN1_pin, 1);
                 //gpio_set_level(this->IN2_pin, 0);
                 pwm_set_duty(pwm_channel1, PWM_DUTY_MAX - (int)MAP(ABS(this->intensity), 0, PWM_DUTY_MAX, this->deadzone, PWM_DUTY_MAX));
