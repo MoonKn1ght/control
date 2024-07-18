@@ -36,74 +36,97 @@ void CCD::Handler() {
 
 void CCD::init() {
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
+    last_dir = 64;
+}
+
+//确定二值化阈值
+void CCD::GetThreshold()
+{
+	uint16_t max_data = 0;
+	uint16_t min_data = 3000;
+	for(int i = 0; i < 128; ++i)
+	{
+		if(this->data[i] > max_data)
+		{
+			max_data = this->data[i];
+		}
+		else if(this->data[i] < min_data)
+		{
+			min_data = this->data[i];
+		}
+
+	}
+	this->threshold = (max_data + min_data)/2;
 }
 
 //CCD图像二值化
-void CCD::Binarization(uint16_t threshold, uint16_t *data, uint8_t *bin_ccd)
+void CCD::Binarization()
 {
 	for(int i = 0; i < 128; ++i)
 	{
-		if(*data++ > threshold)
+		if(this->data[i] > this->threshold)
 		{
-			*bin_ccd++ = 1;
+			this->bin_ccd[i] = 1;
 		}
 		else
 		{
-			*bin_ccd = 0;
+			this->bin_ccd[i] = 0;
 		}
 	}
 }
 
 //CCD采集图像滤波
-void CCD::Filter(uint8_t *bin)
+void CCD::Filter()
 {
 	for(int i = 1; i < 127; ++i)
 	{
-		if(bin[i] == 1 && bin[i-1] == 0 && bin[i+1] == 0)	//消除噪点
+		if(this->bin_ccd[i] == 1 && this->bin_ccd[i-1] == 0 && this->bin_ccd[i+1] == 0)	//消除噪点
 		{
-			bin[i] = 0;
+			this->bin_ccd[i] = 0;
 		}
-		if(bin[i] == 0 && bin[i-1] == 1 && bin[i+1] == 1)
+		if(this->bin_ccd[i] == 0 && this->bin_ccd[i-1] == 1 && this->bin_ccd[i+1] == 1)
 		{
-			bin[i] = 1;
+			this->bin_ccd[i] = 1;
 		}
 	}
 }
 
-//计算赛道偏差值（单线）
-uint16_t CCD::GetError(uint8_t *bin)
+//计算黑线中值（单线）
+uint16_t CCD::GetDirection()
 {
-	int i,j;
-	int error_L,error_R;
+	int i;
+	int Left,Right;
 	//从两边向中间找线
 	for(i = 3; i < 125; i++)	//从左找线
 	{
-		if(bin[i-1] + bin[i-2] + bin[i-3] == 3 && bin[i+1] + bin[i+2] + bin[i+3] == 0)
+		if(this->bin_ccd[i-1] + this->bin_ccd[i-2] + this->bin_ccd[i-3] == 3
+			&& this->bin_ccd[i+1] + this->bin_ccd[i+2] + this->bin_ccd[i+3] == 0)
 		{
-			error_L = i;
+			Left = i;
 			break;
 		}
 		if(i == 125)
-			error_L = 125;
+			Left = 125;
 	}
 
 	for(i = 125; i > 3; i--)
 	{
-		if(bin[i-1] + bin[i-2] + bin[i-3] == 0 && bin[i+1] + bin[i+2] + bin[i+3] == 3)
+		if(this->bin_ccd[i-1] + this->bin_ccd[i-2] + this->bin_ccd[i-3] == 0
+			&& this->bin_ccd[i+1] + this->bin_ccd[i+2] + this->bin_ccd[i+3] == 3)
 		{
-			error_R = i;
+			Right = i;
 			break;
 		}
 		if(i == 3)
-			error_R = 3;
+			Right = 3;
 	}
 
-	if(error_L == 125 && error_R == 3)	//未检测到线
+	if(Left == 125 && Right == 3)	//未检测到线
 	{
 		return 200;
 	}
 
-	return (error_R + error_L - 128);
+	return (Right + Left)/2;	//返回黑线中值坐标
 }
 
 ////计算赛道偏差值（双线）
@@ -159,30 +182,29 @@ uint16_t CCD::GetError(uint8_t *bin)
 //小车巡线
 void CCD::Line_tracing()
 {
-	uint16_t threshold_bin = 500;	//二值化阈值，待调整
-		int threshold_line = 30;	//直线行驶范围，待调整
-	uint16_t CCD_error,CCD_last_error;
+	int Mid_error = 15;	//直线行驶范围，待调整
 
-	Binarization(threshold_bin, this->data, this->bin_ccd);	//二值化
-	Filter(this->bin_ccd);	//数据滤波
-	CCD_error = GetError(this->bin_ccd);	//计算偏差值
 
-	if(CCD_error == 200)
-		CCD_error = CCD_last_error;
+	GetThreshold();
+	Binarization();	//二值化
+	Filter();	//数据滤波
+	this->dir = GetDirection();	//计算偏差值
 
-	//分段PID
-	if(CCD_error > -threshold_line && CCD_error < threshold_line)	//直道
+	if(this->dir == 200)
+		this->dir = this->last_dir;
+
+	if(this->dir > 64 + Mid_error && this->dir < 64 - Mid_error)	//直道巡迹
 	{
 
 	}
-	else	//弯道
+	else	//弯道巡迹
 	{
 
 	}
 
-	//控制电机
+	//
 
-	CCD_last_error = CCD_error;
+	this->last_dir = this->dir;
 
 }
 

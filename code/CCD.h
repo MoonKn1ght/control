@@ -22,14 +22,17 @@ public:
     int integrate_time = 50;
     uint16_t data[128];
     uint8_t bin_ccd[128];
-    uint16_t error;	//赛道偏差
+    uint16_t dir;	//黑线位置
+    uint16_t last_dir;
+    uint16_t threshold;
 
     void init();
     void Handler(); //放在主任务循环里
     void SI_send(); //放在定时器中断里
-    void Binarization(uint16_t threshold, uint16_t *data, uint8_t *bin_ccd);
-    void Filter(uint8_t *bin);
-    uint16_t GetError(uint8_t *bin);
+    void GetThreshold();
+    void Binarization();
+    void Filter();
+    uint16_t GetDirection();
     void Line_tracing();
 
 
