@@ -27,6 +27,9 @@ class Remote {
 public:
     remote_state state = REMOTE_DISCONNECTED;
 
+    uint16_t data[100];
+    uint16_t len = 0;
+
     int mode = 0;
     float horizontal = 0; //-1 - 1
     float vertical = 0; //-1 - 1
@@ -34,7 +37,7 @@ public:
     Remote(UART_HandleTypeDef *huart);
 
     void Handler();
-    void process_data(uint16_t* data, uint16_t len); //接收中断
+    void process_data(); //接收中断
 
 private:
     UART_HandleTypeDef *huart;

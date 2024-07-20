@@ -46,7 +46,9 @@ void Chassis::Handler() {
 
             ang1 += w / MAIN_LOOP_FREQ;
             ang2 += imu->wz / MAIN_LOOP_FREQ;
-            ang = 0.33 * ang1 + (1 - 0.33) * ang2;
+            //ang = 0.33 * ang1 + (1 - 0.33) * ang2;
+            ang = ang1 / 372 * 360;
+            NORMALIZE_ANGLE180(ang);
 
 
             float temp_cos, temp_sin;

@@ -71,11 +71,15 @@ void setup(){
 uint8_t start_flag[] = {0xfe, 0xfe};
 uint8_t end_flag[] = {0xff, 0xff};
 void loop(){
-	//HAL_UART_Transmit(&huart1, start_flag, 2, 0xffff);
-	//HAL_UART_Transmit(&huart1, (uint8_t *)ccd.data, 128 * 2, 0xffff);
-	//HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
-	printf("x:%.1f y:%.1f\r\n", chassis.x, chassis.y);
-	HAL_Delay(500);
+	HAL_UART_Transmit(&huart1, start_flag, 2, 0xffff);
+	HAL_UART_Transmit(&huart1, (uint8_t *)ccd.data, 128 * 2, 0xffff);
+    HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
+    HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.x, 4, 0xffff);
+    HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.y, 4, 0xffff);
+    HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang, 4, 0xffff);
+    HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
+	//printf("x:%.1f y:%.1f\r\n", chassis.x, chassis.y);
+	HAL_Delay(50);
 	
 	get_vpwr();
 	if(vpwr < vpwr_th && vpwr > 3){
@@ -107,12 +111,19 @@ void task_handler(){
             chassis.state = CHASSIS_STOP;
         }break;
         case 1: { //遥控
-            chassis.v_set = remote.vertical * 8000;
-            chassis.w_set = remote.horizontal * (-5000);
-            chassis.state = CHASSIS_RUN;
+			float thresh = 0.05;
+			if(remote.vertical < thresh && remote.vertical > -thresh){
+				chassis.v_set = 0;
+			}else chassis.v_set = remote.vertical * 8000;
+            if(remote.vertical < thresh && remote.vertical > -thresh){
+				chassis.w_set = 0;
+			}else chassis.w_set = remote.horizontal * (-5000);
+			chassis.state = CHASSIS_RUN;
         }break;
         case 2: { //循迹
-            chassis.state = CHASSIS_STOP;
+            chassis.v_set = 5000;
+			chassis.w_set = 3000;
+            chassis.state = CHASSIS_RUN;
         }
     }
 
@@ -142,13 +153,18 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
             uart1_state = 1;
         }else if(val == '\n'){
             if(uart1_state == 1){
-				remote.process_data((uint16_t*)uart1_rx_buf, uart1_rx_len);
+				memcpy(remote.data, uart1_rx_buf, uart1_rx_len);
+				remote.len = uart1_rx_len;
+				//remote.process_data((uint16_t*)uart1_rx_buf, uart1_rx_len);
                 uart1_state = 0;
                 uart1_rx_len = 0;
             }else uart1_state = 0;
         }
 
-        HAL_UART_Receive_IT(&huart1,(uint8_t *)(uart1_rx_buf + uart1_rx_len), 1);//接收一个字节
+		while(HAL_UART_Receive_IT(&huart1, (uint8_t *)(uart1_rx_buf + uart1_rx_len), 1) != HAL_OK){
+			huart1.RxState = HAL_UART_STATE_READY;
+			__HAL_UNLOCK(&huart1);
+		}
     }
 
 }

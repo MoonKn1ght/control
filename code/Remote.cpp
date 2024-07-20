@@ -22,7 +22,7 @@ uint16_t crc;
 uint16_t crc1 = 0;
 int crc_err = 0;
 
-void Remote::process_data(uint16_t* data, uint16_t len) {
+void Remote::process_data() {
 	if(len == REMOTE_LEN * 2 + 2 + 2){
 		//解析数据
 		uint16_t mode = data[0];
@@ -52,4 +52,5 @@ void Remote::Handler() {
     }else{
         state = REMOTE_DISCONNECTED;
     }
+    process_data();
 }
