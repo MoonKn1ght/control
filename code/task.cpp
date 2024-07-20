@@ -80,7 +80,14 @@ void loop(){
     HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
 	//printf("x:%.1f y:%.1f\r\n", chassis.x, chassis.y);
 	HAL_Delay(50);
-	
+
+//    ccd.GetThreshold();
+//    ccd.Binarization();	//二值化
+//	ccd.Filter();	//数据滤波
+//	HAL_UART_Transmit(&huart1, start_flag, 1, 0xffff);
+//	HAL_UART_Transmit(&huart1, ccd.bin_ccd, 128, 0xffff);
+//	HAL_UART_Transmit(&huart1, end_flag, 1, 0xffff);
+//	HAL_Delay(50);
 	get_vpwr();
 	if(vpwr < vpwr_th && vpwr > 3){
 	    if(pwr_cnt >= 10){

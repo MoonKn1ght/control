@@ -1,3 +1,4 @@
-../code/Encoder.cpp:18:6:void Encoder::Handler()	7
-../code/Encoder.cpp:43:6:void Encoder::circle_get()	1
-../code/Encoder.cpp:49:1:Encoder::Encoder(TIM_HandleTypeDef*)	1
+../code/Encoder.cpp:19:6:void Encoder::Handler()	1
+../code/Encoder.cpp:26:1:Encoder::Encoder(TIM_HandleTypeDef*)	1
+../code/Encoder.cpp:30:6:void Encoder::init()	1
+../code/Encoder.cpp:35:6:void Encoder::overflow_update()	3

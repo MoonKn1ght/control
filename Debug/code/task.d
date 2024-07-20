@@ -37,7 +37,8 @@ code/task.o: ../code/task.cpp ../code/task.h ../code/hal.h \
  ../Core/Inc/adc.h ../Core/Inc/main.h ../Core/Inc/can.h ../Core/Inc/i2c.h \
  ../Core/Inc/spi.h ../Core/Inc/tim.h ../Core/Inc/usart.h \
  ../Core/Inc/gpio.h ../code/config.h ../code/module.h ../code/Encoder.h \
- ../code/device.h ../code/Motor.h ../code/N20_Motor.h
+ ../code/Motor.h ../code/N20_Motor.h ../code/CCD.h ../code/Remote.h \
+ ../code/device.h ../code/Chassis.h
 ../code/task.h:
 ../code/hal.h:
 ../Core/Inc/main.h:
@@ -87,6 +88,9 @@ code/task.o: ../code/task.cpp ../code/task.h ../code/hal.h \
 ../code/config.h:
 ../code/module.h:
 ../code/Encoder.h:
-../code/device.h:
 ../code/Motor.h:
 ../code/N20_Motor.h:
+../code/CCD.h:
+../code/Remote.h:
+../code/device.h:
+../code/Chassis.h:
