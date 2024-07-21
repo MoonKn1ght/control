@@ -42,6 +42,8 @@ public:
     float v = 0;
     float w = 0;
     float ang = 0;
+    float ang1 = 0, ang2 = 0;
+    //float R = 0;
 
     float x = 0, y = 0;
 
@@ -50,7 +52,7 @@ public:
     void Handler();
 
 private:
-    float ang1 = 0, ang2 = 0;
+
 };
 
 

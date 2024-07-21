@@ -36,6 +36,10 @@ public:
     float wy;
     float wz;
 
+    float correct_ang = 0;
+    float ax_correct;
+    float ay_correct;
+
     void init();
 
     void Handler();

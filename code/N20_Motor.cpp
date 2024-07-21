@@ -23,7 +23,7 @@ void N20_Motor::measure_parameter() {
     float inc = (float)encoder->pulse / this->reduction_rate * 360;
     inc_pulse = encoder->pulse;
     encoder->pulse = 0;
-    this->v = inc / 180 * M_PI * MAIN_LOOP_FREQ;
+    this->v = inc / 180 * M_PI * MAIN_LOOP_FREQ * radius;
     this->ang += inc;
     if(this->ang >= 360){
         this->ang -= (int)(this->ang / 360) * 360;

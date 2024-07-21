@@ -29,19 +29,20 @@ Encoder right_encoder(&htim2);
 N20_Motor right_motor(&htim1, TIM_CHANNEL_1, TIM_CHANNEL_2,
                      &left_encoder,
                      298 * 4 * 7,
-                     33.4 / 2 / 1000,
-                     300
+                     33.4 / 2 / 1000 / 435 * 432,
+                     0
                      );
 N20_Motor left_motor(&htim1, TIM_CHANNEL_3, TIM_CHANNEL_4,
                      &right_encoder,
                      298 * 4 * 7,
-                     33.4 / 2 / 1000,
-                     300
+                     33.4 / 2 / 1000 / 435 * 432,
+                     0
 );
 CCD ccd;
 Remote remote(&huart1);
 IMU imu;
 Chassis chassis(&left_motor, &right_motor, &imu, 112.5 / 1000);
+Controller controller(&chassis);
 
 
 
@@ -71,15 +72,26 @@ void setup(){
 uint8_t start_flag[] = {0xfe, 0xfe};
 uint8_t end_flag[] = {0xff, 0xff};
 void loop(){
-	HAL_UART_Transmit(&huart1, start_flag, 2, 0xffff);
-	HAL_UART_Transmit(&huart1, (uint8_t *)ccd.data, 128 * 2, 0xffff);
-    HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
-    HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.x, 4, 0xffff);
-    HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.y, 4, 0xffff);
-    HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang, 4, 0xffff);
-    HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
-	//printf("x:%.1f y:%.1f\r\n", chassis.x, chassis.y);
-	HAL_Delay(50);
+    if(ccd.sample_complete == true){
+		HAL_UART_Transmit(&huart1, start_flag, 2, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)ccd.data, 128 * 2, 0xffff);
+		HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.x, 4, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.y, 4, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang, 4, 0xffff);
+		HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
+	}
+	//HAL_Delay(50);
+
+//    测量速度与电流关系
+//    chassis.state = CHASSIS_RUN;
+//    chassis.v_set = intensity;
+//    intensity += 100;
+//    if(intensity >= 10000) intensity = 0;
+//    HAL_Delay(500);
+//    printf("%d,%f,%f;\r\n", intensity, chassis.v, chassis.w);
+
+
 
 //    ccd.GetThreshold();
 //    ccd.Binarization();	//二值化
@@ -88,17 +100,20 @@ void loop(){
 //	HAL_UART_Transmit(&huart1, ccd.bin_ccd, 128, 0xffff);
 //	HAL_UART_Transmit(&huart1, end_flag, 1, 0xffff);
 //	HAL_Delay(50);
-	get_vpwr();
-	if(vpwr < vpwr_th && vpwr > 3){
-	    if(pwr_cnt >= 10){
+
+    get_vpwr();
+    if(vpwr < vpwr_th && vpwr > 3){
+        if(pwr_cnt >= 10){
             HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_SET);
-	    }else pwr_cnt++;
-	}
-	else{
+        }else pwr_cnt++;
+    }
+    else{
         HAL_GPIO_WritePin(BEEP_GPIO_Port, BEEP_Pin, GPIO_PIN_RESET);
         pwr_cnt = 0;
-	}
+    }
+
 }
+
 
 void task_handler(){
 	left_encoder.Handler();
@@ -112,27 +127,30 @@ void task_handler(){
 	
 	if(HAL_GetTick() % 500 == 0) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
-	//主逻辑
+	//遥控器
     switch (remote.mode) {
         case 0: { //停止
             chassis.state = CHASSIS_STOP;
         }break;
         case 1: { //遥控
-			float thresh = 0.05;
+			float thresh = 0;
 			if(remote.vertical < thresh && remote.vertical > -thresh){
 				chassis.v_set = 0;
-			}else chassis.v_set = remote.vertical * 8000;
+			}else chassis.v_set = remote.vertical * 0.1;
             if(remote.vertical < thresh && remote.vertical > -thresh){
 				chassis.w_set = 0;
-			}else chassis.w_set = remote.horizontal * (-5000);
+			}else chassis.w_set = remote.horizontal * (-0.1);
 			chassis.state = CHASSIS_RUN;
         }break;
         case 2: { //循迹
-            chassis.v_set = 5000;
-			chassis.w_set = 3000;
+            chassis.v_set = 0.05;
+			chassis.w_set = 0.05;
             chassis.state = CHASSIS_RUN;
         }
     }
+
+    //位置控制器
+	//controller.Handler();
 
 }
 
@@ -176,3 +194,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 }
 
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
+    if(hadc == &hadc3){
+        ccd.sample_complete = true;
+    }
+}

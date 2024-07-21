@@ -424,6 +424,12 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Chassis.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Controller.cpp">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Controller.h">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Encoder.cpp">
 			<Option target="control.elf"/>
 		</Unit>
@@ -466,6 +472,9 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/device.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/hal.c">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/hal.h">
 			<Option target="control.elf"/>
 		</Unit>
@@ -475,6 +484,9 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/imu660.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/imu660_config.h">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/module.h">
 			<Option target="control.elf"/>
 		</Unit>
@@ -482,15 +494,6 @@
 			<Option target="control.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/task.h">
-			<Option target="control.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/zf_device_config.a">
-			<Option target="control.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/zf_device_config.h">
-			<Option target="control.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/zf_device_config.lib">
 			<Option target="control.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/CMakeLists.txt">

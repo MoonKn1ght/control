@@ -58,5 +58,10 @@ void IMU::init() {
 void IMU::Handler() {
     if(this->state == IMU_RUN){
         get_data();
+
+        float temp_cos, temp_sin;
+        arm_sin_cos_f32(correct_ang, &temp_sin, &temp_cos);
+        ax_correct = ax * temp_cos - ay * temp_sin;
+        ay_correct = ay * temp_cos + ax * temp_sin;
     }
 }

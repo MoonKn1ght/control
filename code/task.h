@@ -30,6 +30,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim);
 void CCD_Handler();
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
+	
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc);
 
 #ifdef __cplusplus
 }

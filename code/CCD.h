@@ -19,8 +19,11 @@
 
 class CCD {
 public:
-    int integrate_time = 50;
+    int integrate_time = 10;
     uint16_t data[128];
+    int sample_t = 0;
+    bool sample_complete = false;
+
     uint8_t bin_ccd[128];
     uint16_t dir;	//黑线位置
     uint16_t last_dir;

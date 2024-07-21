@@ -35,8 +35,8 @@ void Remote::process_data() {
 		crc_err = crc1 - crc;
 		if(mode <= 2 && data[1] < 4096 && data[2] < 4096 && crc1 == crc){
 			this->mode = mode;
-			this->vertical = -vertical;
-			this->horizontal = -horizontal;
+			this->vertical = -vertical * 0.1 + this->vertical * 0.9;
+			this->horizontal = -horizontal * 0.1 + this->horizontal * 0.9;
 		}
 	}
 }

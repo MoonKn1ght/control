@@ -64,6 +64,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/asus/Desktop/contest2024/control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
   "C:/Users/asus/Desktop/contest2024/control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj"
   "C:/Users/asus/Desktop/contest2024/control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj"
+  "C:/Users/asus/Desktop/contest2024/control/code/hal.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/hal.c.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/imu660.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/imu660.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
@@ -87,6 +88,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/asus/Desktop/contest2024/control/code/CCD.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/CCD.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/Chassis.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/Chassis.cpp.obj"
+  "C:/Users/asus/Desktop/contest2024/control/code/Controller.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/Controller.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/Encoder.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/Encoder.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/IMU.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/IMU.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj"

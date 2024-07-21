@@ -31,7 +31,12 @@ void CCD::SI_send() {
 }
 
 void CCD::Handler() {
-    if(HAL_GetTick() % integrate_time == 0) __HAL_TIM_ENABLE_IT(&htim4, TIM_IT_CC4);
+    if(HAL_GetTick() % integrate_time == 0){
+        __HAL_TIM_ENABLE_IT(&htim4, TIM_IT_CC4);
+        sample_t = 0;
+        sample_complete = false;
+    }
+    sample_t++;
 }
 
 void CCD::init() {

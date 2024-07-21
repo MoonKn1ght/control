@@ -1204,6 +1204,33 @@ code/Chassis.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Chassis.cpp.s
 .PHONY : code/Chassis.cpp.s
 
+code/Controller.obj: code/Controller.cpp.obj
+
+.PHONY : code/Controller.obj
+
+# target to build an object file
+code/Controller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Controller.cpp.obj
+.PHONY : code/Controller.cpp.obj
+
+code/Controller.i: code/Controller.cpp.i
+
+.PHONY : code/Controller.i
+
+# target to preprocess a source file
+code/Controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Controller.cpp.i
+.PHONY : code/Controller.cpp.i
+
+code/Controller.s: code/Controller.cpp.s
+
+.PHONY : code/Controller.s
+
+# target to generate assembly for a file
+code/Controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Controller.cpp.s
+.PHONY : code/Controller.cpp.s
+
 code/Encoder.obj: code/Encoder.cpp.obj
 
 .PHONY : code/Encoder.obj
@@ -1338,6 +1365,33 @@ code/Remote.s: code/Remote.cpp.s
 code/Remote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Remote.cpp.s
 .PHONY : code/Remote.cpp.s
+
+code/hal.obj: code/hal.c.obj
+
+.PHONY : code/hal.obj
+
+# target to build an object file
+code/hal.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/hal.c.obj
+.PHONY : code/hal.c.obj
+
+code/hal.i: code/hal.c.i
+
+.PHONY : code/hal.i
+
+# target to preprocess a source file
+code/hal.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/hal.c.i
+.PHONY : code/hal.c.i
+
+code/hal.s: code/hal.c.s
+
+.PHONY : code/hal.s
+
+# target to generate assembly for a file
+code/hal.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/hal.c.s
+.PHONY : code/hal.c.s
 
 code/imu660.obj: code/imu660.c.obj
 
@@ -1520,6 +1574,9 @@ help:
 	@echo ... code/Chassis.obj
 	@echo ... code/Chassis.i
 	@echo ... code/Chassis.s
+	@echo ... code/Controller.obj
+	@echo ... code/Controller.i
+	@echo ... code/Controller.s
 	@echo ... code/Encoder.obj
 	@echo ... code/Encoder.i
 	@echo ... code/Encoder.s
@@ -1535,6 +1592,9 @@ help:
 	@echo ... code/Remote.obj
 	@echo ... code/Remote.i
 	@echo ... code/Remote.s
+	@echo ... code/hal.obj
+	@echo ... code/hal.i
+	@echo ... code/hal.s
 	@echo ... code/imu660.obj
 	@echo ... code/imu660.i
 	@echo ... code/imu660.s
