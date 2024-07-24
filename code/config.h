@@ -20,6 +20,7 @@ extern "C" {
 #endif
 	
 //#include "math.h"
+#include "main.h"
 #include "arm_math.h"
 #include "string.h"
 

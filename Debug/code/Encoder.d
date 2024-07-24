@@ -36,7 +36,8 @@ code/Encoder.o: ../code/Encoder.cpp ../code/Encoder.h ../code/hal.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Core/Inc/adc.h ../Core/Inc/main.h ../Core/Inc/can.h ../Core/Inc/i2c.h \
  ../Core/Inc/spi.h ../Core/Inc/tim.h ../Core/Inc/usart.h \
- ../Core/Inc/gpio.h ../code/config.h
+ ../Core/Inc/gpio.h ../code/config.h \
+ ../Drivers/CMSIS/DSP/Include/arm_math.h
 ../code/Encoder.h:
 ../code/hal.h:
 ../Core/Inc/main.h:
@@ -84,3 +85,4 @@ code/Encoder.o: ../code/Encoder.cpp ../code/Encoder.h ../code/hal.h \
 ../Core/Inc/usart.h:
 ../Core/Inc/gpio.h:
 ../code/config.h:
+../Drivers/CMSIS/DSP/Include/arm_math.h:

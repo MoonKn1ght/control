@@ -20,7 +20,7 @@
 
 typedef enum{
     CHASSIS_STOP = 0,
-    CHASSIS_RUN,
+    CHASSIS_RUN = 1,
     CHASSIS_RELEASE
 } chassis_state;
 
