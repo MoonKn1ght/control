@@ -13,7 +13,7 @@
 **/
 
 #include "CCD.h"
-#include "hal.h"
+
 
 void CCD::SI_send() {
     if(state == 0){ //刚开中断会直接触发中断，而不是在下降沿触发

@@ -35,9 +35,6 @@ extern "C" {
 #define MAP(num, frommin, frommax, tomin, tomax) (((float)(num) - frommin) / (frommax - frommin) * (tomax - tomin) + tomin)
 #define ABS(n) ((n>=0)? n:-n)
 #define MOD(ang, n)     if(ang >= n){ang -= (int)(ang / n) * n;}else if(ang < 0){ang -= (int)(ang / n) * n - n;}
-#define NORMALIZE_ANGLE180(angle) {\
-    angle=angle>180?angle-360:(angle<-180?angle+360:angle);\
-}
 
 #ifdef __cplusplus
 }

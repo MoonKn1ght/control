@@ -51,7 +51,7 @@ I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
 I (..\code\task.h)(0x669CC24E)
 I (..\code\hal.h)(0x66995E92)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x5CEB78EA)
@@ -443,7 +443,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x5CEB78EA)
@@ -1410,7 +1410,7 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x62D6D465)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x62D6D465)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x62D6D465)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x62D6D465)
-F (..\code\task.cpp)(0x669CC5B8)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/task.o -MD)
+F (..\code\task.cpp)(0x66A11C05)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/task.o -MD)
 I (..\code\task.h)(0x669CC24E)
 I (..\code\hal.h)(0x66995E92)
 I (..\Core\Inc\main.h)(0x66979882)
@@ -1464,7 +1464,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\string.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
@@ -1481,15 +1481,15 @@ I (..\code\module.h)(0x6697E63F)
 I (..\code\Encoder.h)(0x669693AC)
 I (..\code\Motor.h)(0x66968ED6)
 I (..\code\N20_Motor.h)(0x669B4E1D)
-I (..\code\CCD.h)(0x669CC4FC)
-I (..\code\Remote.h)(0x669A2133)
+I (..\code\CCD.h)(0x669CCAA9)
+I (..\code\Remote.h)(0x66A11BCD)
 I (..\code\IMU.h)(0x669BB40A)
 I (..\code\device.h)(0x669BCF7C)
-I (..\code\Chassis.h)(0x669BBEFC)
+I (..\code\Chassis.h)(0x669D02FC)
 I (..\code\algorithm.h)(0x66968AD4)
 I (..\code\PID.h)(0x669B4E1D)
-I (..\code\Controller.h)(0x669CBA81)
-F (..\code\config.h)(0x6699FDB8)()
+I (..\code\Controller.h)(0x669D064D)
+F (..\code\config.h)(0x669CCC47)()
 F (..\code\hal.h)(0x66995E92)()
 F (..\code\hal.c)(0x66995E27)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/hal.o -MD)
 I (..\code\hal.h)(0x66995E92)
@@ -1540,7 +1540,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x5CEB78EA)
@@ -1600,7 +1600,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\string.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
@@ -1668,7 +1668,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\string.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
@@ -1682,8 +1682,8 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__undef_macros)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdio.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5CEB78EA)
 I (..\code\Encoder.h)(0x669693AC)
-F (..\code\CCD.cpp)(0x669CC51E)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/ccd.o -MD)
-I (..\code\CCD.h)(0x669CC4FC)
+F (..\code\CCD.cpp)(0x669CCA9C)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/ccd.o -MD)
+I (..\code\CCD.h)(0x669CCAA9)
 I (..\code\hal.h)(0x66995E92)
 I (..\Core\Inc\main.h)(0x66979882)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x62D6D465)
@@ -1736,7 +1736,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\string.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
@@ -1749,8 +1749,8 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__undef_macros)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdio.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5CEB78EA)
-F (..\code\Remote.cpp)(0x669B5FA5)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/remote.o -MD)
-I (..\code\Remote.h)(0x669A2133)
+F (..\code\Remote.cpp)(0x66A1EC12)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/remote.o -MD)
+I (..\code\Remote.h)(0x66A11BCD)
 I (..\code\hal.h)(0x66995E92)
 I (..\Core\Inc\main.h)(0x66979882)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x62D6D465)
@@ -1803,7 +1803,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\string.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
@@ -1816,7 +1816,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\limits)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__undef_macros)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdio.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5CEB78EA)
-F (..\code\IMU.cpp)(0x669BB40A)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/imu.o -MD)
+F (..\code\IMU.cpp)(0x669DDCB0)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/imu.o -MD)
 I (..\code\IMU.h)(0x669BB40A)
 I (..\code\hal.h)(0x66995E92)
 I (..\Core\Inc\main.h)(0x66979882)
@@ -1870,7 +1870,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\string.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
@@ -1934,15 +1934,15 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x5CEB78EA)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5CEB78EA)
 I (..\code\imu660_config.h)(0x66980822)
 F (..\code\device.h)(0x669BCF7C)()
-F (..\code\Chassis.cpp)(0x669BC944)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/chassis.o -MD)
-I (..\code\Chassis.h)(0x669BBEFC)
+F (..\code\Chassis.cpp)(0x66A1E989)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/chassis.o -MD)
+I (..\code\Chassis.h)(0x669D02FC)
 I (..\code\module.h)(0x6697E63F)
 I (..\code\Encoder.h)(0x669693AC)
 I (..\code\hal.h)(0x66995E92)
@@ -1997,7 +1997,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\string.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
@@ -2012,14 +2012,14 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdio.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5CEB78EA)
 I (..\code\Motor.h)(0x66968ED6)
 I (..\code\N20_Motor.h)(0x669B4E1D)
-I (..\code\CCD.h)(0x669CC4FC)
-I (..\code\Remote.h)(0x669A2133)
+I (..\code\CCD.h)(0x669CCAA9)
+I (..\code\Remote.h)(0x66A11BCD)
 I (..\code\IMU.h)(0x669BB40A)
 I (..\code\algorithm.h)(0x66968AD4)
 I (..\code\PID.h)(0x669B4E1D)
-F (..\code\Controller.cpp)(0x669CBD35)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/controller.o -MD)
-I (..\code\Controller.h)(0x669CBA81)
-I (..\code\Chassis.h)(0x669BBEFC)
+F (..\code\Controller.cpp)(0x669CD065)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/controller.o -MD)
+I (..\code\Controller.h)(0x669D064D)
+I (..\code\Chassis.h)(0x669D02FC)
 I (..\code\module.h)(0x6697E63F)
 I (..\code\Encoder.h)(0x669693AC)
 I (..\code\hal.h)(0x66995E92)
@@ -2074,7 +2074,7 @@ I (..\Core\Inc\spi.h)(0x6693B5EC)
 I (..\Core\Inc\tim.h)(0x6695723B)
 I (..\Core\Inc\usart.h)(0x6693B5EC)
 I (..\Core\Inc\gpio.h)(0x6693B5EC)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\string.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5CEB78E8)
@@ -2089,14 +2089,14 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdio.h)(0x5CEB78DC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5CEB78EA)
 I (..\code\Motor.h)(0x66968ED6)
 I (..\code\N20_Motor.h)(0x669B4E1D)
-I (..\code\CCD.h)(0x669CC4FC)
-I (..\code\Remote.h)(0x669A2133)
+I (..\code\CCD.h)(0x669CCAA9)
+I (..\code\Remote.h)(0x66A11BCD)
 I (..\code\IMU.h)(0x669BB40A)
 I (..\code\algorithm.h)(0x66968AD4)
 I (..\code\PID.h)(0x669B4E1D)
 F (..\code\PID.cpp)(0x669B4E1D)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-D__MICROLIB -gdwarf-3 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../code-I./RTE/_control-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/asus/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/DSP/Include-IC:/Users/asus/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -D__TARGET_FPU_VFP -DARM_MATH_CM4-o control/pid.o -MD)
 I (..\code\PID.h)(0x669B4E1D)
-I (..\code\config.h)(0x6699FDB8)
+I (..\code\config.h)(0x669CCC47)
 I (C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h)(0x5C8F4DD4)
 I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x62D6D445)
 I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x5CEB78E6)

@@ -26,12 +26,14 @@ public:
     float dist, ang_err;
     float x_err, y_err;
 
-    float dist_th = 0.005, ang_th = 5;
+    float dist_th = 0.005, ang_th = 3;
 
     float kp1 = 1, kp2 = 0.1;
 
     float v_out = 0, w_out = 0;
     float v_out_max = 0.1, w_out_max = 0.1;
+
+    bool reached = true;
 
     Controller(Chassis* chassis);
 

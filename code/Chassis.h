@@ -42,16 +42,19 @@ public:
     float v = 0;
     float w = 0;
     float ang = 0;
-    float ang1 = 0, ang2 = 0;
+    float ang1 = 0, ang2 = 0, ang3, ang4;
     //float R = 0;
 
     float x = 0, y = 0;
 
     float v_set = 0, w_set = 0; //0-10000
 
+
     void Handler();
 
 private:
+    float scale1 = 1.00699306;
+    float scale2 = 1.01982999;
 
 };
 
