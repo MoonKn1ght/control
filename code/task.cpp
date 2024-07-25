@@ -18,6 +18,8 @@
 #include "device.h"
 #include <math.h>
 
+//#define USE_REMOTE
+
 
 #define UART1_BUF_LEN 100
 uint8_t uart1_rx_buf[UART1_BUF_LEN];
@@ -44,7 +46,8 @@ Remote remote(&huart1);
 IMU imu;
 Chassis chassis(&left_motor, &right_motor, &imu, 112.5 / 1000);
 Controller controller(&chassis);
-PID ccd_controller(0.004,0,0,0.1,0.005,0.1,0.1);
+PID tracking_PID(0.004,0,0,0.1,0.005,0.1,0.1);
+Tracking tracking(&chassis,&ccd,&tracking_PID);
 
 float vpwr = 12, vpwr_th = 9;
 int pwr_cnt = 0;
@@ -72,7 +75,6 @@ uint8_t start_flag[] = {0xfe, 0xfe};
 uint8_t end_flag[] = {0xff, 0xff};
 void loop(){
     if(ccd.sample_complete == true){
-//		ccd.Binarization();	//二值化
 		HAL_UART_Transmit(&huart1, start_flag, 2, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)ccd.data, 128 * 2, 0xffff);
 		HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
@@ -80,6 +82,8 @@ void loop(){
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.x, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.y, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang, 4, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang1, 4, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang2, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
 
 	}
@@ -118,11 +122,12 @@ void task_handler(){
 	//remote.Handler();
 	imu.Handler();
 	chassis.Handler();
+	tracking.Handler();
+	controller.Handler();
 	
 	if(HAL_GetTick() % 500 == 0) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
-
-//	遥控器
+#ifdef USE_REMOTE //遥控器
     switch (remote.mode) {
         case 0: { //停止
             chassis.state = CHASSIS_STOP;
@@ -137,17 +142,47 @@ void task_handler(){
 			}else chassis.w_set = remote.horizontal * (-0.1);
 			chassis.state = CHASSIS_RUN;
         }break;
-        case 2: { //循迹
-            chassis.v_set = 0.05;
-			chassis.w_set = 0.05;
+        case 2: { //位置控制器测试矩形
+            const float l = 0.3;
+			static float x_array[] = {0, l, l, 0};
+			static float y_array[] = {0, 0, -l, -l};
+			static int array_len = 4, index = 0;
+
+			if(controller.reached == true){
+				if(++index >= array_len) index = 0;
+				controller.x_set = x_array[index];
+				controller.y_set = y_array[index];
+				controller.reached = false;
+			}
+			chassis.state = CHASSIS_RUN;
+			controller.Handler();
+        } break;
+        case 3: { //上位机按照一定频率发送轨迹坐标
+            controller.x_set = remote.x;
+            controller.y_set = remote.y;
             chassis.state = CHASSIS_RUN;
 
 
         }break;
+            controller.Handler();
     }
 
-    //位置控制器
-	//controller.Handler();
+#else
+//    const float l = 0.3;
+//    static float x_array[] = {0, l, l, 0};
+//    static float y_array[] = {0, 0, -l, -l};
+//    static int array_len = 4, index = 0;
+//
+//    if(controller.reached == true){
+//        if(++index >= array_len) index = 0;
+//        controller.x_set = x_array[index];
+//        controller.y_set = y_array[index];
+//		controller.reached = false;
+//    }
+//	controller.Handler();
+
+
+#endif
 
 }
 

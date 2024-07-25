@@ -31,8 +31,10 @@ void Controller::Handler(){
         w_out = 0;
         chassis->v_set = v_out;
         chassis->w_set = w_out;
+        reached = true;
         return;
     }
+    reached = false;
     ang_err = atan2(y_err, x_err) / M_PI * 180 - ang;
     if(ang_err < -180) ang_err += 360;
     else if(ang_err > 180) ang_err -= 360;

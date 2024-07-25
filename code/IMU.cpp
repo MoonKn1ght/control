@@ -45,6 +45,8 @@ void IMU::init() {
            wz_mean += wz;
            HAL_Delay(1);
         }
+        //倾斜校正
+
         ax_offset = ax_mean / IMU_CALIBRATE_N;
         ay_offset = ay_mean / IMU_CALIBRATE_N;
         az_offset = az_mean / IMU_CALIBRATE_N;

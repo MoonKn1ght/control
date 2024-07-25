@@ -94,15 +94,20 @@ void Chassis::Handler() {
 
             INRANGE(output1, 10000);
             INRANGE(output2, 10000);
-            this->motorL->intensity = this->motorL->intensity * 0.9 + (int)(output1 * 0.1);
-            this->motorR->intensity = this->motorR->intensity * 0.9 + (int)(output2 * 0.1);
+            this->motorL->intensity = this->motorL->intensity * 0.95 + (int)(output1 * 0.05);
+            this->motorR->intensity = this->motorR->intensity * 0.95 + (int)(output2 * 0.05);
 
             this->motorL->state = MOTOR_RUN;
             this->motorR->state = MOTOR_RUN;
 
             ang1 += (motorR->v - motorL->v) / wheel_seperation / M_PI * 180 / MAIN_LOOP_FREQ;
             ang2 += imu->wz / MAIN_LOOP_FREQ;
-            ang = ang2 * 360 / 354;
+            ang3 = ang1 * scale1;
+            ang4 = ang2 * scale2;
+            //ang = (ang1 + ang4) / 2;
+            //ang = ang1 / 3525 * 3600;
+            ang = ang2 / 3540 * 3600;
+           // ang = ang4;
             MOD(ang, 360);
 
 //            TODO 速度用加速度计修正

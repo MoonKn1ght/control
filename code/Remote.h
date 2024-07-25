@@ -34,6 +34,9 @@ public:
     float horizontal = 0; //-1 - 1
     float vertical = 0; //-1 - 1
 
+    float x = 0;
+    float y = 0;
+
     Remote(UART_HandleTypeDef *huart);
 
     void Handler();

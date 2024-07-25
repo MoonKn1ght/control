@@ -38,6 +38,24 @@ void Remote::process_data() {
 			this->vertical = -vertical * 0.1 + this->vertical * 0.9;
 			this->horizontal = -horizontal * 0.1 + this->horizontal * 0.9;
 		}
+	}else if(len == 2 + 2 * 4 + 2 + 2){ //发送位置
+        uint16_t mode = data[0];
+		remote_cnt++;
+        if(mode == 3){
+            crc = data[5];
+            crc1 = 0;
+            for(int i = 0; i < 2 + 2 * 4; i++) crc1 += *((uint8_t*)data + i);
+            crc_err = crc1 - crc;
+            if(crc1 == crc){
+                float x0 = *(float*)(data + 1);
+                float y0 = *(float*)(data + 3);
+                if(-2 < x0 && x0 < 2 && -2 < y0 && y0 < 2){
+                    this->mode = mode;
+                    this->x = x0 * 0.1 + x * 0.9;
+                    this->y = y0 * 0.1 + y * 0.9;
+                }
+            }
+        }
 	}
 }
 
