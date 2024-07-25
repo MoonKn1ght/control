@@ -1,8 +1,3 @@
-../code/CCD.cpp:34:6:void CCD::SI_send()	3
-../code/CCD.cpp:49:6:void CCD::Handler()	2
-../code/CCD.cpp:58:6:void CCD::init()	1
-../code/CCD.cpp:64:6:void CCD::GetThreshold()	5
-../code/CCD.cpp:88:6:void CCD::Normalization()	2
-../code/CCD.cpp:97:6:void CCD::Binarization()	3
-../code/CCD.cpp:113:6:void CCD::Filter()	8
-../code/CCD.cpp:129:6:void CCD::GetDirection()	11
+../code/CCD.cpp:18:6:void CCD::SI_send()	3
+../code/CCD.cpp:33:6:void CCD::Handler()	2
+../code/CCD.cpp:42:6:void CCD::init()	1

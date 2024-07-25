@@ -1,4 +1,5 @@
-code/task.o: ../code/task.cpp ../code/task.h ../code/hal.h \
+code/Tracking.o: ../code/Tracking.cpp ../code/Tracking.h \
+ ../code/Chassis.h ../code/module.h ../code/Encoder.h ../code/hal.h \
  ../Core/Inc/main.h ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -37,12 +38,13 @@ code/task.o: ../code/task.cpp ../code/task.h ../code/hal.h \
  ../Core/Inc/adc.h ../Core/Inc/main.h ../Core/Inc/can.h ../Core/Inc/i2c.h \
  ../Core/Inc/spi.h ../Core/Inc/tim.h ../Core/Inc/usart.h \
  ../Core/Inc/gpio.h ../code/config.h \
- ../Drivers/CMSIS/DSP/Include/arm_math.h ../code/module.h \
- ../code/Encoder.h ../code/Motor.h ../code/N20_Motor.h ../code/CCD.h \
- ../code/Remote.h ../code/IMU.h ../code/device.h ../code/Chassis.h \
- ../code/algorithm.h ../code/PID.h ../code/Controller.h \
- ../code/Tracking.h
-../code/task.h:
+ ../Drivers/CMSIS/DSP/Include/arm_math.h ../code/Motor.h \
+ ../code/N20_Motor.h ../code/CCD.h ../code/Remote.h ../code/IMU.h \
+ ../code/algorithm.h ../code/PID.h
+../code/Tracking.h:
+../code/Chassis.h:
+../code/module.h:
+../code/Encoder.h:
 ../code/hal.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -90,16 +92,10 @@ code/task.o: ../code/task.cpp ../code/task.h ../code/hal.h \
 ../Core/Inc/gpio.h:
 ../code/config.h:
 ../Drivers/CMSIS/DSP/Include/arm_math.h:
-../code/module.h:
-../code/Encoder.h:
 ../code/Motor.h:
 ../code/N20_Motor.h:
 ../code/CCD.h:
 ../code/Remote.h:
 ../code/IMU.h:
-../code/device.h:
-../code/Chassis.h:
 ../code/algorithm.h:
 ../code/PID.h:
-../code/Controller.h:
-../code/Tracking.h:

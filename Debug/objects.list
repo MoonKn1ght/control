@@ -44,6 +44,7 @@
 "./code/N20_Motor.o"
 "./code/PID.o"
 "./code/Remote.o"
+"./code/Tracking.o"
 "./code/hal.o"
 "./code/imu660.o"
 "./code/task.o"

@@ -16,13 +16,13 @@
 #include "hal.h"
 #include "module.h"
 #include "device.h"
+#include <math.h>
 
 
 #define UART1_BUF_LEN 100
 uint8_t uart1_rx_buf[UART1_BUF_LEN];
 uint16_t uart1_rx_len = 0;
 int uart1_state = 0;
-
 
 /**************************   device    ***************************/
 Encoder left_encoder(&htim5);
@@ -44,12 +44,7 @@ Remote remote(&huart1);
 IMU imu;
 Chassis chassis(&left_motor, &right_motor, &imu, 112.5 / 1000);
 Controller controller(&chassis);
-PID ccd_controller(0.004,0,0,0.4,0.005,0.1,0.1);
-float DIR = 0;
-float V = 0.1;
-chassis_state STATE = CHASSIS_RUN;
-float v1 = 0;
-float w1 = 0.05;
+PID ccd_controller(0.004,0,0,0.1,0.005,0.1,0.1);
 
 float vpwr = 12, vpwr_th = 9;
 int pwr_cnt = 0;
@@ -71,9 +66,6 @@ void setup(){
     ccd.init();
     imu.init();
 	HAL_UART_Receive_IT(&huart1,(uint8_t *)(uart1_rx_buf), 1);//接收一个字节
-	ccd_controller.feedback = &DIR;
-
-	ccd_controller.target = 0;
 }
 
 uint8_t start_flag[] = {0xfe, 0xfe};
@@ -88,16 +80,8 @@ void loop(){
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.x, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.y, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang, 4, 0xffff);
-		HAL_UART_Transmit(&huart1, (uint8_t *)&ccd.dir, 4, 0xffff);
-		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.w_set, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
-		ccd.Normalization();
-		ccd.GetThreshold();
-		ccd.Binarization();
-		ccd.last_dir = ccd.dir;
-		ccd.GetDirection();	//获取黑线位置
-//		error_dir = 64 - ccd.dir;
-//		turn_w = error_dir / 64 * ccd_controller.kp;
+
 	}
 	//HAL_Delay(50);
 
@@ -137,97 +121,30 @@ void task_handler(){
 	
 	if(HAL_GetTick() % 500 == 0) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
-	float k = 0.1;
-
-
-	chassis.v_set = v1 ;
-	chassis.w_set = w1;
-	chassis.state = STATE;
-
-	if(ccd.dir != 500)
-	{
-		if(ccd.Right - ccd.Left < 35)
-		{
-			DIR = (1 - k) * DIR + k * ((float)ccd.dir - 64);
-			chassis.v_set = V ;
-			chassis.w_set = ccd_controller.calc()*0.5;
-			chassis.state = STATE;
-		}
-		else
-		{
-			chassis.state = CHASSIS_STOP;
-			chassis.v_set = v1 ;
-			chassis.w_set = w1;
-			chassis.state = CHASSIS_RUN;
-//			while(ccd.Right - ccd.Left > 25)
-//			{
-//				chassis.v_set = v1 ;
-//				chassis.w_set = w1;
-//				chassis.state = CHASSIS_RUN;
-//			}
-		}
-
-	}
-//	else chassis.state = CHASSIS_STOP;
-	else
-	{
-		chassis.v_set = v1 ;
-		chassis.w_set = w1;
-		chassis.state = CHASSIS_RUN;
-	}
-//	else	//丢线时
-//	{
-//		if(ccd.last_dir < 30)
-//		{
-//			chassis.v_set = 0.02 ;
-//			chassis.w_set = 0.02;
-//			chassis.state = CHASSIS_RUN;
-//		}
-//		else if(ccd.last_dir >90)
-//		{
-//			chassis.v_set = 0.02 ;
-//			chassis.w_set = -0.02;
-//			chassis.state = CHASSIS_RUN;
-//		}
-//	}
-
-
 
 //	遥控器
-//    switch (remote.mode) {
-//        case 0: { //停止
-//            chassis.state = CHASSIS_STOP;
-//        }break;
-//        case 1: { //遥控
-//			float thresh = 0;
-//			if(remote.vertical < thresh && remote.vertical > -thresh){
-//				chassis.v_set = 0;
-//			}else chassis.v_set = remote.vertical * 0.1;
-//            if(remote.vertical < thresh && remote.vertical > -thresh){
-//				chassis.w_set = 0;
-//			}else chassis.w_set = remote.horizontal * (-0.1);
-//			chassis.state = CHASSIS_RUN;
-//        }break;
-//        case 2: { //循迹
-////            chassis.v_set = 0.05;
-////			chassis.w_set = 0.05;
-////            chassis.state = CHASSIS_RUN;
-////			chassis.state = CHASSIS_RUN;
-////        	chassis.v_set = 0.02 ;
-////			ccd_controller.feedback = (float*)ccd.dir;
-////			chassis.w_set = ccd_controller.calc()*0.5;
-//
-////        	if(ccd.dir != 500)
-////        	{
-////        		chassis.v_set = 0.02 ;
-////        		ccd_controller.feedback = (float*)ccd.dir;
-////				chassis.w_set = ccd_controller.calc()*0.5;
-////				chassis.state = CHASSIS_RUN;
-////        	}
-////        	else chassis.state = CHASSIS_STOP;
-//
-//        }break;
-//    }
+    switch (remote.mode) {
+        case 0: { //停止
+            chassis.state = CHASSIS_STOP;
+        }break;
+        case 1: { //遥控
+			float thresh = 0;
+			if(remote.vertical < thresh && remote.vertical > -thresh){
+				chassis.v_set = 0;
+			}else chassis.v_set = remote.vertical * 0.1;
+            if(remote.vertical < thresh && remote.vertical > -thresh){
+				chassis.w_set = 0;
+			}else chassis.w_set = remote.horizontal * (-0.1);
+			chassis.state = CHASSIS_RUN;
+        }break;
+        case 2: { //循迹
+            chassis.v_set = 0.05;
+			chassis.w_set = 0.05;
+            chassis.state = CHASSIS_RUN;
+
+
+        }break;
+    }
 
     //位置控制器
 	//controller.Handler();
