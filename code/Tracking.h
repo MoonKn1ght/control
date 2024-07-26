@@ -11,6 +11,7 @@
 #include "Chassis.h"
 #include "CCD.h"
 #include "PID.h"
+#include "Controller.h"
 
 class Tracking
 {
@@ -18,20 +19,22 @@ public:
 	PID* tracking_PID;
 	CCD* ccd;
 	Chassis* chassis;
-	uint16_t data_norm[128];
+	Controller* controller;
+	float data_norm[128];
 	uint8_t bin_ccd[128];
 	float dir_filtered;
 	float k_filter;
     uint16_t dir;	//黑线位置
     uint16_t last_dir;
-    uint16_t threshold;
+    float threshold;
 
     float v;
 
-    float x_path,y_path;	//轨道坐标
+    float x_line,y_line;	//轨道坐标
+    float last_x_line,last_y_line;
 
 
-	Tracking(Chassis* chassis, CCD* ccd,PID* tracking_PID);
+	Tracking(Chassis* chassis, CCD* ccd,PID* tracking_PID,Controller* controller);
 	void Handler();
 	void init();
 

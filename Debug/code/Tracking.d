@@ -40,7 +40,7 @@ code/Tracking.o: ../code/Tracking.cpp ../code/Tracking.h \
  ../Core/Inc/gpio.h ../code/config.h \
  ../Drivers/CMSIS/DSP/Include/arm_math.h ../code/Motor.h \
  ../code/N20_Motor.h ../code/CCD.h ../code/Remote.h ../code/IMU.h \
- ../code/algorithm.h ../code/PID.h
+ ../code/algorithm.h ../code/PID.h ../code/Controller.h
 ../code/Tracking.h:
 ../code/Chassis.h:
 ../code/module.h:
@@ -99,3 +99,4 @@ code/Tracking.o: ../code/Tracking.cpp ../code/Tracking.h \
 ../code/IMU.h:
 ../code/algorithm.h:
 ../code/PID.h:
+../code/Controller.h:

@@ -47,7 +47,7 @@ IMU imu;
 Chassis chassis(&left_motor, &right_motor, &imu, 112.5 / 1000);
 Controller controller(&chassis);
 PID tracking_PID(0.004,0,0,0.1,0.005,0.1,0.1);
-Tracking tracking(&chassis,&ccd,&tracking_PID);
+Tracking tracking(&chassis,&ccd,&tracking_PID,&controller);
 
 float vpwr = 12, vpwr_th = 9;
 int pwr_cnt = 0;
@@ -69,6 +69,8 @@ void setup(){
     ccd.init();
     imu.init();
 	HAL_UART_Receive_IT(&huart1,(uint8_t *)(uart1_rx_buf), 1);//接收一个字节
+	tracking.init();
+
 }
 
 uint8_t start_flag[] = {0xfe, 0xfe};
@@ -85,7 +87,6 @@ void loop(){
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang1, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang2, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
-
 	}
 	//HAL_Delay(50);
 
@@ -119,12 +120,16 @@ void task_handler(){
 	left_motor.Handler();
 	right_motor.Handler();
 	ccd.Handler();
-	//remote.Handler();
+//	remote.Handler();
 	imu.Handler();
 	chassis.Handler();
 	tracking.Handler();
+//	remote.mode = 3;
+//	controller.x_set = remote.x;
+//	controller.y_set = remote.y;
+//	chassis.state = CHASSIS_RUN;
 	controller.Handler();
-	
+
 	if(HAL_GetTick() % 500 == 0) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
 #ifdef USE_REMOTE //遥控器
