@@ -19,25 +19,6 @@ int16_t imu660ra_gyro_x = 0, imu660ra_gyro_y = 0, imu660ra_gyro_z = 0;          
 int16_t imu660ra_acc_x = 0, imu660ra_acc_y = 0, imu660ra_acc_z = 0;               // 三轴加速度计数据 acc  (accelerometer 加速度计)
 float imu660ra_transition_factor[2] = {4096, 16.4};
 
-void spi_write_8bit_register(SPI_HandleTypeDef *hspi, uint8_t reg, uint8_t data){
-    uint8_t temp = reg;
-    HAL_SPI_Transmit(hspi, &temp, 1, 0xffff);
-    temp = data;
-    HAL_SPI_Transmit(hspi, &temp, 1, 0xffff);
-}
-
-void spi_write_8bit_registers(SPI_HandleTypeDef *hspi, uint8_t reg, uint8_t* data, uint16_t len){
-    uint8_t temp = reg;
-    HAL_SPI_Transmit(hspi, &temp, 1, 0xffff);
-    HAL_SPI_Transmit(hspi, data, len, 0xffff);
-}
-
-void spi_read_8bit_registers(SPI_HandleTypeDef *hspi, uint8_t reg, uint8_t* data, uint16_t len){
-    uint8_t temp = reg;
-    HAL_SPI_Transmit(hspi, &temp, 1, 0xffff);
-    HAL_SPI_Receive(hspi, data, len, 0xffff);
-}
-#define system_delay_ms HAL_Delay
 //-------------------------------------------------------------------------------------------------------------------
 // 函数简介     IMU660RA 写寄存器
 // 参数说明     reg             寄存器地址

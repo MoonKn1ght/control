@@ -692,9 +692,22 @@ CMakeFiles/control.elf.dir/code/imu660.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/control.elf.dir/code/imu660.c.s"
 	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\asus\Desktop\contest2024\control\code\imu660.c -o CMakeFiles\control.elf.dir\code\imu660.c.s
 
+CMakeFiles/control.elf.dir/code/imu963ra.c.obj: CMakeFiles/control.elf.dir/flags.make
+CMakeFiles/control.elf.dir/code/imu963ra.c.obj: ../code/imu963ra.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/control.elf.dir/code/imu963ra.c.obj"
+	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\control.elf.dir\code\imu963ra.c.obj   -c C:\Users\asus\Desktop\contest2024\control\code\imu963ra.c
+
+CMakeFiles/control.elf.dir/code/imu963ra.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/control.elf.dir/code/imu963ra.c.i"
+	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\asus\Desktop\contest2024\control\code\imu963ra.c > CMakeFiles\control.elf.dir\code\imu963ra.c.i
+
+CMakeFiles/control.elf.dir/code/imu963ra.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/control.elf.dir/code/imu963ra.c.s"
+	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\asus\Desktop\contest2024\control\code\imu963ra.c -o CMakeFiles\control.elf.dir\code\imu963ra.c.s
+
 CMakeFiles/control.elf.dir/code/task.cpp.obj: CMakeFiles/control.elf.dir/flags.make
 CMakeFiles/control.elf.dir/code/task.cpp.obj: ../code/task.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/control.elf.dir/code/task.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/control.elf.dir/code/task.cpp.obj"
 	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\control.elf.dir\code\task.cpp.obj -c C:\Users\asus\Desktop\contest2024\control\code\task.cpp
 
 CMakeFiles/control.elf.dir/code/task.cpp.i: cmake_force
@@ -755,6 +768,7 @@ control_elf_OBJECTS = \
 "CMakeFiles/control.elf.dir/code/Remote.cpp.obj" \
 "CMakeFiles/control.elf.dir/code/hal.c.obj" \
 "CMakeFiles/control.elf.dir/code/imu660.c.obj" \
+"CMakeFiles/control.elf.dir/code/imu963ra.c.obj" \
 "CMakeFiles/control.elf.dir/code/task.cpp.obj"
 
 # External object files for target control.elf
@@ -808,10 +822,11 @@ control.elf: CMakeFiles/control.elf.dir/code/PID.cpp.obj
 control.elf: CMakeFiles/control.elf.dir/code/Remote.cpp.obj
 control.elf: CMakeFiles/control.elf.dir/code/hal.c.obj
 control.elf: CMakeFiles/control.elf.dir/code/imu660.c.obj
+control.elf: CMakeFiles/control.elf.dir/code/imu963ra.c.obj
 control.elf: CMakeFiles/control.elf.dir/code/task.cpp.obj
 control.elf: CMakeFiles/control.elf.dir/build.make
 control.elf: CMakeFiles/control.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Linking CXX executable control.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking CXX executable control.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\control.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/control.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/control.bin"

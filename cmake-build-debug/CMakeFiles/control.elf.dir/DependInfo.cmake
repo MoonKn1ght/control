@@ -66,6 +66,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/asus/Desktop/contest2024/control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/hal.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/hal.c.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/imu660.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/imu660.c.obj"
+  "C:/Users/asus/Desktop/contest2024/control/code/imu963ra.c" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/imu963ra.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

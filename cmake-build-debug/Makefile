@@ -1420,6 +1420,33 @@ code/imu660.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/imu660.c.s
 .PHONY : code/imu660.c.s
 
+code/imu963ra.obj: code/imu963ra.c.obj
+
+.PHONY : code/imu963ra.obj
+
+# target to build an object file
+code/imu963ra.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/imu963ra.c.obj
+.PHONY : code/imu963ra.c.obj
+
+code/imu963ra.i: code/imu963ra.c.i
+
+.PHONY : code/imu963ra.i
+
+# target to preprocess a source file
+code/imu963ra.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/imu963ra.c.i
+.PHONY : code/imu963ra.c.i
+
+code/imu963ra.s: code/imu963ra.c.s
+
+.PHONY : code/imu963ra.s
+
+# target to generate assembly for a file
+code/imu963ra.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/imu963ra.c.s
+.PHONY : code/imu963ra.c.s
+
 code/task.obj: code/task.cpp.obj
 
 .PHONY : code/task.obj
@@ -1598,6 +1625,9 @@ help:
 	@echo ... code/imu660.obj
 	@echo ... code/imu660.i
 	@echo ... code/imu660.s
+	@echo ... code/imu963ra.obj
+	@echo ... code/imu963ra.i
+	@echo ... code/imu963ra.s
 	@echo ... code/task.obj
 	@echo ... code/task.i
 	@echo ... code/task.s

@@ -1,4 +1,4 @@
-control/imu.o: ..\code\IMU.cpp ..\code\IMU.h ..\code\hal.h \
+control/imu963ra.o: ..\code\imu963ra.c ..\code\imu963ra.h ..\code\hal.h \
   ..\Core\Inc\main.h ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -6,8 +6,6 @@ control/imu.o: ..\code\IMU.cpp ..\code\IMU.h ..\code\hal.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\CMSIS\Include\cmsis_version.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
@@ -17,9 +15,7 @@ control/imu.o: ..\code\IMU.cpp ..\code\IMU.h ..\code\hal.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__nullptr \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h \
@@ -47,15 +43,6 @@ control/imu.o: ..\code\IMU.cpp ..\code\IMU.h ..\code\hal.h \
   ..\Core\Inc\usart.h ..\Core\Inc\gpio.h ..\code\config.h \
   C:\Users\asus\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Include\arm_math.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\type_traits \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\version \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdio.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h ..\code\imu660.h \
-  ..\code\imu963ra.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h

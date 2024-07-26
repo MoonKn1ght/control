@@ -487,6 +487,12 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/imu660_config.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/imu963ra.c">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/imu963ra.h">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/module.h">
 			<Option target="control.elf"/>
 		</Unit>
