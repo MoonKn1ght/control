@@ -1,0 +1,12 @@
+../code/imu963ra.c:21:13:imu963ra_write_acc_gyro_register	1
+../code/imu963ra.c:36:16:imu963ra_read_acc_gyro_register	1
+../code/imu963ra.c:55:13:imu963ra_read_acc_gyro_registers	1
+../code/imu963ra.c:73:16:imu963ra_write_mag_register	3
+../code/imu963ra.c:106:16:imu963ra_read_mag_register	3
+../code/imu963ra.c:137:13:imu963ra_connect_mag	1
+../code/imu963ra.c:155:16:imu963ra_acc_gyro_self_check	3
+../code/imu963ra.c:181:16:imu963ra_mag_self_check	3
+../code/imu963ra.c:207:6:imu963ra_get_acc	1
+../code/imu963ra.c:225:6:imu963ra_get_gyro	1
+../code/imu963ra.c:243:6:imu963ra_get_mag	2
+../code/imu963ra.c:267:9:imu963ra_init	6

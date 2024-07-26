@@ -18,11 +18,13 @@ CPP_SRCS += \
 
 C_SRCS += \
 ../code/hal.c \
-../code/imu660.c 
+../code/imu660.c \
+../code/imu963ra.c 
 
 C_DEPS += \
 ./code/hal.d \
-./code/imu660.d 
+./code/imu660.d \
+./code/imu963ra.d 
 
 OBJS += \
 ./code/CCD.o \
@@ -36,6 +38,7 @@ OBJS += \
 ./code/Tracking.o \
 ./code/hal.o \
 ./code/imu660.o \
+./code/imu963ra.o \
 ./code/task.o 
 
 CPP_DEPS += \
@@ -60,7 +63,7 @@ code/%.o code/%.su code/%.cyclo: ../code/%.c code/subdir.mk
 clean: clean-code
 
 clean-code:
-	-$(RM) ./code/CCD.cyclo ./code/CCD.d ./code/CCD.o ./code/CCD.su ./code/Chassis.cyclo ./code/Chassis.d ./code/Chassis.o ./code/Chassis.su ./code/Controller.cyclo ./code/Controller.d ./code/Controller.o ./code/Controller.su ./code/Encoder.cyclo ./code/Encoder.d ./code/Encoder.o ./code/Encoder.su ./code/IMU.cyclo ./code/IMU.d ./code/IMU.o ./code/IMU.su ./code/N20_Motor.cyclo ./code/N20_Motor.d ./code/N20_Motor.o ./code/N20_Motor.su ./code/PID.cyclo ./code/PID.d ./code/PID.o ./code/PID.su ./code/Remote.cyclo ./code/Remote.d ./code/Remote.o ./code/Remote.su ./code/Tracking.cyclo ./code/Tracking.d ./code/Tracking.o ./code/Tracking.su ./code/hal.cyclo ./code/hal.d ./code/hal.o ./code/hal.su ./code/imu660.cyclo ./code/imu660.d ./code/imu660.o ./code/imu660.su ./code/task.cyclo ./code/task.d ./code/task.o ./code/task.su
+	-$(RM) ./code/CCD.cyclo ./code/CCD.d ./code/CCD.o ./code/CCD.su ./code/Chassis.cyclo ./code/Chassis.d ./code/Chassis.o ./code/Chassis.su ./code/Controller.cyclo ./code/Controller.d ./code/Controller.o ./code/Controller.su ./code/Encoder.cyclo ./code/Encoder.d ./code/Encoder.o ./code/Encoder.su ./code/IMU.cyclo ./code/IMU.d ./code/IMU.o ./code/IMU.su ./code/N20_Motor.cyclo ./code/N20_Motor.d ./code/N20_Motor.o ./code/N20_Motor.su ./code/PID.cyclo ./code/PID.d ./code/PID.o ./code/PID.su ./code/Remote.cyclo ./code/Remote.d ./code/Remote.o ./code/Remote.su ./code/Tracking.cyclo ./code/Tracking.d ./code/Tracking.o ./code/Tracking.su ./code/hal.cyclo ./code/hal.d ./code/hal.o ./code/hal.su ./code/imu660.cyclo ./code/imu660.d ./code/imu660.o ./code/imu660.su ./code/imu963ra.cyclo ./code/imu963ra.d ./code/imu963ra.o ./code/imu963ra.su ./code/task.cyclo ./code/task.d ./code/task.o ./code/task.su
 
 .PHONY: clean-code
 

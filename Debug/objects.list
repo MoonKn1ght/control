@@ -47,4 +47,5 @@
 "./code/Tracking.o"
 "./code/hal.o"
 "./code/imu660.o"
+"./code/imu963ra.o"
 "./code/task.o"
