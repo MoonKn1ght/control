@@ -43,6 +43,7 @@
 "control\remote.o"
 "control\imu.o"
 "control\imu660.o"
+"control\imu963ra.o"
 "control\chassis.o"
 "control\controller.o"
 "control\pid.o"

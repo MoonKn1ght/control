@@ -1408,6 +1408,16 @@ Section Cross References
     hal.o(.text.fputc) refers to usart.o(.bss.huart1) for huart1
     hal.o(.text.fputc) refers to stm32f4xx_hal_uart.o(.text.HAL_UART_Transmit) for HAL_UART_Transmit
     hal.o(.ARM.exidx.text.fputc) refers to hal.o(.text.fputc) for [Anonymous Symbol]
+    hal.o(.text.spi_write_8bit_register) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    hal.o(.ARM.exidx.text.spi_write_8bit_register) refers to hal.o(.text.spi_write_8bit_register) for [Anonymous Symbol]
+    hal.o(.text.spi_write_8bit_registers) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    hal.o(.ARM.exidx.text.spi_write_8bit_registers) refers to hal.o(.text.spi_write_8bit_registers) for [Anonymous Symbol]
+    hal.o(.text.spi_read_8bit_register) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    hal.o(.text.spi_read_8bit_register) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Receive) for HAL_SPI_Receive
+    hal.o(.ARM.exidx.text.spi_read_8bit_register) refers to hal.o(.text.spi_read_8bit_register) for [Anonymous Symbol]
+    hal.o(.text.spi_read_8bit_registers) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    hal.o(.text.spi_read_8bit_registers) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Receive) for HAL_SPI_Receive
+    hal.o(.ARM.exidx.text.spi_read_8bit_registers) refers to hal.o(.text.spi_read_8bit_registers) for [Anonymous Symbol]
     encoder.o(.ARM.exidx.text._ZN7Encoder7HandlerEv) refers to encoder.o(.text._ZN7Encoder7HandlerEv) for [Anonymous Symbol]
     encoder.o(.ARM.exidx.text._ZN7EncoderC2EP17TIM_HandleTypeDef) refers to encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef) for [Anonymous Symbol]
     encoder.o(.text._ZN7Encoder4initEv) refers to stm32f4xx_hal_tim.o(.text.HAL_TIM_Encoder_Start) for HAL_TIM_Encoder_Start
@@ -1456,42 +1466,36 @@ Section Cross References
     remote.o(.text._ZN6Remote7HandlerEv) refers to stm32f4xx_hal_gpio.o(.text.HAL_GPIO_ReadPin) for HAL_GPIO_ReadPin
     remote.o(.text._ZN6Remote7HandlerEv) refers to remote.o(.text._ZN6Remote12process_dataEv) for Remote::process_data()
     remote.o(.ARM.exidx.text._ZN6Remote7HandlerEv) refers to remote.o(.text._ZN6Remote7HandlerEv) for [Anonymous Symbol]
-    imu.o(.text._ZN3IMU8get_dataEv) refers to imu660.o(.text.imu660ra_get_acc) for imu660ra_get_acc
-    imu.o(.text._ZN3IMU8get_dataEv) refers to imu660.o(.text.imu660ra_get_gyro) for imu660ra_get_gyro
-    imu.o(.text._ZN3IMU8get_dataEv) refers to imu660.o(.bss.imu660ra_acc_x) for imu660ra_acc_x
-    imu.o(.text._ZN3IMU8get_dataEv) refers to imu660.o(.data.imu660ra_transition_factor) for imu660ra_transition_factor
-    imu.o(.text._ZN3IMU8get_dataEv) refers to imu660.o(.bss.imu660ra_acc_y) for imu660ra_acc_y
-    imu.o(.text._ZN3IMU8get_dataEv) refers to imu660.o(.bss.imu660ra_acc_z) for imu660ra_acc_z
-    imu.o(.text._ZN3IMU8get_dataEv) refers to imu660.o(.bss.imu660ra_gyro_x) for imu660ra_gyro_x
-    imu.o(.text._ZN3IMU8get_dataEv) refers to imu660.o(.bss.imu660ra_gyro_y) for imu660ra_gyro_y
-    imu.o(.text._ZN3IMU8get_dataEv) refers to imu660.o(.bss.imu660ra_gyro_z) for imu660ra_gyro_z
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.text.imu963ra_get_acc) for imu963ra_get_acc
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.text.imu963ra_get_gyro) for imu963ra_get_gyro
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.text.imu963ra_get_mag) for imu963ra_get_mag
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.bss.imu963ra_acc_x) for imu963ra_acc_x
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.data.imu963ra_transition_factor) for imu963ra_transition_factor
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.bss.imu963ra_acc_y) for imu963ra_acc_y
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.bss.imu963ra_acc_z) for imu963ra_acc_z
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.bss.imu963ra_gyro_x) for imu963ra_gyro_x
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.bss.imu963ra_gyro_y) for imu963ra_gyro_y
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.bss.imu963ra_gyro_z) for imu963ra_gyro_z
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.bss.imu963ra_mag_x) for imu963ra_mag_x
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.bss.imu963ra_mag_y) for imu963ra_mag_y
+    imu.o(.text._ZN3IMU8get_dataEv) refers to imu963ra.o(.bss.imu963ra_mag_z) for imu963ra_mag_z
     imu.o(.ARM.exidx.text._ZN3IMU8get_dataEv) refers to imu.o(.text._ZN3IMU8get_dataEv) for [Anonymous Symbol]
-    imu.o(.text._ZN3IMU4initEv) refers to imu660.o(.text.imu660ra_init) for imu660ra_init
+    imu.o(.text._ZN3IMU4initEv) refers to imu963ra.o(.text.imu963ra_init) for imu963ra_init
     imu.o(.text._ZN3IMU4initEv) refers to stm32f4xx_hal.o(.text.HAL_Delay) for HAL_Delay
     imu.o(.text._ZN3IMU4initEv) refers to imu.o(.text._ZN3IMU8get_dataEv) for IMU::get_data()
     imu.o(.ARM.exidx.text._ZN3IMU4initEv) refers to imu.o(.text._ZN3IMU4initEv) for [Anonymous Symbol]
     imu.o(.text._ZN3IMU7HandlerEv) refers to imu.o(.text._ZN3IMU8get_dataEv) for IMU::get_data()
-    imu.o(.text._ZN3IMU7HandlerEv) refers to arm_sin_cos_f32.o(.text.arm_sin_cos_f32) for arm_sin_cos_f32
     imu.o(.ARM.exidx.text._ZN3IMU7HandlerEv) refers to imu.o(.text._ZN3IMU7HandlerEv) for [Anonymous Symbol]
-    imu660.o(.text.spi_write_8bit_register) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    imu660.o(.ARM.exidx.text.spi_write_8bit_register) refers to imu660.o(.text.spi_write_8bit_register) for [Anonymous Symbol]
-    imu660.o(.text.spi_write_8bit_registers) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    imu660.o(.ARM.exidx.text.spi_write_8bit_registers) refers to imu660.o(.text.spi_write_8bit_registers) for [Anonymous Symbol]
-    imu660.o(.text.spi_read_8bit_registers) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    imu660.o(.text.spi_read_8bit_registers) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Receive) for HAL_SPI_Receive
-    imu660.o(.ARM.exidx.text.spi_read_8bit_registers) refers to imu660.o(.text.spi_read_8bit_registers) for [Anonymous Symbol]
     imu660.o(.text.imu660ra_get_acc) refers to stm32f4xx_hal_gpio.o(.text.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
     imu660.o(.text.imu660ra_get_acc) refers to spi.o(.bss.hspi2) for hspi2
-    imu660.o(.text.imu660ra_get_acc) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    imu660.o(.text.imu660ra_get_acc) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Receive) for HAL_SPI_Receive
+    imu660.o(.text.imu660ra_get_acc) refers to hal.o(.text.spi_read_8bit_registers) for spi_read_8bit_registers
     imu660.o(.text.imu660ra_get_acc) refers to imu660.o(.bss.imu660ra_acc_y) for imu660ra_acc_y
     imu660.o(.text.imu660ra_get_acc) refers to imu660.o(.bss.imu660ra_acc_x) for imu660ra_acc_x
     imu660.o(.text.imu660ra_get_acc) refers to imu660.o(.bss.imu660ra_acc_z) for imu660ra_acc_z
     imu660.o(.ARM.exidx.text.imu660ra_get_acc) refers to imu660.o(.text.imu660ra_get_acc) for [Anonymous Symbol]
     imu660.o(.text.imu660ra_get_gyro) refers to stm32f4xx_hal_gpio.o(.text.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
     imu660.o(.text.imu660ra_get_gyro) refers to spi.o(.bss.hspi2) for hspi2
-    imu660.o(.text.imu660ra_get_gyro) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    imu660.o(.text.imu660ra_get_gyro) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Receive) for HAL_SPI_Receive
+    imu660.o(.text.imu660ra_get_gyro) refers to hal.o(.text.spi_read_8bit_registers) for spi_read_8bit_registers
     imu660.o(.text.imu660ra_get_gyro) refers to imu660.o(.bss.imu660ra_gyro_y) for imu660ra_gyro_y
     imu660.o(.text.imu660ra_get_gyro) refers to imu660.o(.bss.imu660ra_gyro_x) for imu660ra_gyro_x
     imu660.o(.text.imu660ra_get_gyro) refers to imu660.o(.bss.imu660ra_gyro_z) for imu660ra_gyro_z
@@ -1499,12 +1503,51 @@ Section Cross References
     imu660.o(.text.imu660ra_init) refers to stm32f4xx_hal.o(.text.HAL_Delay) for HAL_Delay
     imu660.o(.text.imu660ra_init) refers to stm32f4xx_hal_gpio.o(.text.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
     imu660.o(.text.imu660ra_init) refers to spi.o(.bss.hspi2) for hspi2
-    imu660.o(.text.imu660ra_init) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    imu660.o(.text.imu660ra_init) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_Receive) for HAL_SPI_Receive
+    imu660.o(.text.imu660ra_init) refers to hal.o(.text.spi_read_8bit_registers) for spi_read_8bit_registers
+    imu660.o(.text.imu660ra_init) refers to hal.o(.text.spi_write_8bit_register) for spi_write_8bit_register
     imu660.o(.text.imu660ra_init) refers to imu660.o(.rodata.imu660ra_config_file) for imu660ra_config_file
+    imu660.o(.text.imu660ra_init) refers to hal.o(.text.spi_write_8bit_registers) for spi_write_8bit_registers
     imu660.o(.text.imu660ra_init) refers to imu660.o(.data.imu660ra_transition_factor) for imu660ra_transition_factor
     imu660.o(.text.imu660ra_init) refers to imu660.o(.bss.imu660ra_state) for imu660ra_state
     imu660.o(.ARM.exidx.text.imu660ra_init) refers to imu660.o(.text.imu660ra_init) for [Anonymous Symbol]
+    imu963ra.o(.text.imu963ra_get_acc) refers to stm32f4xx_hal_gpio.o(.text.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    imu963ra.o(.text.imu963ra_get_acc) refers to spi.o(.bss.hspi2) for hspi2
+    imu963ra.o(.text.imu963ra_get_acc) refers to hal.o(.text.spi_read_8bit_registers) for spi_read_8bit_registers
+    imu963ra.o(.text.imu963ra_get_acc) refers to imu963ra.o(.bss.imu963ra_acc_x) for imu963ra_acc_x
+    imu963ra.o(.text.imu963ra_get_acc) refers to imu963ra.o(.bss.imu963ra_acc_y) for imu963ra_acc_y
+    imu963ra.o(.text.imu963ra_get_acc) refers to imu963ra.o(.bss.imu963ra_acc_z) for imu963ra_acc_z
+    imu963ra.o(.ARM.exidx.text.imu963ra_get_acc) refers to imu963ra.o(.text.imu963ra_get_acc) for [Anonymous Symbol]
+    imu963ra.o(.text.imu963ra_get_gyro) refers to stm32f4xx_hal_gpio.o(.text.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    imu963ra.o(.text.imu963ra_get_gyro) refers to spi.o(.bss.hspi2) for hspi2
+    imu963ra.o(.text.imu963ra_get_gyro) refers to hal.o(.text.spi_read_8bit_registers) for spi_read_8bit_registers
+    imu963ra.o(.text.imu963ra_get_gyro) refers to imu963ra.o(.bss.imu963ra_gyro_x) for imu963ra_gyro_x
+    imu963ra.o(.text.imu963ra_get_gyro) refers to imu963ra.o(.bss.imu963ra_gyro_y) for imu963ra_gyro_y
+    imu963ra.o(.text.imu963ra_get_gyro) refers to imu963ra.o(.bss.imu963ra_gyro_z) for imu963ra_gyro_z
+    imu963ra.o(.ARM.exidx.text.imu963ra_get_gyro) refers to imu963ra.o(.text.imu963ra_get_gyro) for [Anonymous Symbol]
+    imu963ra.o(.text.imu963ra_get_mag) refers to stm32f4xx_hal_gpio.o(.text.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    imu963ra.o(.text.imu963ra_get_mag) refers to spi.o(.bss.hspi2) for hspi2
+    imu963ra.o(.text.imu963ra_get_mag) refers to hal.o(.text.spi_write_8bit_register) for spi_write_8bit_register
+    imu963ra.o(.text.imu963ra_get_mag) refers to hal.o(.text.spi_read_8bit_register) for spi_read_8bit_register
+    imu963ra.o(.text.imu963ra_get_mag) refers to hal.o(.text.spi_read_8bit_registers) for spi_read_8bit_registers
+    imu963ra.o(.text.imu963ra_get_mag) refers to imu963ra.o(.bss.imu963ra_mag_x) for imu963ra_mag_x
+    imu963ra.o(.text.imu963ra_get_mag) refers to imu963ra.o(.bss.imu963ra_mag_y) for imu963ra_mag_y
+    imu963ra.o(.text.imu963ra_get_mag) refers to imu963ra.o(.bss.imu963ra_mag_z) for imu963ra_mag_z
+    imu963ra.o(.ARM.exidx.text.imu963ra_get_mag) refers to imu963ra.o(.text.imu963ra_get_mag) for [Anonymous Symbol]
+    imu963ra.o(.text.imu963ra_init) refers to stm32f4xx_hal.o(.text.HAL_Delay) for HAL_Delay
+    imu963ra.o(.text.imu963ra_init) refers to stm32f4xx_hal_gpio.o(.text.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    imu963ra.o(.text.imu963ra_init) refers to spi.o(.bss.hspi2) for hspi2
+    imu963ra.o(.text.imu963ra_init) refers to hal.o(.text.spi_write_8bit_register) for spi_write_8bit_register
+    imu963ra.o(.text.imu963ra_init) refers to hal.o(.text.spi_read_8bit_register) for spi_read_8bit_register
+    imu963ra.o(.text.imu963ra_init) refers to imu963ra.o(.data.imu963ra_transition_factor) for imu963ra_transition_factor
+    imu963ra.o(.text.imu963ra_init) refers to imu963ra.o(.text.imu963ra_write_mag_register) for imu963ra_write_mag_register
+    imu963ra.o(.text.imu963ra_init) refers to imu963ra.o(.bss.imu963ra_state) for imu963ra_state
+    imu963ra.o(.ARM.exidx.text.imu963ra_init) refers to imu963ra.o(.text.imu963ra_init) for [Anonymous Symbol]
+    imu963ra.o(.text.imu963ra_write_mag_register) refers to stm32f4xx_hal_gpio.o(.text.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    imu963ra.o(.text.imu963ra_write_mag_register) refers to spi.o(.bss.hspi2) for hspi2
+    imu963ra.o(.text.imu963ra_write_mag_register) refers to hal.o(.text.spi_write_8bit_register) for spi_write_8bit_register
+    imu963ra.o(.text.imu963ra_write_mag_register) refers to hal.o(.text.spi_read_8bit_register) for spi_read_8bit_register
+    imu963ra.o(.text.imu963ra_write_mag_register) refers to stm32f4xx_hal.o(.text.HAL_Delay) for HAL_Delay
+    imu963ra.o(.ARM.exidx.text.imu963ra_write_mag_register) refers to imu963ra.o(.text.imu963ra_write_mag_register) for [Anonymous Symbol]
     chassis.o(.ARM.exidx.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf) refers to chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf) for [Anonymous Symbol]
     chassis.o(.text._Z15Kalman_Filter_xfff) refers to chassis.o(.bss._ZZ15Kalman_Filter_xfffE6Q_bias) for Kalman_Filter_x(float, float, float)::Q_bias
     chassis.o(.text._Z15Kalman_Filter_xfff) refers to f2d.o(.text) for __aeabi_f2d
@@ -2728,6 +2771,11 @@ Removing Unused input sections from the image.
     Removing hal.o(.text), (0 bytes).
     Removing hal.o(.text.fputc), (30 bytes).
     Removing hal.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing hal.o(.ARM.exidx.text.spi_write_8bit_register), (8 bytes).
+    Removing hal.o(.text.spi_write_8bit_registers), (46 bytes).
+    Removing hal.o(.ARM.exidx.text.spi_write_8bit_registers), (8 bytes).
+    Removing hal.o(.ARM.exidx.text.spi_read_8bit_register), (8 bytes).
+    Removing hal.o(.ARM.exidx.text.spi_read_8bit_registers), (8 bytes).
     Removing encoder.o(.text), (0 bytes).
     Removing encoder.o(.ARM.exidx.text._ZN7Encoder7HandlerEv), (8 bytes).
     Removing encoder.o(.ARM.exidx.text._ZN7EncoderC2EP17TIM_HandleTypeDef), (8 bytes).
@@ -2764,15 +2812,27 @@ Removing Unused input sections from the image.
     Removing imu.o(.ARM.exidx.text._ZN3IMU4initEv), (8 bytes).
     Removing imu.o(.ARM.exidx.text._ZN3IMU7HandlerEv), (8 bytes).
     Removing imu660.o(.text), (0 bytes).
-    Removing imu660.o(.text.spi_write_8bit_register), (50 bytes).
-    Removing imu660.o(.ARM.exidx.text.spi_write_8bit_register), (8 bytes).
-    Removing imu660.o(.text.spi_write_8bit_registers), (46 bytes).
-    Removing imu660.o(.ARM.exidx.text.spi_write_8bit_registers), (8 bytes).
-    Removing imu660.o(.text.spi_read_8bit_registers), (46 bytes).
-    Removing imu660.o(.ARM.exidx.text.spi_read_8bit_registers), (8 bytes).
+    Removing imu660.o(.text.imu660ra_get_acc), (96 bytes).
     Removing imu660.o(.ARM.exidx.text.imu660ra_get_acc), (8 bytes).
+    Removing imu660.o(.text.imu660ra_get_gyro), (96 bytes).
     Removing imu660.o(.ARM.exidx.text.imu660ra_get_gyro), (8 bytes).
+    Removing imu660.o(.text.imu660ra_init), (536 bytes).
     Removing imu660.o(.ARM.exidx.text.imu660ra_init), (8 bytes).
+    Removing imu660.o(.rodata.imu660ra_config_file), (8192 bytes).
+    Removing imu660.o(.bss.imu660ra_gyro_x), (2 bytes).
+    Removing imu660.o(.bss.imu660ra_gyro_y), (2 bytes).
+    Removing imu660.o(.bss.imu660ra_gyro_z), (2 bytes).
+    Removing imu660.o(.bss.imu660ra_acc_x), (2 bytes).
+    Removing imu660.o(.bss.imu660ra_acc_y), (2 bytes).
+    Removing imu660.o(.bss.imu660ra_acc_z), (2 bytes).
+    Removing imu660.o(.data.imu660ra_transition_factor), (8 bytes).
+    Removing imu660.o(.bss.imu660ra_state), (4 bytes).
+    Removing imu963ra.o(.text), (0 bytes).
+    Removing imu963ra.o(.ARM.exidx.text.imu963ra_get_acc), (8 bytes).
+    Removing imu963ra.o(.ARM.exidx.text.imu963ra_get_gyro), (8 bytes).
+    Removing imu963ra.o(.ARM.exidx.text.imu963ra_get_mag), (8 bytes).
+    Removing imu963ra.o(.ARM.exidx.text.imu963ra_init), (8 bytes).
+    Removing imu963ra.o(.ARM.exidx.text.imu963ra_write_mag_register), (8 bytes).
     Removing chassis.o(.text), (0 bytes).
     Removing chassis.o(.ARM.exidx.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf), (8 bytes).
     Removing chassis.o(.text._Z15Kalman_Filter_xfff), (468 bytes).
@@ -2853,7 +2913,7 @@ Removing Unused input sections from the image.
     Removing arm_common_tables.o(.rodata.sinTable_q31), (2052 bytes).
     Removing arm_common_tables.o(.rodata.sinTable_q15), (1026 bytes).
 
-1234 unused section(s) (total 284918 bytes) removed from the image.
+1251 unused section(s) (total 293814 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2920,6 +2980,7 @@ Image Symbol Table
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
     i2c.c                                    0x00000000   Number         0  i2c.o ABSOLUTE
     imu660.c                                 0x00000000   Number         0  imu660.o ABSOLUTE
+    imu963ra.c                               0x00000000   Number         0  imu963ra.o ABSOLUTE
     init.s                                   0x00000000   Number         0  init.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
     spi.c                                    0x00000000   Number         0  spi.o ABSOLUTE
@@ -3116,58 +3177,64 @@ Image Symbol Table
     [Anonymous Symbol]                       0x08005254   Section        0  stm32f4xx_hal_uart.o(.text.UART_SetConfig)
     [Anonymous Symbol]                       0x08005338   Section        0  stm32f4xx_it.o(.text.USART1_IRQHandler)
     [Anonymous Symbol]                       0x08005354   Section        0  stm32f4xx_it.o(.text.UsageFault_Handler)
-    _GLOBAL__sub_I_task.cpp                  0x08005359   Thumb Code   276  task.o(.text._GLOBAL__sub_I_task.cpp)
+    _GLOBAL__sub_I_task.cpp                  0x08005359   Thumb Code   284  task.o(.text._GLOBAL__sub_I_task.cpp)
     [Anonymous Symbol]                       0x08005358   Section        0  task.o(.text._GLOBAL__sub_I_task.cpp)
-    [Anonymous Symbol]                       0x08005470   Section        0  controller.o(.text._ZN10Controller7HandlerEv)
-    [Anonymous Symbol]                       0x08005684   Section        0  controller.o(.text._ZN10ControllerC2EP7Chassis)
+    [Anonymous Symbol]                       0x08005478   Section        0  controller.o(.text._ZN10Controller7HandlerEv)
+    [Anonymous Symbol]                       0x0800568c   Section        0  controller.o(.text._ZN10ControllerC2EP7Chassis)
     [Anonymous Symbol]                       0x080056c4   Section        0  ccd.o(.text._ZN3CCD4initEv)
     [Anonymous Symbol]                       0x080056e0   Section        0  ccd.o(.text._ZN3CCD7HandlerEv)
     [Anonymous Symbol]                       0x08005724   Section        0  ccd.o(.text._ZN3CCD7SI_sendEv)
     [Anonymous Symbol]                       0x08005794   Section        0  imu.o(.text._ZN3IMU4initEv)
     [Anonymous Symbol]                       0x08005860   Section        0  imu.o(.text._ZN3IMU7HandlerEv)
-    [Anonymous Symbol]                       0x080058b4   Section        0  imu.o(.text._ZN3IMU8get_dataEv)
-    [Anonymous Symbol]                       0x08005a18   Section        0  remote.o(.text._ZN6Remote12process_dataEv)
-    [Anonymous Symbol]                       0x08005cd4   Section        0  remote.o(.text._ZN6Remote7HandlerEv)
-    [Anonymous Symbol]                       0x08005cfc   Section        0  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
-    [Anonymous Symbol]                       0x08005d20   Section        0  chassis.o(.text._ZN7Chassis7HandlerEv)
-    [Anonymous Symbol]                       0x080060e4   Section        0  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf)
-    [Anonymous Symbol]                       0x08006120   Section        0  encoder.o(.text._ZN7Encoder15overflow_updateEv)
-    [Anonymous Symbol]                       0x08006144   Section        0  encoder.o(.text._ZN7Encoder4initEv)
-    [Anonymous Symbol]                       0x0800615c   Section        0  encoder.o(.text._ZN7Encoder7HandlerEv)
-    [Anonymous Symbol]                       0x08006180   Section        0  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
-    [Anonymous Symbol]                       0x08006190   Section        0  n20_motor.o(.text._ZN9N20_Motor16output_intensityEv)
-    [Anonymous Symbol]                       0x080063e8   Section        0  n20_motor.o(.text._ZN9N20_Motor17measure_parameterEv)
-    [Anonymous Symbol]                       0x080064d0   Section        0  n20_motor.o(.text._ZN9N20_Motor4initEv)
-    [Anonymous Symbol]                       0x080064e8   Section        0  n20_motor.o(.text._ZN9N20_Motor7HandlerEv)
-    [Anonymous Symbol]                       0x080064fc   Section        0  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
-    [Anonymous Symbol]                       0x08006524   Section        0  arm_sin_cos_f32.o(.text.arm_sin_cos_f32)
-    [Anonymous Symbol]                       0x08006644   Section        0  imu660.o(.text.imu660ra_get_acc)
-    [Anonymous Symbol]                       0x080066c0   Section        0  imu660.o(.text.imu660ra_get_gyro)
-    [Anonymous Symbol]                       0x0800673c   Section        0  imu660.o(.text.imu660ra_init)
-    [Anonymous Symbol]                       0x08006ac0   Section        0  task.o(.text.loop)
-    [Anonymous Symbol]                       0x08006c64   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x08006ccc   Section        0  task.o(.text.setup)
-    [Anonymous Symbol]                       0x08006d30   Section        0  task.o(.text.task_handler)
-    i.__ARM_fpclassifyf                      0x08006eb0   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
-    i.__hardfp_atan2f                        0x08006ed8   Section        0  atan2f.o(i.__hardfp_atan2f)
-    i.__hardfp_sqrtf                         0x0800716c   Section        0  sqrtf.o(i.__hardfp_sqrtf)
-    i.__mathlib_flt_infnan2                  0x080071a6   Section        0  funder.o(i.__mathlib_flt_infnan2)
-    i.__mathlib_flt_underflow                0x080071ac   Section        0  funder.o(i.__mathlib_flt_underflow)
-    i.__scatterload_copy                     0x080071bc   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x080071ca   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x080071cc   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.__set_errno                            0x080071dc   Section        0  errno.o(i.__set_errno)
-    task_handler::x_array                    0x08007200   Data          16  task.o(.rodata.cst16)
-    task_handler::y_array                    0x08007210   Data          16  task.o(.rodata.cst16)
-    DMA_CalcBaseAndBitshift.flagBitshiftOffset 0x08007220   Data           8  stm32f4xx_hal_dma.o(.rodata.cst8)
-    .init_array                              0x08009a50   Section        0  cpp_init.o(.init_array)
+    [Anonymous Symbol]                       0x0800586c   Section        0  imu.o(.text._ZN3IMU8get_dataEv)
+    [Anonymous Symbol]                       0x08005a28   Section        0  remote.o(.text._ZN6Remote12process_dataEv)
+    [Anonymous Symbol]                       0x08005ce4   Section        0  remote.o(.text._ZN6Remote7HandlerEv)
+    [Anonymous Symbol]                       0x08005d0c   Section        0  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
+    [Anonymous Symbol]                       0x08005d30   Section        0  chassis.o(.text._ZN7Chassis7HandlerEv)
+    [Anonymous Symbol]                       0x080060f4   Section        0  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf)
+    [Anonymous Symbol]                       0x08006130   Section        0  encoder.o(.text._ZN7Encoder15overflow_updateEv)
+    [Anonymous Symbol]                       0x08006154   Section        0  encoder.o(.text._ZN7Encoder4initEv)
+    [Anonymous Symbol]                       0x0800616c   Section        0  encoder.o(.text._ZN7Encoder7HandlerEv)
+    [Anonymous Symbol]                       0x08006190   Section        0  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
+    [Anonymous Symbol]                       0x080061a0   Section        0  n20_motor.o(.text._ZN9N20_Motor16output_intensityEv)
+    [Anonymous Symbol]                       0x080063f8   Section        0  n20_motor.o(.text._ZN9N20_Motor17measure_parameterEv)
+    [Anonymous Symbol]                       0x080064e0   Section        0  n20_motor.o(.text._ZN9N20_Motor4initEv)
+    [Anonymous Symbol]                       0x080064f8   Section        0  n20_motor.o(.text._ZN9N20_Motor7HandlerEv)
+    [Anonymous Symbol]                       0x0800650c   Section        0  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
+    [Anonymous Symbol]                       0x08006534   Section        0  arm_sin_cos_f32.o(.text.arm_sin_cos_f32)
+    [Anonymous Symbol]                       0x08006654   Section        0  imu963ra.o(.text.imu963ra_get_acc)
+    [Anonymous Symbol]                       0x080066b8   Section        0  imu963ra.o(.text.imu963ra_get_gyro)
+    [Anonymous Symbol]                       0x0800671c   Section        0  imu963ra.o(.text.imu963ra_get_mag)
+    [Anonymous Symbol]                       0x080067ec   Section        0  imu963ra.o(.text.imu963ra_init)
+    imu963ra_write_mag_register              0x08006c45   Thumb Code   274  imu963ra.o(.text.imu963ra_write_mag_register)
+    [Anonymous Symbol]                       0x08006c44   Section        0  imu963ra.o(.text.imu963ra_write_mag_register)
+    [Anonymous Symbol]                       0x08006d58   Section        0  task.o(.text.loop)
+    [Anonymous Symbol]                       0x08006efc   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x08006f64   Section        0  task.o(.text.setup)
+    [Anonymous Symbol]                       0x08006fc8   Section        0  hal.o(.text.spi_read_8bit_register)
+    [Anonymous Symbol]                       0x08006ff8   Section        0  hal.o(.text.spi_read_8bit_registers)
+    [Anonymous Symbol]                       0x08007028   Section        0  hal.o(.text.spi_write_8bit_register)
+    [Anonymous Symbol]                       0x08007060   Section        0  task.o(.text.task_handler)
+    i.__ARM_fpclassifyf                      0x080071e0   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
+    i.__hardfp_atan2f                        0x08007208   Section        0  atan2f.o(i.__hardfp_atan2f)
+    i.__hardfp_sqrtf                         0x0800749c   Section        0  sqrtf.o(i.__hardfp_sqrtf)
+    i.__mathlib_flt_infnan2                  0x080074d6   Section        0  funder.o(i.__mathlib_flt_infnan2)
+    i.__mathlib_flt_underflow                0x080074dc   Section        0  funder.o(i.__mathlib_flt_underflow)
+    i.__scatterload_copy                     0x080074ec   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080074fa   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080074fc   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__set_errno                            0x0800750c   Section        0  errno.o(i.__set_errno)
+    task_handler::x_array                    0x08007530   Data          16  task.o(.rodata.cst16)
+    task_handler::y_array                    0x08007540   Data          16  task.o(.rodata.cst16)
+    DMA_CalcBaseAndBitshift.flagBitshiftOffset 0x08007550   Data           8  stm32f4xx_hal_dma.o(.rodata.cst8)
+    .init_array                              0x08007d80   Section        0  cpp_init.o(.init_array)
     _errno                                   0x20000000   Data           4  errno.o(.data)
     .data                                    0x20000000   Section        4  errno.o(.data)
     HAL_RCC_CAN1_CLK_ENABLED                 0x20000028   Data           4  can.o(.bss.HAL_RCC_CAN1_CLK_ENABLED)
     [Anonymous Symbol]                       0x20000028   Section        0  can.o(.bss.HAL_RCC_CAN1_CLK_ENABLED)
     task_handler::index                      0x2000002c   Data           4  task.o(.bss._ZZ12task_handlerE5index)
     [Anonymous Symbol]                       0x2000002c   Section        0  task.o(.bss._ZZ12task_handlerE5index)
-    STACK                                    0x20000a28   Section     1024  startup_stm32f407xx.o(STACK)
+    STACK                                    0x20000a40   Section     1024  startup_stm32f407xx.o(STACK)
 
     Global Symbols
 
@@ -3410,66 +3477,69 @@ Image Symbol Table
     TIM_Base_SetConfig                       0x08005029   Thumb Code   294  stm32f4xx_hal_tim.o(.text.TIM_Base_SetConfig)
     USART1_IRQHandler                        0x08005339   Thumb Code    26  stm32f4xx_it.o(.text.USART1_IRQHandler)
     UsageFault_Handler                       0x08005355   Thumb Code     2  stm32f4xx_it.o(.text.UsageFault_Handler)
-    Controller::Handler()                    0x08005471   Thumb Code   532  controller.o(.text._ZN10Controller7HandlerEv)
-    Controller::Controller(Chassis*)         0x08005685   Thumb Code    62  controller.o(.text._ZN10ControllerC2EP7Chassis)
-    Controller::Controller__sub_object(Chassis*) 0x08005685   Thumb Code    62  controller.o(.text._ZN10ControllerC2EP7Chassis)
+    Controller::Handler()                    0x08005479   Thumb Code   532  controller.o(.text._ZN10Controller7HandlerEv)
+    Controller::Controller(Chassis*)         0x0800568d   Thumb Code    54  controller.o(.text._ZN10ControllerC2EP7Chassis)
+    Controller::Controller__sub_object(Chassis*) 0x0800568d   Thumb Code    54  controller.o(.text._ZN10ControllerC2EP7Chassis)
     CCD::init()                              0x080056c5   Thumb Code    26  ccd.o(.text._ZN3CCD4initEv)
     CCD::Handler()                           0x080056e1   Thumb Code    68  ccd.o(.text._ZN3CCD7HandlerEv)
     CCD::SI_send()                           0x08005725   Thumb Code   110  ccd.o(.text._ZN3CCD7SI_sendEv)
     IMU::init()                              0x08005795   Thumb Code   204  imu.o(.text._ZN3IMU4initEv)
-    IMU::Handler()                           0x08005861   Thumb Code    82  imu.o(.text._ZN3IMU7HandlerEv)
-    IMU::get_data()                          0x080058b5   Thumb Code   354  imu.o(.text._ZN3IMU8get_dataEv)
-    Remote::process_data()                   0x08005a19   Thumb Code   700  remote.o(.text._ZN6Remote12process_dataEv)
-    Remote::Handler()                        0x08005cd5   Thumb Code    40  remote.o(.text._ZN6Remote7HandlerEv)
-    Remote::Remote(__UART_HandleTypeDef*)    0x08005cfd   Thumb Code    34  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
-    Remote::Remote__sub_object(__UART_HandleTypeDef*) 0x08005cfd   Thumb Code    34  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
-    Chassis::Handler()                       0x08005d21   Thumb Code   964  chassis.o(.text._ZN7Chassis7HandlerEv)
-    Chassis::Chassis(N20_Motor*, N20_Motor*, IMU*, float) 0x080060e5   Thumb Code    60  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf)
-    Chassis::Chassis__sub_object(N20_Motor*, N20_Motor*, IMU*, float) 0x080060e5   Thumb Code    60  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf)
-    Encoder::overflow_update()               0x08006121   Thumb Code    34  encoder.o(.text._ZN7Encoder15overflow_updateEv)
-    Encoder::init()                          0x08006145   Thumb Code    22  encoder.o(.text._ZN7Encoder4initEv)
-    Encoder::Handler()                       0x0800615d   Thumb Code    34  encoder.o(.text._ZN7Encoder7HandlerEv)
-    Encoder::Encoder(TIM_HandleTypeDef*)     0x08006181   Thumb Code    14  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
-    Encoder::Encoder__sub_object(TIM_HandleTypeDef*) 0x08006181   Thumb Code    14  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
-    N20_Motor::output_intensity()            0x08006191   Thumb Code   600  n20_motor.o(.text._ZN9N20_Motor16output_intensityEv)
-    N20_Motor::measure_parameter()           0x080063e9   Thumb Code   232  n20_motor.o(.text._ZN9N20_Motor17measure_parameterEv)
-    N20_Motor::init()                        0x080064d1   Thumb Code    24  n20_motor.o(.text._ZN9N20_Motor4initEv)
-    N20_Motor::Handler()                     0x080064e9   Thumb Code    18  n20_motor.o(.text._ZN9N20_Motor7HandlerEv)
-    N20_Motor::N20_Motor(TIM_HandleTypeDef*, unsigned, unsigned, Encoder*, float, float, float) 0x080064fd   Thumb Code    40  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
-    N20_Motor::N20_Motor__sub_object(TIM_HandleTypeDef*, unsigned, unsigned, Encoder*, float, float, float) 0x080064fd   Thumb Code    40  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
-    arm_sin_cos_f32                          0x08006525   Thumb Code   288  arm_sin_cos_f32.o(.text.arm_sin_cos_f32)
-    imu660ra_get_acc                         0x08006645   Thumb Code   124  imu660.o(.text.imu660ra_get_acc)
-    imu660ra_get_gyro                        0x080066c1   Thumb Code   124  imu660.o(.text.imu660ra_get_gyro)
-    imu660ra_init                            0x0800673d   Thumb Code   898  imu660.o(.text.imu660ra_init)
-    loop                                     0x08006ac1   Thumb Code   420  task.o(.text.loop)
-    main                                     0x08006c65   Thumb Code   102  main.o(.text.main)
-    setup                                    0x08006ccd   Thumb Code   100  task.o(.text.setup)
-    task_handler                             0x08006d31   Thumb Code   384  task.o(.text.task_handler)
-    __ARM_fpclassifyf                        0x08006eb1   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
-    __hardfp_atan2f                          0x08006ed9   Thumb Code   572  atan2f.o(i.__hardfp_atan2f)
-    __hardfp_sqrtf                           0x0800716d   Thumb Code    58  sqrtf.o(i.__hardfp_sqrtf)
-    __mathlib_flt_infnan2                    0x080071a7   Thumb Code     6  funder.o(i.__mathlib_flt_infnan2)
-    __mathlib_flt_underflow                  0x080071ad   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
-    __scatterload_copy                       0x080071bd   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x080071cb   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x080071cd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    __set_errno                              0x080071dd   Thumb Code     6  errno.o(i.__set_errno)
-    AHBPrescTable                            0x080071e8   Data          16  system_stm32f4xx.o(.rodata.AHBPrescTable)
-    APBPrescTable                            0x080071f8   Data           8  system_stm32f4xx.o(.rodata.APBPrescTable)
-    imu660ra_config_file                     0x08007228   Data        8192  imu660.o(.rodata.imu660ra_config_file)
-    sinTable_f32                             0x08009228   Data        2052  arm_common_tables.o(.rodata.sinTable_f32)
-    Region$$Table$$Base                      0x08009a2c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08009a4c   Number         0  anon$$obj.o(Region$$Table)
-    SHT$$INIT_ARRAY$$Base                    0x08009a4c   Number         0  task.o(.init_array)
-    SHT$$INIT_ARRAY$$Limit                   0x08009a50   Number         0  cpp_init.o(.init_array)
+    IMU::Handler()                           0x08005861   Thumb Code    12  imu.o(.text._ZN3IMU7HandlerEv)
+    IMU::get_data()                          0x0800586d   Thumb Code   442  imu.o(.text._ZN3IMU8get_dataEv)
+    Remote::process_data()                   0x08005a29   Thumb Code   700  remote.o(.text._ZN6Remote12process_dataEv)
+    Remote::Handler()                        0x08005ce5   Thumb Code    40  remote.o(.text._ZN6Remote7HandlerEv)
+    Remote::Remote(__UART_HandleTypeDef*)    0x08005d0d   Thumb Code    34  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
+    Remote::Remote__sub_object(__UART_HandleTypeDef*) 0x08005d0d   Thumb Code    34  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
+    Chassis::Handler()                       0x08005d31   Thumb Code   964  chassis.o(.text._ZN7Chassis7HandlerEv)
+    Chassis::Chassis(N20_Motor*, N20_Motor*, IMU*, float) 0x080060f5   Thumb Code    60  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf)
+    Chassis::Chassis__sub_object(N20_Motor*, N20_Motor*, IMU*, float) 0x080060f5   Thumb Code    60  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf)
+    Encoder::overflow_update()               0x08006131   Thumb Code    34  encoder.o(.text._ZN7Encoder15overflow_updateEv)
+    Encoder::init()                          0x08006155   Thumb Code    22  encoder.o(.text._ZN7Encoder4initEv)
+    Encoder::Handler()                       0x0800616d   Thumb Code    34  encoder.o(.text._ZN7Encoder7HandlerEv)
+    Encoder::Encoder(TIM_HandleTypeDef*)     0x08006191   Thumb Code    14  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
+    Encoder::Encoder__sub_object(TIM_HandleTypeDef*) 0x08006191   Thumb Code    14  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
+    N20_Motor::output_intensity()            0x080061a1   Thumb Code   600  n20_motor.o(.text._ZN9N20_Motor16output_intensityEv)
+    N20_Motor::measure_parameter()           0x080063f9   Thumb Code   232  n20_motor.o(.text._ZN9N20_Motor17measure_parameterEv)
+    N20_Motor::init()                        0x080064e1   Thumb Code    24  n20_motor.o(.text._ZN9N20_Motor4initEv)
+    N20_Motor::Handler()                     0x080064f9   Thumb Code    18  n20_motor.o(.text._ZN9N20_Motor7HandlerEv)
+    N20_Motor::N20_Motor(TIM_HandleTypeDef*, unsigned, unsigned, Encoder*, float, float, float) 0x0800650d   Thumb Code    40  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
+    N20_Motor::N20_Motor__sub_object(TIM_HandleTypeDef*, unsigned, unsigned, Encoder*, float, float, float) 0x0800650d   Thumb Code    40  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
+    arm_sin_cos_f32                          0x08006535   Thumb Code   288  arm_sin_cos_f32.o(.text.arm_sin_cos_f32)
+    imu963ra_get_acc                         0x08006655   Thumb Code    98  imu963ra.o(.text.imu963ra_get_acc)
+    imu963ra_get_gyro                        0x080066b9   Thumb Code    98  imu963ra.o(.text.imu963ra_get_gyro)
+    imu963ra_get_mag                         0x0800671d   Thumb Code   206  imu963ra.o(.text.imu963ra_get_mag)
+    imu963ra_init                            0x080067ed   Thumb Code  1112  imu963ra.o(.text.imu963ra_init)
+    loop                                     0x08006d59   Thumb Code   420  task.o(.text.loop)
+    main                                     0x08006efd   Thumb Code   102  main.o(.text.main)
+    setup                                    0x08006f65   Thumb Code   100  task.o(.text.setup)
+    spi_read_8bit_register                   0x08006fc9   Thumb Code    48  hal.o(.text.spi_read_8bit_register)
+    spi_read_8bit_registers                  0x08006ff9   Thumb Code    46  hal.o(.text.spi_read_8bit_registers)
+    spi_write_8bit_register                  0x08007029   Thumb Code    50  hal.o(.text.spi_write_8bit_register)
+    task_handler                             0x08007061   Thumb Code   384  task.o(.text.task_handler)
+    __ARM_fpclassifyf                        0x080071e1   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
+    __hardfp_atan2f                          0x08007209   Thumb Code   572  atan2f.o(i.__hardfp_atan2f)
+    __hardfp_sqrtf                           0x0800749d   Thumb Code    58  sqrtf.o(i.__hardfp_sqrtf)
+    __mathlib_flt_infnan2                    0x080074d7   Thumb Code     6  funder.o(i.__mathlib_flt_infnan2)
+    __mathlib_flt_underflow                  0x080074dd   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
+    __scatterload_copy                       0x080074ed   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080074fb   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080074fd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    __set_errno                              0x0800750d   Thumb Code     6  errno.o(i.__set_errno)
+    AHBPrescTable                            0x08007518   Data          16  system_stm32f4xx.o(.rodata.AHBPrescTable)
+    APBPrescTable                            0x08007528   Data           8  system_stm32f4xx.o(.rodata.APBPrescTable)
+    sinTable_f32                             0x08007558   Data        2052  arm_common_tables.o(.rodata.sinTable_f32)
+    Region$$Table$$Base                      0x08007d5c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08007d7c   Number         0  anon$$obj.o(Region$$Table)
+    SHT$$INIT_ARRAY$$Base                    0x08007d7c   Number         0  task.o(.init_array)
+    SHT$$INIT_ARRAY$$Limit                   0x08007d80   Number         0  cpp_init.o(.init_array)
     SystemCoreClock                          0x20000004   Data           4  system_stm32f4xx.o(.data.SystemCoreClock)
     end_flag                                 0x20000008   Data           2  task.o(.data.end_flag)
-    imu660ra_transition_factor               0x2000000c   Data           8  imu660.o(.data.imu660ra_transition_factor)
-    start_flag                               0x20000014   Data           2  task.o(.data.start_flag)
-    uwTickFreq                               0x20000016   Data           1  stm32f4xx_hal.o(.data.uwTickFreq)
-    uwTickPrio                               0x20000018   Data           4  stm32f4xx_hal.o(.data.uwTickPrio)
-    vpwr                                     0x2000001c   Data           4  task.o(.data.vpwr)
-    vpwr_th                                  0x20000020   Data           4  task.o(.data.vpwr_th)
+    imu963ra_transition_factor               0x2000000c   Data          12  imu963ra.o(.data.imu963ra_transition_factor)
+    start_flag                               0x20000018   Data           2  task.o(.data.start_flag)
+    uwTickFreq                               0x2000001a   Data           1  stm32f4xx_hal.o(.data.uwTickFreq)
+    uwTickPrio                               0x2000001c   Data           4  stm32f4xx_hal.o(.data.uwTickPrio)
+    vpwr                                     0x20000020   Data           4  task.o(.data.vpwr)
+    vpwr_th                                  0x20000024   Data           4  task.o(.data.vpwr_th)
     ccd                                      0x20000030   Data         404  task.o(.bss.ccd)
     chassis                                  0x200001c4   Data          72  task.o(.bss.chassis)
     controller                               0x2000020c   Data          76  task.o(.bss.controller)
@@ -3496,27 +3566,30 @@ Image Symbol Table
     huart1                                   0x20000728   Data          68  usart.o(.bss.huart1)
     huart2                                   0x2000076c   Data          68  usart.o(.bss.huart2)
     huart3                                   0x200007b0   Data          68  usart.o(.bss.huart3)
-    imu                                      0x200007f4   Data          68  task.o(.bss.imu)
-    imu660ra_acc_x                           0x20000838   Data           2  imu660.o(.bss.imu660ra_acc_x)
-    imu660ra_acc_y                           0x2000083a   Data           2  imu660.o(.bss.imu660ra_acc_y)
-    imu660ra_acc_z                           0x2000083c   Data           2  imu660.o(.bss.imu660ra_acc_z)
-    imu660ra_gyro_x                          0x2000083e   Data           2  imu660.o(.bss.imu660ra_gyro_x)
-    imu660ra_gyro_y                          0x20000840   Data           2  imu660.o(.bss.imu660ra_gyro_y)
-    imu660ra_gyro_z                          0x20000842   Data           2  imu660.o(.bss.imu660ra_gyro_z)
-    imu660ra_state                           0x20000844   Data           4  imu660.o(.bss.imu660ra_state)
-    left_encoder                             0x20000848   Data          20  task.o(.bss.left_encoder)
-    left_motor                               0x2000085c   Data          44  task.o(.bss.left_motor)
-    pwr_cnt                                  0x20000888   Data           4  task.o(.bss.pwr_cnt)
-    remote                                   0x2000088c   Data         228  task.o(.bss.remote)
-    remote_cnt                               0x20000970   Data           4  remote.o(.bss.remote_cnt)
-    right_encoder                            0x20000974   Data          20  task.o(.bss.right_encoder)
-    right_motor                              0x20000988   Data          44  task.o(.bss.right_motor)
-    uart1_cnt                                0x200009b4   Data           4  stm32f4xx_it.o(.bss.uart1_cnt)
-    uart1_rx_buf                             0x200009b8   Data         100  task.o(.bss.uart1_rx_buf)
-    uart1_rx_len                             0x20000a1c   Data           2  task.o(.bss.uart1_rx_len)
-    uart1_state                              0x20000a20   Data           4  task.o(.bss.uart1_state)
-    uwTick                                   0x20000a24   Data           4  stm32f4xx_hal.o(.bss.uwTick)
-    __initial_sp                             0x20000e28   Data           0  startup_stm32f407xx.o(STACK)
+    imu                                      0x200007f4   Data          80  task.o(.bss.imu)
+    imu963ra_acc_x                           0x20000844   Data           2  imu963ra.o(.bss.imu963ra_acc_x)
+    imu963ra_acc_y                           0x20000846   Data           2  imu963ra.o(.bss.imu963ra_acc_y)
+    imu963ra_acc_z                           0x20000848   Data           2  imu963ra.o(.bss.imu963ra_acc_z)
+    imu963ra_gyro_x                          0x2000084a   Data           2  imu963ra.o(.bss.imu963ra_gyro_x)
+    imu963ra_gyro_y                          0x2000084c   Data           2  imu963ra.o(.bss.imu963ra_gyro_y)
+    imu963ra_gyro_z                          0x2000084e   Data           2  imu963ra.o(.bss.imu963ra_gyro_z)
+    imu963ra_mag_x                           0x20000850   Data           2  imu963ra.o(.bss.imu963ra_mag_x)
+    imu963ra_mag_y                           0x20000852   Data           2  imu963ra.o(.bss.imu963ra_mag_y)
+    imu963ra_mag_z                           0x20000854   Data           2  imu963ra.o(.bss.imu963ra_mag_z)
+    imu963ra_state                           0x20000858   Data           4  imu963ra.o(.bss.imu963ra_state)
+    left_encoder                             0x2000085c   Data          20  task.o(.bss.left_encoder)
+    left_motor                               0x20000870   Data          44  task.o(.bss.left_motor)
+    pwr_cnt                                  0x2000089c   Data           4  task.o(.bss.pwr_cnt)
+    remote                                   0x200008a0   Data         228  task.o(.bss.remote)
+    remote_cnt                               0x20000984   Data           4  remote.o(.bss.remote_cnt)
+    right_encoder                            0x20000988   Data          20  task.o(.bss.right_encoder)
+    right_motor                              0x2000099c   Data          44  task.o(.bss.right_motor)
+    uart1_cnt                                0x200009c8   Data           4  stm32f4xx_it.o(.bss.uart1_cnt)
+    uart1_rx_buf                             0x200009cc   Data         100  task.o(.bss.uart1_rx_buf)
+    uart1_rx_len                             0x20000a30   Data           2  task.o(.bss.uart1_rx_len)
+    uart1_state                              0x20000a34   Data           4  task.o(.bss.uart1_state)
+    uwTick                                   0x20000a38   Data           4  stm32f4xx_hal.o(.bss.uwTick)
+    __initial_sp                             0x20000e40   Data           0  startup_stm32f407xx.o(STACK)
 
 
 
@@ -3526,42 +3599,42 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00009a78, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00007da8, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00009a50, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00007d80, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000188   Data   RO            3    RESET               startup_stm32f407xx.o
-    0x08000188   0x08000188   0x00000000   Code   RO         1836  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000188   0x08000188   0x00000004   Code   RO         1880    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800018c   0x0800018c   0x00000004   Code   RO         1883    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000190   0x08000190   0x00000000   Code   RO         1885    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000190   0x08000190   0x00000004   Code   RO         1886    .ARM.Collect$$$$00000009  mc_w.l(entry8a.o)
-    0x08000194   0x08000194   0x00000000   Code   RO         1887    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000194   0x08000194   0x00000008   Code   RO         1888    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x0800019c   0x0800019c   0x00000000   Code   RO         1890    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x0800019c   0x0800019c   0x00000000   Code   RO         1892    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x0800019c   0x0800019c   0x00000004   Code   RO         1881    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000188   0x08000188   0x00000000   Code   RO         1869  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000188   0x08000188   0x00000004   Code   RO         1913    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800018c   0x0800018c   0x00000004   Code   RO         1916    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000190   0x08000190   0x00000000   Code   RO         1918    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000190   0x08000190   0x00000004   Code   RO         1919    .ARM.Collect$$$$00000009  mc_w.l(entry8a.o)
+    0x08000194   0x08000194   0x00000000   Code   RO         1920    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000194   0x08000194   0x00000008   Code   RO         1921    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x0800019c   0x0800019c   0x00000000   Code   RO         1923    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x0800019c   0x0800019c   0x00000000   Code   RO         1925    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x0800019c   0x0800019c   0x00000004   Code   RO         1914    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x080001a0   0x080001a0   0x00000024   Code   RO            4    .text               startup_stm32f407xx.o
-    0x080001c4   0x080001c4   0x00000062   Code   RO         1839    .text               mc_w.l(uldiv.o)
-    0x08000226   0x08000226   0x00000024   Code   RO         1841    .text               mc_w.l(memcpya.o)
+    0x080001c4   0x080001c4   0x00000062   Code   RO         1872    .text               mc_w.l(uldiv.o)
+    0x08000226   0x08000226   0x00000024   Code   RO         1874    .text               mc_w.l(memcpya.o)
     0x0800024a   0x0800024a   0x00000002   PAD
-    0x0800024c   0x0800024c   0x00000020   Code   RO         1848    .text               mc_w.l(cpp_init.o)
-    0x0800026c   0x0800026c   0x0000014e   Code   RO         1850    .text               mf_w.l(dadd.o)
-    0x080003ba   0x080003ba   0x000000e4   Code   RO         1852    .text               mf_w.l(dmul.o)
-    0x0800049e   0x0800049e   0x000000de   Code   RO         1854    .text               mf_w.l(ddiv.o)
-    0x0800057c   0x0800057c   0x00000022   Code   RO         1856    .text               mf_w.l(dflti.o)
-    0x0800059e   0x0800059e   0x0000003e   Code   RO         1858    .text               mf_w.l(dfixi.o)
-    0x080005dc   0x080005dc   0x00000026   Code   RO         1860    .text               mf_w.l(f2d.o)
-    0x08000602   0x08000602   0x00000038   Code   RO         1862    .text               mf_w.l(d2f.o)
-    0x0800063a   0x0800063a   0x0000001e   Code   RO         1894    .text               mc_w.l(llshl.o)
-    0x08000658   0x08000658   0x00000020   Code   RO         1896    .text               mc_w.l(llushr.o)
-    0x08000678   0x08000678   0x00000024   Code   RO         1898    .text               mc_w.l(llsshr.o)
-    0x0800069c   0x0800069c   0x00000000   Code   RO         1907    .text               mc_w.l(iusefp.o)
-    0x0800069c   0x0800069c   0x0000006e   Code   RO         1908    .text               mf_w.l(fepilogue.o)
-    0x0800070a   0x0800070a   0x000000ba   Code   RO         1910    .text               mf_w.l(depilogue.o)
-    0x080007c4   0x080007c4   0x00000024   Code   RO         1912    .text               mc_w.l(init.o)
+    0x0800024c   0x0800024c   0x00000020   Code   RO         1881    .text               mc_w.l(cpp_init.o)
+    0x0800026c   0x0800026c   0x0000014e   Code   RO         1883    .text               mf_w.l(dadd.o)
+    0x080003ba   0x080003ba   0x000000e4   Code   RO         1885    .text               mf_w.l(dmul.o)
+    0x0800049e   0x0800049e   0x000000de   Code   RO         1887    .text               mf_w.l(ddiv.o)
+    0x0800057c   0x0800057c   0x00000022   Code   RO         1889    .text               mf_w.l(dflti.o)
+    0x0800059e   0x0800059e   0x0000003e   Code   RO         1891    .text               mf_w.l(dfixi.o)
+    0x080005dc   0x080005dc   0x00000026   Code   RO         1893    .text               mf_w.l(f2d.o)
+    0x08000602   0x08000602   0x00000038   Code   RO         1895    .text               mf_w.l(d2f.o)
+    0x0800063a   0x0800063a   0x0000001e   Code   RO         1927    .text               mc_w.l(llshl.o)
+    0x08000658   0x08000658   0x00000020   Code   RO         1929    .text               mc_w.l(llushr.o)
+    0x08000678   0x08000678   0x00000024   Code   RO         1931    .text               mc_w.l(llsshr.o)
+    0x0800069c   0x0800069c   0x00000000   Code   RO         1940    .text               mc_w.l(iusefp.o)
+    0x0800069c   0x0800069c   0x0000006e   Code   RO         1941    .text               mf_w.l(fepilogue.o)
+    0x0800070a   0x0800070a   0x000000ba   Code   RO         1943    .text               mf_w.l(depilogue.o)
+    0x080007c4   0x080007c4   0x00000024   Code   RO         1945    .text               mc_w.l(init.o)
     0x080007e8   0x080007e8   0x00000068   Code   RO          269    .text.ADC_DMAConvCplt  stm32f4xx_hal_adc.o
     0x08000850   0x08000850   0x00000012   Code   RO          273    .text.ADC_DMAError  stm32f4xx_hal_adc.o
     0x08000862   0x08000862   0x00000002   PAD
@@ -3751,97 +3824,104 @@ Memory Map of the image
     0x08005352   0x08005352   0x00000002   PAD
     0x08005354   0x08005354   0x00000002   Code   RO          199    .text.UsageFault_Handler  stm32f4xx_it.o
     0x08005356   0x08005356   0x00000002   PAD
-    0x08005358   0x08005358   0x00000114   Code   RO         1524    .text._GLOBAL__sub_I_task.cpp  task.o
-    0x0800546c   0x0800546c   0x00000004   PAD
-    0x08005470   0x08005470   0x00000214   Code   RO         1714    .text._ZN10Controller7HandlerEv  controller.o
-    0x08005684   0x08005684   0x0000003e   Code   RO         1712    .text._ZN10ControllerC2EP7Chassis  controller.o
+    0x08005358   0x08005358   0x0000011c   Code   RO         1524    .text._GLOBAL__sub_I_task.cpp  task.o
+    0x08005474   0x08005474   0x00000004   PAD
+    0x08005478   0x08005478   0x00000214   Code   RO         1747    .text._ZN10Controller7HandlerEv  controller.o
+    0x0800568c   0x0800568c   0x00000036   Code   RO         1745    .text._ZN10ControllerC2EP7Chassis  controller.o
     0x080056c2   0x080056c2   0x00000002   PAD
-    0x080056c4   0x080056c4   0x0000001a   Code   RO         1607    .text._ZN3CCD4initEv  ccd.o
+    0x080056c4   0x080056c4   0x0000001a   Code   RO         1616    .text._ZN3CCD4initEv  ccd.o
     0x080056de   0x080056de   0x00000002   PAD
-    0x080056e0   0x080056e0   0x00000044   Code   RO         1605    .text._ZN3CCD7HandlerEv  ccd.o
-    0x08005724   0x08005724   0x0000006e   Code   RO         1603    .text._ZN3CCD7SI_sendEv  ccd.o
+    0x080056e0   0x080056e0   0x00000044   Code   RO         1614    .text._ZN3CCD7HandlerEv  ccd.o
+    0x08005724   0x08005724   0x0000006e   Code   RO         1612    .text._ZN3CCD7SI_sendEv  ccd.o
     0x08005792   0x08005792   0x00000002   PAD
-    0x08005794   0x08005794   0x000000cc   Code   RO         1649    .text._ZN3IMU4initEv  imu.o
-    0x08005860   0x08005860   0x00000052   Code   RO         1651    .text._ZN3IMU7HandlerEv  imu.o
-    0x080058b2   0x080058b2   0x00000002   PAD
-    0x080058b4   0x080058b4   0x00000162   Code   RO         1647    .text._ZN3IMU8get_dataEv  imu.o
-    0x08005a16   0x08005a16   0x00000002   PAD
-    0x08005a18   0x08005a18   0x000002bc   Code   RO         1628    .text._ZN6Remote12process_dataEv  remote.o
-    0x08005cd4   0x08005cd4   0x00000028   Code   RO         1632    .text._ZN6Remote7HandlerEv  remote.o
-    0x08005cfc   0x08005cfc   0x00000022   Code   RO         1630    .text._ZN6RemoteC2EP20__UART_HandleTypeDef  remote.o
-    0x08005d1e   0x08005d1e   0x00000002   PAD
-    0x08005d20   0x08005d20   0x000003c4   Code   RO         1696    .text._ZN7Chassis7HandlerEv  chassis.o
-    0x080060e4   0x080060e4   0x0000003c   Code   RO         1692    .text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf  chassis.o
-    0x08006120   0x08006120   0x00000022   Code   RO         1571    .text._ZN7Encoder15overflow_updateEv  encoder.o
-    0x08006142   0x08006142   0x00000002   PAD
-    0x08006144   0x08006144   0x00000016   Code   RO         1569    .text._ZN7Encoder4initEv  encoder.o
-    0x0800615a   0x0800615a   0x00000002   PAD
-    0x0800615c   0x0800615c   0x00000022   Code   RO         1565    .text._ZN7Encoder7HandlerEv  encoder.o
-    0x0800617e   0x0800617e   0x00000002   PAD
-    0x08006180   0x08006180   0x0000000e   Code   RO         1567    .text._ZN7EncoderC2EP17TIM_HandleTypeDef  encoder.o
+    0x08005794   0x08005794   0x000000cc   Code   RO         1658    .text._ZN3IMU4initEv  imu.o
+    0x08005860   0x08005860   0x0000000c   Code   RO         1660    .text._ZN3IMU7HandlerEv  imu.o
+    0x0800586c   0x0800586c   0x000001ba   Code   RO         1656    .text._ZN3IMU8get_dataEv  imu.o
+    0x08005a26   0x08005a26   0x00000002   PAD
+    0x08005a28   0x08005a28   0x000002bc   Code   RO         1637    .text._ZN6Remote12process_dataEv  remote.o
+    0x08005ce4   0x08005ce4   0x00000028   Code   RO         1641    .text._ZN6Remote7HandlerEv  remote.o
+    0x08005d0c   0x08005d0c   0x00000022   Code   RO         1639    .text._ZN6RemoteC2EP20__UART_HandleTypeDef  remote.o
+    0x08005d2e   0x08005d2e   0x00000002   PAD
+    0x08005d30   0x08005d30   0x000003c4   Code   RO         1729    .text._ZN7Chassis7HandlerEv  chassis.o
+    0x080060f4   0x080060f4   0x0000003c   Code   RO         1725    .text._ZN7ChassisC2EP9N20_MotorS1_P3IMUf  chassis.o
+    0x08006130   0x08006130   0x00000022   Code   RO         1580    .text._ZN7Encoder15overflow_updateEv  encoder.o
+    0x08006152   0x08006152   0x00000002   PAD
+    0x08006154   0x08006154   0x00000016   Code   RO         1578    .text._ZN7Encoder4initEv  encoder.o
+    0x0800616a   0x0800616a   0x00000002   PAD
+    0x0800616c   0x0800616c   0x00000022   Code   RO         1574    .text._ZN7Encoder7HandlerEv  encoder.o
     0x0800618e   0x0800618e   0x00000002   PAD
-    0x08006190   0x08006190   0x00000258   Code   RO         1586    .text._ZN9N20_Motor16output_intensityEv  n20_motor.o
-    0x080063e8   0x080063e8   0x000000e8   Code   RO         1584    .text._ZN9N20_Motor17measure_parameterEv  n20_motor.o
-    0x080064d0   0x080064d0   0x00000018   Code   RO         1592    .text._ZN9N20_Motor4initEv  n20_motor.o
-    0x080064e8   0x080064e8   0x00000012   Code   RO         1582    .text._ZN9N20_Motor7HandlerEv  n20_motor.o
-    0x080064fa   0x080064fa   0x00000002   PAD
-    0x080064fc   0x080064fc   0x00000028   Code   RO         1590    .text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff  n20_motor.o
-    0x08006524   0x08006524   0x00000120   Code   RO         1738    .text.arm_sin_cos_f32  arm_cortexM4lf_math.lib(arm_sin_cos_f32.o)
-    0x08006644   0x08006644   0x0000007c   Code   RO         1668    .text.imu660ra_get_acc  imu660.o
-    0x080066c0   0x080066c0   0x0000007c   Code   RO         1670    .text.imu660ra_get_gyro  imu660.o
-    0x0800673c   0x0800673c   0x00000382   Code   RO         1672    .text.imu660ra_init  imu660.o
-    0x08006abe   0x08006abe   0x00000002   PAD
-    0x08006ac0   0x08006ac0   0x000001a4   Code   RO         1512    .text.loop          task.o
-    0x08006c64   0x08006c64   0x00000066   Code   RO           11    .text.main          main.o
-    0x08006cca   0x08006cca   0x00000002   PAD
-    0x08006ccc   0x08006ccc   0x00000064   Code   RO         1510    .text.setup         task.o
-    0x08006d30   0x08006d30   0x00000180   Code   RO         1514    .text.task_handler  task.o
-    0x08006eb0   0x08006eb0   0x00000026   Code   RO         1864    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
-    0x08006ed6   0x08006ed6   0x00000002   PAD
-    0x08006ed8   0x08006ed8   0x00000294   Code   RO         1812    i.__hardfp_atan2f   m_wm.l(atan2f.o)
-    0x0800716c   0x0800716c   0x0000003a   Code   RO         1824    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
-    0x080071a6   0x080071a6   0x00000006   Code   RO         1868    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
-    0x080071ac   0x080071ac   0x00000010   Code   RO         1872    i.__mathlib_flt_underflow  m_wm.l(funder.o)
-    0x080071bc   0x080071bc   0x0000000e   Code   RO         1916    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x080071ca   0x080071ca   0x00000002   Code   RO         1917    i.__scatterload_null  mc_w.l(handlers.o)
-    0x080071cc   0x080071cc   0x0000000e   Code   RO         1918    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x080071da   0x080071da   0x00000002   PAD
-    0x080071dc   0x080071dc   0x0000000c   Code   RO         1902    i.__set_errno       mc_w.l(errno.o)
-    0x080071e8   0x080071e8   0x00000010   Data   RO         1497    .rodata.AHBPrescTable  system_stm32f4xx.o
-    0x080071f8   0x080071f8   0x00000008   Data   RO         1498    .rodata.APBPrescTable  system_stm32f4xx.o
-    0x08007200   0x08007200   0x00000020   Data   RO         1543    .rodata.cst16       task.o
-    0x08007220   0x08007220   0x00000008   Data   RO          516    .rodata.cst8        stm32f4xx_hal_dma.o
-    0x08007228   0x08007228   0x00002000   Data   RO         1674    .rodata.imu660ra_config_file  imu660.o
-    0x08009228   0x08009228   0x00000804   Data   RO         1804    .rodata.sinTable_f32  arm_cortexM4lf_math.lib(arm_common_tables.o)
-    0x08009a2c   0x08009a2c   0x00000020   Data   RO         1915    Region$$Table       anon$$obj.o
-    0x08009a4c   0x08009a4c   0x00000004   Data   RO         1545    .init_array         task.o
-    0x08009a50   0x08009a4c   0x00000000   Data   RO         1846    .init_array         mc_w.l(cpp_init.o)
+    0x08006190   0x08006190   0x0000000e   Code   RO         1576    .text._ZN7EncoderC2EP17TIM_HandleTypeDef  encoder.o
+    0x0800619e   0x0800619e   0x00000002   PAD
+    0x080061a0   0x080061a0   0x00000258   Code   RO         1595    .text._ZN9N20_Motor16output_intensityEv  n20_motor.o
+    0x080063f8   0x080063f8   0x000000e8   Code   RO         1593    .text._ZN9N20_Motor17measure_parameterEv  n20_motor.o
+    0x080064e0   0x080064e0   0x00000018   Code   RO         1601    .text._ZN9N20_Motor4initEv  n20_motor.o
+    0x080064f8   0x080064f8   0x00000012   Code   RO         1591    .text._ZN9N20_Motor7HandlerEv  n20_motor.o
+    0x0800650a   0x0800650a   0x00000002   PAD
+    0x0800650c   0x0800650c   0x00000028   Code   RO         1599    .text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff  n20_motor.o
+    0x08006534   0x08006534   0x00000120   Code   RO         1771    .text.arm_sin_cos_f32  arm_cortexM4lf_math.lib(arm_sin_cos_f32.o)
+    0x08006654   0x08006654   0x00000062   Code   RO         1695    .text.imu963ra_get_acc  imu963ra.o
+    0x080066b6   0x080066b6   0x00000002   PAD
+    0x080066b8   0x080066b8   0x00000062   Code   RO         1697    .text.imu963ra_get_gyro  imu963ra.o
+    0x0800671a   0x0800671a   0x00000002   PAD
+    0x0800671c   0x0800671c   0x000000ce   Code   RO         1699    .text.imu963ra_get_mag  imu963ra.o
+    0x080067ea   0x080067ea   0x00000002   PAD
+    0x080067ec   0x080067ec   0x00000458   Code   RO         1701    .text.imu963ra_init  imu963ra.o
+    0x08006c44   0x08006c44   0x00000112   Code   RO         1703    .text.imu963ra_write_mag_register  imu963ra.o
+    0x08006d56   0x08006d56   0x00000002   PAD
+    0x08006d58   0x08006d58   0x000001a4   Code   RO         1512    .text.loop          task.o
+    0x08006efc   0x08006efc   0x00000066   Code   RO           11    .text.main          main.o
+    0x08006f62   0x08006f62   0x00000002   PAD
+    0x08006f64   0x08006f64   0x00000064   Code   RO         1510    .text.setup         task.o
+    0x08006fc8   0x08006fc8   0x00000030   Code   RO         1561    .text.spi_read_8bit_register  hal.o
+    0x08006ff8   0x08006ff8   0x0000002e   Code   RO         1563    .text.spi_read_8bit_registers  hal.o
+    0x08007026   0x08007026   0x00000002   PAD
+    0x08007028   0x08007028   0x00000032   Code   RO         1557    .text.spi_write_8bit_register  hal.o
+    0x0800705a   0x0800705a   0x00000006   PAD
+    0x08007060   0x08007060   0x00000180   Code   RO         1514    .text.task_handler  task.o
+    0x080071e0   0x080071e0   0x00000026   Code   RO         1897    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
+    0x08007206   0x08007206   0x00000002   PAD
+    0x08007208   0x08007208   0x00000294   Code   RO         1845    i.__hardfp_atan2f   m_wm.l(atan2f.o)
+    0x0800749c   0x0800749c   0x0000003a   Code   RO         1857    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
+    0x080074d6   0x080074d6   0x00000006   Code   RO         1901    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
+    0x080074dc   0x080074dc   0x00000010   Code   RO         1905    i.__mathlib_flt_underflow  m_wm.l(funder.o)
+    0x080074ec   0x080074ec   0x0000000e   Code   RO         1949    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080074fa   0x080074fa   0x00000002   Code   RO         1950    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080074fc   0x080074fc   0x0000000e   Code   RO         1951    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800750a   0x0800750a   0x00000002   PAD
+    0x0800750c   0x0800750c   0x0000000c   Code   RO         1935    i.__set_errno       mc_w.l(errno.o)
+    0x08007518   0x08007518   0x00000010   Data   RO         1497    .rodata.AHBPrescTable  system_stm32f4xx.o
+    0x08007528   0x08007528   0x00000008   Data   RO         1498    .rodata.APBPrescTable  system_stm32f4xx.o
+    0x08007530   0x08007530   0x00000020   Data   RO         1543    .rodata.cst16       task.o
+    0x08007550   0x08007550   0x00000008   Data   RO          516    .rodata.cst8        stm32f4xx_hal_dma.o
+    0x08007558   0x08007558   0x00000804   Data   RO         1837    .rodata.sinTable_f32  arm_cortexM4lf_math.lib(arm_common_tables.o)
+    0x08007d5c   0x08007d5c   0x00000020   Data   RO         1948    Region$$Table       anon$$obj.o
+    0x08007d7c   0x08007d7c   0x00000004   Data   RO         1545    .init_array         task.o
+    0x08007d80   0x08007d7c   0x00000000   Data   RO         1879    .init_array         mc_w.l(cpp_init.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08009a50, Size: 0x00000e28, Max: 0x0001c000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08007d80, Size: 0x00000e40, Max: 0x0001c000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08009a50   0x00000004   Data   RW         1903    .data               mc_w.l(errno.o)
-    0x20000004   0x08009a54   0x00000004   Data   RW         1496    .data.SystemCoreClock  system_stm32f4xx.o
-    0x20000008   0x08009a58   0x00000002   Data   RW         1542    .data.end_flag      task.o
-    0x2000000a   0x08009a5a   0x00000002   PAD
-    0x2000000c   0x08009a5c   0x00000008   Data   RW         1681    .data.imu660ra_transition_factor  imu660.o
-    0x20000014   0x08009a64   0x00000002   Data   RW         1541    .data.start_flag    task.o
-    0x20000016   0x08009a66   0x00000001   Data   RW          692    .data.uwTickFreq    stm32f4xx_hal.o
-    0x20000017   0x08009a67   0x00000001   PAD
-    0x20000018   0x08009a68   0x00000004   Data   RW          691    .data.uwTickPrio    stm32f4xx_hal.o
-    0x2000001c   0x08009a6c   0x00000004   Data   RW         1538    .data.vpwr          task.o
-    0x20000020   0x08009a70   0x00000004   Data   RW         1539    .data.vpwr_th       task.o
-    0x20000024   0x08009a74   0x00000004   PAD
+    0x20000000   0x08007d80   0x00000004   Data   RW         1936    .data               mc_w.l(errno.o)
+    0x20000004   0x08007d84   0x00000004   Data   RW         1496    .data.SystemCoreClock  system_stm32f4xx.o
+    0x20000008   0x08007d88   0x00000002   Data   RW         1542    .data.end_flag      task.o
+    0x2000000a   0x08007d8a   0x00000002   PAD
+    0x2000000c   0x08007d8c   0x0000000c   Data   RW         1714    .data.imu963ra_transition_factor  imu963ra.o
+    0x20000018   0x08007d98   0x00000002   Data   RW         1541    .data.start_flag    task.o
+    0x2000001a   0x08007d9a   0x00000001   Data   RW          692    .data.uwTickFreq    stm32f4xx_hal.o
+    0x2000001b   0x08007d9b   0x00000001   PAD
+    0x2000001c   0x08007d9c   0x00000004   Data   RW          691    .data.uwTickPrio    stm32f4xx_hal.o
+    0x20000020   0x08007da0   0x00000004   Data   RW         1538    .data.vpwr          task.o
+    0x20000024   0x08007da4   0x00000004   Data   RW         1539    .data.vpwr_th       task.o
     0x20000028        -       0x00000004   Zero   RW           71    .bss.HAL_RCC_CAN1_CLK_ENABLED  can.o
     0x2000002c        -       0x00000004   Zero   RW         1544    .bss._ZZ12task_handlerE5index  task.o
     0x20000030        -       0x00000194   Zero   RW         1533    .bss.ccd            task.o
     0x200001c4        -       0x00000048   Zero   RW         1536    .bss.chassis        task.o
     0x2000020c        -       0x0000004c   Zero   RW         1537    .bss.controller     task.o
-    0x20000258        -       0x00000002   Zero   RW         1635    .bss.crc            remote.o
-    0x2000025a        -       0x00000002   Zero   RW         1636    .bss.crc1           remote.o
-    0x2000025c        -       0x00000004   Zero   RW         1637    .bss.crc_err        remote.o
+    0x20000258        -       0x00000002   Zero   RW         1644    .bss.crc            remote.o
+    0x2000025a        -       0x00000002   Zero   RW         1645    .bss.crc1           remote.o
+    0x2000025c        -       0x00000004   Zero   RW         1646    .bss.crc_err        remote.o
     0x20000260        -       0x00000048   Zero   RW           48    .bss.hadc1          adc.o
     0x200002a8        -       0x00000048   Zero   RW           49    .bss.hadc2          adc.o
     0x200002f0        -       0x00000048   Zero   RW           50    .bss.hadc3          adc.o
@@ -3862,31 +3942,36 @@ Memory Map of the image
     0x20000728        -       0x00000044   Zero   RW          179    .bss.huart1         usart.o
     0x2000076c        -       0x00000044   Zero   RW          180    .bss.huart2         usart.o
     0x200007b0        -       0x00000044   Zero   RW          181    .bss.huart3         usart.o
-    0x200007f4        -       0x00000044   Zero   RW         1535    .bss.imu            task.o
-    0x20000838        -       0x00000002   Zero   RW         1678    .bss.imu660ra_acc_x  imu660.o
-    0x2000083a        -       0x00000002   Zero   RW         1679    .bss.imu660ra_acc_y  imu660.o
-    0x2000083c        -       0x00000002   Zero   RW         1680    .bss.imu660ra_acc_z  imu660.o
-    0x2000083e        -       0x00000002   Zero   RW         1675    .bss.imu660ra_gyro_x  imu660.o
-    0x20000840        -       0x00000002   Zero   RW         1676    .bss.imu660ra_gyro_y  imu660.o
-    0x20000842        -       0x00000002   Zero   RW         1677    .bss.imu660ra_gyro_z  imu660.o
-    0x20000844        -       0x00000004   Zero   RW         1682    .bss.imu660ra_state  imu660.o
-    0x20000848        -       0x00000014   Zero   RW         1529    .bss.left_encoder   task.o
-    0x2000085c        -       0x0000002c   Zero   RW         1532    .bss.left_motor     task.o
-    0x20000888        -       0x00000004   Zero   RW         1540    .bss.pwr_cnt        task.o
-    0x2000088c        -       0x000000e4   Zero   RW         1534    .bss.remote         task.o
-    0x20000970        -       0x00000004   Zero   RW         1634    .bss.remote_cnt     remote.o
-    0x20000974        -       0x00000014   Zero   RW         1530    .bss.right_encoder  task.o
-    0x20000988        -       0x0000002c   Zero   RW         1531    .bss.right_motor    task.o
-    0x200009b4        -       0x00000004   Zero   RW          221    .bss.uart1_cnt      stm32f4xx_it.o
-    0x200009b8        -       0x00000064   Zero   RW         1526    .bss.uart1_rx_buf   task.o
-    0x20000a1c        -       0x00000002   Zero   RW         1527    .bss.uart1_rx_len   task.o
-    0x20000a1e   0x08009a74   0x00000002   PAD
-    0x20000a20        -       0x00000004   Zero   RW         1528    .bss.uart1_state    task.o
-    0x20000a24        -       0x00000004   Zero   RW          693    .bss.uwTick         stm32f4xx_hal.o
-    0x20000a28        -       0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
+    0x200007f4        -       0x00000050   Zero   RW         1535    .bss.imu            task.o
+    0x20000844        -       0x00000002   Zero   RW         1708    .bss.imu963ra_acc_x  imu963ra.o
+    0x20000846        -       0x00000002   Zero   RW         1709    .bss.imu963ra_acc_y  imu963ra.o
+    0x20000848        -       0x00000002   Zero   RW         1710    .bss.imu963ra_acc_z  imu963ra.o
+    0x2000084a        -       0x00000002   Zero   RW         1705    .bss.imu963ra_gyro_x  imu963ra.o
+    0x2000084c        -       0x00000002   Zero   RW         1706    .bss.imu963ra_gyro_y  imu963ra.o
+    0x2000084e        -       0x00000002   Zero   RW         1707    .bss.imu963ra_gyro_z  imu963ra.o
+    0x20000850        -       0x00000002   Zero   RW         1711    .bss.imu963ra_mag_x  imu963ra.o
+    0x20000852        -       0x00000002   Zero   RW         1712    .bss.imu963ra_mag_y  imu963ra.o
+    0x20000854        -       0x00000002   Zero   RW         1713    .bss.imu963ra_mag_z  imu963ra.o
+    0x20000856   0x08007da8   0x00000002   PAD
+    0x20000858        -       0x00000004   Zero   RW         1715    .bss.imu963ra_state  imu963ra.o
+    0x2000085c        -       0x00000014   Zero   RW         1529    .bss.left_encoder   task.o
+    0x20000870        -       0x0000002c   Zero   RW         1532    .bss.left_motor     task.o
+    0x2000089c        -       0x00000004   Zero   RW         1540    .bss.pwr_cnt        task.o
+    0x200008a0        -       0x000000e4   Zero   RW         1534    .bss.remote         task.o
+    0x20000984        -       0x00000004   Zero   RW         1643    .bss.remote_cnt     remote.o
+    0x20000988        -       0x00000014   Zero   RW         1530    .bss.right_encoder  task.o
+    0x2000099c        -       0x0000002c   Zero   RW         1531    .bss.right_motor    task.o
+    0x200009c8        -       0x00000004   Zero   RW          221    .bss.uart1_cnt      stm32f4xx_it.o
+    0x200009cc        -       0x00000064   Zero   RW         1526    .bss.uart1_rx_buf   task.o
+    0x20000a30        -       0x00000002   Zero   RW         1527    .bss.uart1_rx_len   task.o
+    0x20000a32   0x08007da8   0x00000002   PAD
+    0x20000a34        -       0x00000004   Zero   RW         1528    .bss.uart1_state    task.o
+    0x20000a38        -       0x00000004   Zero   RW          693    .bss.uwTick         stm32f4xx_hal.o
+    0x20000a3c   0x08007da8   0x00000004   PAD
+    0x20000a40        -       0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x2001c000, Load base: 0x08009a78, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x2001c000, Load base: 0x08007da8, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
@@ -3901,14 +3986,15 @@ Image component sizes
        740          0          0          0        312       5813   adc.o
        402          0          0          0         84       4584   can.o
        204          0          0          0          0      19037   ccd.o
-      1024         92          0          0          0      19031   chassis.o
-       594         44          0          0          0      17147   controller.o
+      1024         92          0          0          0      19079   chassis.o
+       586         44          0          0          0      17145   controller.o
         56          0          0          0          0       3270   dma.o
        104          0          0          0          0      17480   encoder.o
        308          0          0          0          0       2286   gpio.o
+       144          0          0          0          0       4828   hal.o
        352          0          0          0        168       5365   i2c.o
-       640          8          0          0          0      16447   imu.o
-      1146          0       8192          8         16       9439   imu660.o
+       658          8          0          0          0      16343   imu.o
+      1788          0          0         12         22       6645   imu963ra.o
        286          0          0          0          0       2778   main.o
        914         60          0          0          0      21068   n20_motor.o
        774         28          0          0         12      16858   remote.o
@@ -3929,14 +4015,14 @@ Image component sizes
       2668          0          0          0          0      27485   stm32f4xx_hal_uart.o
        126          0          0          0          4       1729   stm32f4xx_it.o
         18          0         24          4          0       2568   system_stm32f4xx.o
-      1466         56         36         12       1090      23639   task.o
+      1474         56         36         12       1102      23685   task.o
       2652          0          0          0        576      12133   tim.o
        522          0          0          0        204       7225   usart.o
 
     ----------------------------------------------------------------------
-     26060        308       8684         32       3588     438553   Object Totals
+     26876        308        492         36       3608     440575   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-       160          4          0          3          6          0   (incl. Padding)
+       172          4          0          3          8          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -4000,15 +4086,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     28768        446      10736         36       3588     444599   Grand Totals
-     28768        446      10736         36       3588     444599   ELF Image Totals
-     28768        446      10736         36          0          0   ROM Totals
+     29584        446       2544         40       3608     446605   Grand Totals
+     29584        446       2544         40       3608     446605   ELF Image Totals
+     29584        446       2544         40          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                39504 (  38.58kB)
-    Total RW  Size (RW Data + ZI Data)              3624 (   3.54kB)
-    Total ROM Size (Code + RO Data + RW Data)      39540 (  38.61kB)
+    Total RO  Size (Code + RO Data)                32128 (  31.38kB)
+    Total RW  Size (RW Data + ZI Data)              3648 (   3.56kB)
+    Total ROM Size (Code + RO Data + RW Data)      32168 (  31.41kB)
 
 ==============================================================================
 

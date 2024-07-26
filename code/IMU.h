@@ -15,6 +15,9 @@
 #ifndef CONTROL_IMU_H
 #define CONTROL_IMU_H
 
+//#define USE_IMU660RA
+#define USE_IMU963RA
+
 #include "hal.h"
 
 typedef enum{
@@ -35,6 +38,10 @@ public:
     float wx;
     float wy;
     float wz;
+
+    float gx = 0;
+    float gy = 0;
+    float gz = 0;
 
     float correct_ang = 0;
     float ax_correct;

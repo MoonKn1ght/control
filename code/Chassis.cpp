@@ -106,7 +106,7 @@ void Chassis::Handler() {
             ang4 = ang2 * scale2;
             //ang = (ang1 + ang4) / 2;
             //ang = ang1 / 3525 * 3600;
-            ang = ang2 / 3540 * 3600;
+            ang = ang2 / 3550 * 3600; //TODO 待修正
            // ang = ang4;
             MOD(ang, 360);
 
