@@ -7,8 +7,6 @@
 
 #include "Tracking.h"
 
-//#define U_turn
-//#define line_memory
 
 float ccd_norm[128] = {2122.7,2156.54,2253.56,2302.95,2364.85,2384.49,2396.97,2428.91,
 						2480.69,2519.74,2546.13,2574.88,2585.78,2596.07,2601.78,2609.21,2613.86,
@@ -38,12 +36,16 @@ Tracking::Tracking(Chassis* chassis, CCD* ccd,PID* tracking_PID,Controller* cont
 void Tracking::init()
 {
 	tracking_PID->target = 0;
-	tracking_PID->feedback = &dir_filtered;
+	tracking_PID->feedback = &input;
 	last_x_line = 15.4/100;
 	last_y_line = 0;
+	last_dir = dir_filtered = 64;
+	v = 0.08;
+	controller->x_set = 0.154;
+	controller->y_set = 0.05;
+	state = 0;
 }
-
-void Tracking::Handler()
+void Tracking::process()
 {
 	// Normalization
 	int i;
@@ -85,10 +87,8 @@ void Tracking::Handler()
 			bin_ccd[i] = 0;
 		}
 	}
-
 	//Get the direction
 	//从两边向中间找线
-	uint16_t Left,Right;
 	for(i = 3; i < 125; ++i)	//从左找线
 	{
 		if(bin_ccd[i-1] + bin_ccd[i-2] + bin_ccd[i-3] == 3
@@ -114,6 +114,14 @@ void Tracking::Handler()
 	}
 
 	last_dir = dir;
+}
+
+//#define U_turn
+//#define line_memory1
+#define line_memory2
+
+void Tracking::Handler()
+{
 
 #ifdef U_turn
 
@@ -126,8 +134,8 @@ void Tracking::Handler()
 	else
 	{
 		dir = (Right + Left)/2;
-		dir_filtered = (1 - k_filter) * dir_filtered + k_filter * ((float)dir - 64);
-
+		dir_filtered = (1 - k_filter) * dir + k_filter * dir_filtered;
+		input = dir_filtered-64;
 		if(Right - Left < 35)
 		{
 			chassis->v_set = v ;
@@ -137,59 +145,156 @@ void Tracking::Handler()
 		else
 		{
 			chassis->state = CHASSIS_STOP;
-			chassis->v_set = 0 ;
+			chassis->v_set = 0.05 ;
 			chassis->w_set = 0.05;
 			chassis->state = CHASSIS_RUN;
 		}
 	}
 #endif
 
-#ifdef line_memory
+#ifdef line_memory1
 	static int t1 = 0;
 	static int t2 = 0;
-    static float x_line_array[1000] = {0};
-	static float y_line_array[1000] = {0};
-	if(Left == 500 || Right == 500)	//未检测到线
-	{
-		chassis->v_set = 0 ;
-		chassis->w_set = 0.05;
-		chassis->state = CHASSIS_RUN;
-	}
-	else if(Right - Left < 35)
-	{
-		dir = (Right + Left)/2;
-		dir_filtered = (1 - k_filter) * dir_filtered + k_filter * ((float)dir - 64);
 
-		//计算轨道坐标，单位为m
-		float theta = atan((64-dir_filtered)*0.093/120/0.154);
-		float distance = sqrt(((64-dir_filtered)*0.093/120)*((64-dir_filtered)*0.093/120) + (0.154)*(0.154));
-		x_line = chassis->x + distance*cos(theta + chassis->ang*PI/180);
-		y_line = chassis->y + distance*sin(theta + chassis->ang*PI/180);
-		if(abs(x_line - last_x_line) + abs(y_line - last_y_line) > 0.03)
+	if(state)
+	{
+
+		if(Left == 500)	//左丢线
 		{
-			x_line_array[t1] = x_line;
-			y_line_array[t1] = y_line;
-			++t1;
-			last_x_line = x_line;
-			last_y_line = y_line;
+			chassis->v_set = 0 ;
+			chassis->w_set = 0.05;
+			chassis->state = CHASSIS_RUN;
+		}
+		else if(Right == 500)	//右丢线
+		{
+			chassis->v_set = 0 ;
+			chassis->w_set = -0.05;
+			chassis->state = CHASSIS_RUN;
+		}
+		else if(Right - Left < 35)
+		{
+			dir = (Right + Left)/2;
+			dir_filtered = (1 - k_filter) * dir_filtered + k_filter * ((float)dir - 64);
+
+			//计算轨道坐标，单位为m
+			float theta = atan((64-dir_filtered)*0.093/120/0.154);
+			float distance = sqrt(((64-dir_filtered)*0.093/120)*((64-dir_filtered)*0.093/120) + (0.154)*(0.154));
+			x_line = chassis->x + distance*cos(theta + chassis->ang*PI/180);
+			y_line = chassis->y + distance*sin(theta + chassis->ang*PI/180);
 			controller->x_set = x_line;
 			controller->y_set = y_line;
+//			if(abs(x_line - last_x_line) + abs(y_line - last_y_line) > 0.03)
+//			{
+//				x_line_array[t1] = x_line;
+//				y_line_array[t1] = y_line;
+//				++t1;
+//				last_x_line = x_line;
+//				last_y_line = y_line;
+//				controller->x_set = x_line;
+//				controller->y_set = y_line;
+//			}
+		}
+//		else	//回到起点
+//		{
+//			if(t2 == 0)
+//			{
+//				controller->x_set = x_line_array[0];
+//				controller->y_set = y_line_array[0];
+//			}
+//			if(t2 < t1)
+//			{
+//				if(abs(chassis->x-x_line_array[t2]) + abs(chassis->y-y_line_array[t2]) < 0.13)
+//				{
+//					t2++;
+//					controller->x_set = x_line_array[t2];
+//					controller->y_set = y_line_array[t2];
+//				}
+//			}
+//			else
+//			{
+//				chassis->state = CHASSIS_STOP;
+//			}
+//		}
+	}
+	else
+	{
+		chassis->v_set = 0 ;
+		chassis->w_set = 0;
+		chassis->state = CHASSIS_STOP;
+	}
+
+
+#endif
+
+#ifdef line_memory2
+
+	static int t1 = 0;
+	static int t2 = 0;
+	if(!start_flag)
+	{
+		if(Left == 500)
+		{
+			chassis->v_set = 0 ;
+			chassis->w_set = 0.05;
+			chassis->state = CHASSIS_RUN;
+		}
+		else if(Right == 500)
+		{
+			chassis->v_set = 0 ;
+			chassis->w_set = -0.05;
+			chassis->state = CHASSIS_RUN;
+		}
+		else
+		{
+			dir = (Right + Left)/2;
+			dir_filtered = (1 - k_filter) * dir + k_filter * dir_filtered;
+			input = dir_filtered-64;
+			if(Right - Left < 35)
+			{
+				chassis->v_set = v ;
+				chassis->w_set = tracking_PID->calc()*0.5;
+				chassis->state = CHASSIS_RUN;
+				x_line = chassis->x;
+				y_line = chassis->y;
+				if(abs(x_line - last_x_line) + abs(y_line - last_y_line) > 0.03)
+				{
+					x_line_array[t1] = x_line;
+					y_line_array[t1] = y_line;
+					++t1;
+					last_x_line = x_line;
+					last_y_line = y_line;
+					controller->x_set = x_line;
+					controller->y_set = y_line;
+				}
+			}
+//			else
+//			{
+//				chassis->state = CHASSIS_STOP;
+//				start_flag = 1;
+//			}
+		}
+		if(Right == 500 && Left == 500)
+		{
+			chassis->state = CHASSIS_STOP;
+			start_flag = 1;
 		}
 	}
-	else	//回到起点
+	else
 	{
 		if(t2 == 0)
 		{
 			controller->x_set = x_line_array[0];
 			controller->y_set = y_line_array[0];
+			controller->Handler();
 		}
 		if(t2 < t1)
 		{
-			if(abs(chassis->x-x_line_array[t2]) + abs(chassis->y-y_line_array[t2]) < 0.13)
+			if(abs(chassis->x-x_line_array[t2]) + abs(chassis->y-y_line_array[t2]) < 0.03)
 			{
 				t2++;
 				controller->x_set = x_line_array[t2];
 				controller->y_set = y_line_array[t2];
+				controller->Handler();
 			}
 		}
 		else

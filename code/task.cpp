@@ -128,7 +128,7 @@ void task_handler(){
 //	controller.x_set = remote.x;
 //	controller.y_set = remote.y;
 //	chassis.state = CHASSIS_RUN;
-	controller.Handler();
+//	controller.Handler();
 
 	if(HAL_GetTick() % 500 == 0) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
@@ -235,4 +235,5 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
     if(hadc == &hadc3){
         ccd.sample_complete = true;
     }
+    tracking.process();
 }

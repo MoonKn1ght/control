@@ -8,5 +8,5 @@
 ../code/task.cpp:203:6:void CCD_Handler()	8	static
 ../code/task.cpp:208:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	24	static
 ../code/task.cpp:234:6:void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef*)	16	static
-../code/task.cpp:238:1:void __static_initialization_and_destruction_0(int, int)	24	static
-../code/task.cpp:238:1:cpp)	8	static
+../code/task.cpp:239:1:void __static_initialization_and_destruction_0(int, int)	24	static
+../code/task.cpp:239:1:cpp)	8	static

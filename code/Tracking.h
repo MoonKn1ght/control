@@ -23,20 +23,29 @@ public:
 	float data_norm[128];
 	uint8_t bin_ccd[128];
 	float dir_filtered;
-	float k_filter;
+	float k_filter = 0.1;
     uint16_t dir;	//黑线位置
     uint16_t last_dir;
     float threshold;
+	uint16_t Left,Right;
+	float input;
+
+	bool state = false;
 
     float v;
 
     float x_line,y_line;	//轨道坐标
     float last_x_line,last_y_line;
+    bool start_flag = 0;
+
+	float x_line_array[1000] = {0};
+	float y_line_array[1000] = {0};
 
 
 	Tracking(Chassis* chassis, CCD* ccd,PID* tracking_PID,Controller* controller);
 	void Handler();
 	void init();
+	void process();
 
 
 };
