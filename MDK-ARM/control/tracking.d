@@ -1,4 +1,5 @@
-control/task.o: ..\code\task.cpp ..\code\task.h ..\code\hal.h \
+control/tracking.o: ..\code\Tracking.cpp ..\code\Tracking.h \
+  ..\code\Chassis.h ..\code\module.h ..\code\Encoder.h ..\code\hal.h \
   ..\Core\Inc\main.h ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -57,8 +58,6 @@ control/task.o: ..\code\task.cpp ..\code\task.h ..\code\hal.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\limits \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__undef_macros \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdio.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h ..\code\module.h \
-  ..\code\Encoder.h ..\code\Motor.h ..\code\N20_Motor.h ..\code\CCD.h \
-  ..\code\Remote.h ..\code\IMU.h ..\code\device.h ..\code\Chassis.h \
-  ..\code\algorithm.h ..\code\PID.h ..\code\Controller.h \
-  ..\code\Tracking.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h ..\code\Motor.h \
+  ..\code\N20_Motor.h ..\code\CCD.h ..\code\Remote.h ..\code\IMU.h \
+  ..\code\algorithm.h ..\code\PID.h ..\code\Controller.h

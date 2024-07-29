@@ -46,6 +46,7 @@
 "control\imu963ra.o"
 "control\chassis.o"
 "control\controller.o"
+"control\tracking.o"
 "control\pid.o"
 "..\..\..\..\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\DSP\Lib\ARM\arm_cortexM4lf_math.lib"
 --library_type=microlib --strict --scatter "control\control.sct"

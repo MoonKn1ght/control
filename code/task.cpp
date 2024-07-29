@@ -16,9 +16,8 @@
 #include "hal.h"
 #include "module.h"
 #include "device.h"
-#include <math.h>
 
-//#define USE_REMOTE
+#define USE_REMOTE
 
 
 #define UART1_BUF_LEN 100
@@ -29,16 +28,16 @@ int uart1_state = 0;
 /**************************   device    ***************************/
 Encoder left_encoder(&htim5);
 Encoder right_encoder(&htim2);
-N20_Motor right_motor(&htim1, TIM_CHANNEL_1, TIM_CHANNEL_2,
+N20_Motor left_motor(&htim1, TIM_CHANNEL_2, TIM_CHANNEL_1,
                      &left_encoder,
                      298 * 4 * 7,
-                     33.4 / 2 / 1000 / 435 * 432,
+                     33.4 / 2 / 1000 / 435 * 432 * 8.0 / 7.85,
                      0
                      );
-N20_Motor left_motor(&htim1, TIM_CHANNEL_3, TIM_CHANNEL_4,
+N20_Motor right_motor(&htim1, TIM_CHANNEL_4, TIM_CHANNEL_3,
                      &right_encoder,
                      298 * 4 * 7,
-                     33.4 / 2 / 1000 / 435 * 432,
+                     33.4 / 2 / 1000 / 435 * 432 * 8.0 / 7.85,
                      0
 );
 CCD ccd;
@@ -67,8 +66,10 @@ void setup(){
 	left_motor.init();
 	right_motor.init();
     ccd.init();
+    HAL_Delay(1000);//imu校准
     imu.init();
 	HAL_UART_Receive_IT(&huart1,(uint8_t *)(uart1_rx_buf), 1);//接收一个字节
+
 	tracking.init();
 
 }
@@ -84,9 +85,10 @@ void loop(){
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.x, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.y, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang, 4, 0xffff);
-		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang1, 4, 0xffff);
-		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang2, 4, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)&tracking.x_line, 4, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)&tracking.y_line, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
+        ccd.sample_complete = false;
 	}
 	//HAL_Delay(50);
 
@@ -120,17 +122,15 @@ void task_handler(){
 	left_motor.Handler();
 	right_motor.Handler();
 	ccd.Handler();
-//	remote.Handler();
+	remote.Handler();
 	imu.Handler();
 	chassis.Handler();
-	tracking.Handler();
-//	remote.mode = 3;
-//	controller.x_set = remote.x;
-//	controller.y_set = remote.y;
-//	chassis.state = CHASSIS_RUN;
-//	controller.Handler();
 
-	if(HAL_GetTick() % 500 == 0) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+	tracking.Handler();
+
+	controller.Handler();
+
+	if(HAL_GetTick() % 500 == 0 && imu.state == IMU_RUN) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
 #ifdef USE_REMOTE //遥控器
     switch (remote.mode) {
@@ -153,12 +153,14 @@ void task_handler(){
 			static float y_array[] = {0, 0, -l, -l};
 			static int array_len = 4, index = 0;
 
-			if(controller.reached == true){
-				if(++index >= array_len) index = 0;
-				controller.x_set = x_array[index];
-				controller.y_set = y_array[index];
-				controller.reached = false;
-			}
+            controller.x_set = 0.95;
+//			if(controller.reached == true){
+//				if(++index >= array_len) index = 0;
+//				controller.x_set = x_array[index];
+//				controller.y_set = y_array[index];
+//				controller.reached = false;
+//			}
+			controller.state = 1;
 			chassis.state = CHASSIS_RUN;
 			controller.Handler();
         } break;
@@ -171,21 +173,6 @@ void task_handler(){
         }break;
             controller.Handler();
     }
-
-#else
-//    const float l = 0.3;
-//    static float x_array[] = {0, l, l, 0};
-//    static float y_array[] = {0, 0, -l, -l};
-//    static int array_len = 4, index = 0;
-//
-//    if(controller.reached == true){
-//        if(++index >= array_len) index = 0;
-//        controller.x_set = x_array[index];
-//        controller.y_set = y_array[index];
-//		controller.reached = false;
-//    }
-//	controller.Handler();
-
 
 #endif
 
@@ -234,6 +221,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
     if(hadc == &hadc3){
         ccd.sample_complete = true;
+        tracking.process();
     }
-    tracking.process();
 }

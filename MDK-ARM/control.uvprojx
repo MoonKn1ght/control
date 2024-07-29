@@ -672,6 +672,11 @@
               <FileType>8</FileType>
               <FilePath>..\code\Controller.cpp</FilePath>
             </File>
+            <File>
+              <FileName>Tracking.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\code\Tracking.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

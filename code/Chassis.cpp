@@ -106,7 +106,7 @@ void Chassis::Handler() {
             ang4 = ang2 * scale2;
             //ang = (ang1 + ang4) / 2;
             //ang = ang1 / 3525 * 3600;
-            ang = ang2 / 3550 * 3600; //TODO 待修正
+            ang = ang2 / 3540 * 3600; //TODO 待修正
            // ang = ang4;
             MOD(ang, 360);
 
@@ -114,7 +114,7 @@ void Chassis::Handler() {
 //            v1 = v;
 //            v2 = Kalman_Filter_x(v2, v, imu->ax * 9.8);
 //            v3 += imu->ax_correct * 9.8 / MAIN_LOOP_FREQ;
-            float temp_cos, temp_sin;
+            float temp_cos = 0, temp_sin = 0;
             arm_sin_cos_f32(ang, &temp_sin, &temp_cos);
             x += (motorL->v + motorR->v) / 2 * temp_cos / MAIN_LOOP_FREQ;
             y += (motorL->v + motorR->v) / 2 * temp_sin / MAIN_LOOP_FREQ;

@@ -15,8 +15,8 @@
 #ifndef CONTROL_IMU_H
 #define CONTROL_IMU_H
 
-//#define USE_IMU660RA
-#define USE_IMU963RA
+#define USE_IMU660RA
+//#define USE_IMU963RA
 
 #include "hal.h"
 

@@ -1366,6 +1366,33 @@ code/Remote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Remote.cpp.s
 .PHONY : code/Remote.cpp.s
 
+code/Tracking.obj: code/Tracking.cpp.obj
+
+.PHONY : code/Tracking.obj
+
+# target to build an object file
+code/Tracking.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Tracking.cpp.obj
+.PHONY : code/Tracking.cpp.obj
+
+code/Tracking.i: code/Tracking.cpp.i
+
+.PHONY : code/Tracking.i
+
+# target to preprocess a source file
+code/Tracking.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Tracking.cpp.i
+.PHONY : code/Tracking.cpp.i
+
+code/Tracking.s: code/Tracking.cpp.s
+
+.PHONY : code/Tracking.s
+
+# target to generate assembly for a file
+code/Tracking.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/Tracking.cpp.s
+.PHONY : code/Tracking.cpp.s
+
 code/hal.obj: code/hal.c.obj
 
 .PHONY : code/hal.obj
@@ -1619,6 +1646,9 @@ help:
 	@echo ... code/Remote.obj
 	@echo ... code/Remote.i
 	@echo ... code/Remote.s
+	@echo ... code/Tracking.obj
+	@echo ... code/Tracking.i
+	@echo ... code/Tracking.s
 	@echo ... code/hal.obj
 	@echo ... code/hal.i
 	@echo ... code/hal.s

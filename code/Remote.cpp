@@ -57,6 +57,7 @@ void Remote::process_data() {
             }
         }
 	}
+	len = 0;
 }
 
 Remote::Remote(UART_HandleTypeDef *huart) {
@@ -65,10 +66,10 @@ Remote::Remote(UART_HandleTypeDef *huart) {
 
 
 void Remote::Handler() {
-    if(HAL_GPIO_ReadPin(REMOTE_LOCK_GPIO_Port, REMOTE_LOCK_Pin) == GPIO_PIN_SET){
-        state = REMOTE_CONNECTED;
-    }else{
-        state = REMOTE_DISCONNECTED;
-    }
+//    if(HAL_GPIO_ReadPin(REMOTE_LOCK_GPIO_Port, REMOTE_LOCK_Pin) == GPIO_PIN_SET){
+//        state = REMOTE_CONNECTED;
+//    }else{
+//        state = REMOTE_DISCONNECTED;
+//    }
     process_data();
 }

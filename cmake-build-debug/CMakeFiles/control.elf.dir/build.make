@@ -666,9 +666,22 @@ CMakeFiles/control.elf.dir/code/Remote.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control.elf.dir/code/Remote.cpp.s"
 	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\asus\Desktop\contest2024\control\code\Remote.cpp -o CMakeFiles\control.elf.dir\code\Remote.cpp.s
 
+CMakeFiles/control.elf.dir/code/Tracking.cpp.obj: CMakeFiles/control.elf.dir/flags.make
+CMakeFiles/control.elf.dir/code/Tracking.cpp.obj: ../code/Tracking.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/control.elf.dir/code/Tracking.cpp.obj"
+	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\control.elf.dir\code\Tracking.cpp.obj -c C:\Users\asus\Desktop\contest2024\control\code\Tracking.cpp
+
+CMakeFiles/control.elf.dir/code/Tracking.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/control.elf.dir/code/Tracking.cpp.i"
+	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\asus\Desktop\contest2024\control\code\Tracking.cpp > CMakeFiles\control.elf.dir\code\Tracking.cpp.i
+
+CMakeFiles/control.elf.dir/code/Tracking.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control.elf.dir/code/Tracking.cpp.s"
+	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\asus\Desktop\contest2024\control\code\Tracking.cpp -o CMakeFiles\control.elf.dir\code\Tracking.cpp.s
+
 CMakeFiles/control.elf.dir/code/hal.c.obj: CMakeFiles/control.elf.dir/flags.make
 CMakeFiles/control.elf.dir/code/hal.c.obj: ../code/hal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/control.elf.dir/code/hal.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/control.elf.dir/code/hal.c.obj"
 	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\control.elf.dir\code\hal.c.obj   -c C:\Users\asus\Desktop\contest2024\control\code\hal.c
 
 CMakeFiles/control.elf.dir/code/hal.c.i: cmake_force
@@ -681,7 +694,7 @@ CMakeFiles/control.elf.dir/code/hal.c.s: cmake_force
 
 CMakeFiles/control.elf.dir/code/imu660.c.obj: CMakeFiles/control.elf.dir/flags.make
 CMakeFiles/control.elf.dir/code/imu660.c.obj: ../code/imu660.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/control.elf.dir/code/imu660.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/control.elf.dir/code/imu660.c.obj"
 	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\control.elf.dir\code\imu660.c.obj   -c C:\Users\asus\Desktop\contest2024\control\code\imu660.c
 
 CMakeFiles/control.elf.dir/code/imu660.c.i: cmake_force
@@ -694,7 +707,7 @@ CMakeFiles/control.elf.dir/code/imu660.c.s: cmake_force
 
 CMakeFiles/control.elf.dir/code/imu963ra.c.obj: CMakeFiles/control.elf.dir/flags.make
 CMakeFiles/control.elf.dir/code/imu963ra.c.obj: ../code/imu963ra.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/control.elf.dir/code/imu963ra.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/control.elf.dir/code/imu963ra.c.obj"
 	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\control.elf.dir\code\imu963ra.c.obj   -c C:\Users\asus\Desktop\contest2024\control\code\imu963ra.c
 
 CMakeFiles/control.elf.dir/code/imu963ra.c.i: cmake_force
@@ -707,7 +720,7 @@ CMakeFiles/control.elf.dir/code/imu963ra.c.s: cmake_force
 
 CMakeFiles/control.elf.dir/code/task.cpp.obj: CMakeFiles/control.elf.dir/flags.make
 CMakeFiles/control.elf.dir/code/task.cpp.obj: ../code/task.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/control.elf.dir/code/task.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/control.elf.dir/code/task.cpp.obj"
 	G:\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\control.elf.dir\code\task.cpp.obj -c C:\Users\asus\Desktop\contest2024\control\code\task.cpp
 
 CMakeFiles/control.elf.dir/code/task.cpp.i: cmake_force
@@ -766,6 +779,7 @@ control_elf_OBJECTS = \
 "CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj" \
 "CMakeFiles/control.elf.dir/code/PID.cpp.obj" \
 "CMakeFiles/control.elf.dir/code/Remote.cpp.obj" \
+"CMakeFiles/control.elf.dir/code/Tracking.cpp.obj" \
 "CMakeFiles/control.elf.dir/code/hal.c.obj" \
 "CMakeFiles/control.elf.dir/code/imu660.c.obj" \
 "CMakeFiles/control.elf.dir/code/imu963ra.c.obj" \
@@ -820,13 +834,14 @@ control.elf: CMakeFiles/control.elf.dir/code/IMU.cpp.obj
 control.elf: CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj
 control.elf: CMakeFiles/control.elf.dir/code/PID.cpp.obj
 control.elf: CMakeFiles/control.elf.dir/code/Remote.cpp.obj
+control.elf: CMakeFiles/control.elf.dir/code/Tracking.cpp.obj
 control.elf: CMakeFiles/control.elf.dir/code/hal.c.obj
 control.elf: CMakeFiles/control.elf.dir/code/imu660.c.obj
 control.elf: CMakeFiles/control.elf.dir/code/imu963ra.c.obj
 control.elf: CMakeFiles/control.elf.dir/code/task.cpp.obj
 control.elf: CMakeFiles/control.elf.dir/build.make
 control.elf: CMakeFiles/control.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking CXX executable control.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\asus\Desktop\contest2024\control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Linking CXX executable control.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\control.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/control.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/control.bin"

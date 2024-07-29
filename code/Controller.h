@@ -21,6 +21,8 @@ class Controller {
 public:
     Chassis* chassis;
 
+    bool state = false;
+
     float x, y, ang;
     float x_set = 0, y_set = 0;
     float dist, ang_err;

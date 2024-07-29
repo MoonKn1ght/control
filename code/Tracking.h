@@ -16,10 +16,22 @@
 class Tracking
 {
 public:
+    bool state = false;
+
 	PID* tracking_PID;
 	CCD* ccd;
 	Chassis* chassis;
 	Controller* controller;
+
+	//视野参数
+	float D = 8.8 / 100;
+	float dl = 8.0 / 100 / 88;
+
+	//轨道识别信息
+	bool inrange = false;
+	float mid_point = 0;
+    float x_line = 0, y_line = 0;	//轨道坐标
+
 	float data_norm[128];
 	uint8_t bin_ccd[128];
 	float dir_filtered;
@@ -30,11 +42,8 @@ public:
 	uint16_t Left,Right;
 	float input;
 
-	bool state = false;
-
     float v;
 
-    float x_line,y_line;	//轨道坐标
     float last_x_line,last_y_line;
     bool start_flag = 0;
 
