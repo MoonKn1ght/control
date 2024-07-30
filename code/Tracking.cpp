@@ -30,18 +30,40 @@ void Tracking::Handler() {
         case 1:{
             chassis->state = CHASSIS_RUN;
             chassis->v_set = 0.05;
+//            if(chassis->inrange){
+//                r2_set = true;
+//                r2.x = chassis->x_line;
+//                r2.y = chassis->y_line;
+//                if(!r1_set){ //看到第一个点
+//                    r1_set = true;
+//                    r1.x = chassis->x_line;
+//                    r1.y = chassis->y_line;
+//                }else if(calc_dist(r1, r2) >= ref_dist){
+//                    //先测试能否校准零位
+//                    calibrate_pos(r1, r2, POINT_B);
+//                    chassis->v_set = 0;
+//                    state = 2;
+//                }
+//            }
             if(chassis->inrange){
-                r2_set = true;
-                r2.x = chassis->x_line;
-                r2.y = chassis->y_line;
                 if(!r1_set){ //看到第一个点
                     r1_set = true;
                     r1.x = chassis->x_line;
                     r1.y = chassis->y_line;
-                }else if(calc_dist(r1, r2) >= ref_dist){
-                    //先测试能否校准零位
-                    calibrate_pos(r1, r2, POINT_B);
+
+                    pid_controller->dir = -1;
+                    pid_controller->state = 1;
+                }else{
+                    r2.x = chassis->x_line;
+                    r2.y = chassis->y_line;
+                }
+            } else{
+                if(r1_set){ //看不到第二个点
+                    r2_set = true;
+                    pid_controller->state = 0;
                     chassis->v_set = 0;
+                    chassis->w_set = 0;
+                    calibrate_pos2(r1, r2, POINT_A, POINT_B);
                     state = 2;
                 }
             }
@@ -95,5 +117,14 @@ float Tracking::calc_dist(Point r1, Point r2) {
     float y_diff = r2.y - r1.y;
     arm_sqrt_f32(x_diff * x_diff + y_diff * y_diff, &dist);
     return dist;
+}
+
+void Tracking::calibrate_pos2(Point r1, Point r2, ref_point_e ref1, ref_point_e ref2) {
+    Point ref_r1 = ref_points[ref1];
+    Point ref_r2 = ref_points[ref2];
+
+    //calc_dist(r1, r2);
+
+
 }
 

@@ -61,6 +61,8 @@ private:
 
     //r1: 位置参考点，对应ref_r
     void calibrate_pos(Point r1, Point r2, ref_point_e ref_r);
+    //r2: 位置参考点
+    void calibrate_pos2(Point r1, Point r2, ref_point_e ref1, ref_point_e ref2);
 
 };
 

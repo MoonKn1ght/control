@@ -1415,10 +1415,9 @@ Section Cross References
     tracking.o(.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller) refers to tracking.o(.rodata.cst32) for .Lconstinit
     tracking.o(.ARM.exidx.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller) refers to tracking.o(.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller) for [Anonymous Symbol]
     tracking.o(.text._ZN8Tracking7HandlerEv) refers to sqrtf.o(i.__hardfp_sqrtf) for __hardfp_sqrtf
-    tracking.o(.text._ZN8Tracking7HandlerEv) refers to tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e) for Tracking::calibrate_pos(Point, Point, ref_point_e)
     tracking.o(.ARM.exidx.text._ZN8Tracking7HandlerEv) refers to tracking.o(.text._ZN8Tracking7HandlerEv) for [Anonymous Symbol]
-    tracking.o(.text._ZN8Tracking9calc_distE5PointS0_) refers to sqrtf.o(i.__hardfp_sqrtf) for __hardfp_sqrtf
-    tracking.o(.ARM.exidx.text._ZN8Tracking9calc_distE5PointS0_) refers to tracking.o(.text._ZN8Tracking9calc_distE5PointS0_) for [Anonymous Symbol]
+    tracking.o(.text._ZN8Tracking14calibrate_pos2E5PointS0_11ref_point_eS1_) refers to sqrtf.o(i.__hardfp_sqrtf) for __hardfp_sqrtf
+    tracking.o(.ARM.exidx.text._ZN8Tracking14calibrate_pos2E5PointS0_11ref_point_eS1_) refers to tracking.o(.text._ZN8Tracking14calibrate_pos2E5PointS0_11ref_point_eS1_) for [Anonymous Symbol]
     tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e) refers to f2d.o(.text) for __aeabi_f2d
     tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e) refers to ddiv.o(.text) for __aeabi_ddiv
     tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e) refers to d2f.o(.text) for __aeabi_d2f
@@ -1426,6 +1425,8 @@ Section Cross References
     tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e) refers to acosf.o(i.__hardfp_acosf) for __hardfp_acosf
     tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e) refers to dmul.o(.text) for __aeabi_dmul
     tracking.o(.ARM.exidx.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e) refers to tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e) for [Anonymous Symbol]
+    tracking.o(.text._ZN8Tracking9calc_distE5PointS0_) refers to sqrtf.o(i.__hardfp_sqrtf) for __hardfp_sqrtf
+    tracking.o(.ARM.exidx.text._ZN8Tracking9calc_distE5PointS0_) refers to tracking.o(.text._ZN8Tracking9calc_distE5PointS0_) for [Anonymous Symbol]
     hal.o(.text.fputc) refers to usart.o(.bss.huart1) for huart1
     hal.o(.text.fputc) refers to stm32f4xx_hal_uart.o(.text.HAL_UART_Transmit) for HAL_UART_Transmit
     hal.o(.ARM.exidx.text.fputc) refers to hal.o(.text.fputc) for [Anonymous Symbol]
@@ -2809,9 +2810,12 @@ Removing Unused input sections from the image.
     Removing tracking.o(.text), (0 bytes).
     Removing tracking.o(.ARM.exidx.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller), (8 bytes).
     Removing tracking.o(.ARM.exidx.text._ZN8Tracking7HandlerEv), (8 bytes).
+    Removing tracking.o(.text._ZN8Tracking14calibrate_pos2E5PointS0_11ref_point_eS1_), (64 bytes).
+    Removing tracking.o(.ARM.exidx.text._ZN8Tracking14calibrate_pos2E5PointS0_11ref_point_eS1_), (8 bytes).
+    Removing tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e), (440 bytes).
+    Removing tracking.o(.ARM.exidx.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e), (8 bytes).
     Removing tracking.o(.text._ZN8Tracking9calc_distE5PointS0_), (64 bytes).
     Removing tracking.o(.ARM.exidx.text._ZN8Tracking9calc_distE5PointS0_), (8 bytes).
-    Removing tracking.o(.ARM.exidx.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e), (8 bytes).
     Removing hal.o(.text), (0 bytes).
     Removing hal.o(.text.fputc), (30 bytes).
     Removing hal.o(.ARM.exidx.text.fputc), (8 bytes).
@@ -2955,7 +2959,7 @@ Removing Unused input sections from the image.
     Removing arm_common_tables.o(.rodata.sinTable_q31), (2052 bytes).
     Removing arm_common_tables.o(.rodata.sinTable_q15), (1026 bytes).
 
-1256 unused section(s) (total 284858 bytes) removed from the image.
+1259 unused section(s) (total 285370 bytes) removed from the image.
 
 ==============================================================================
 
@@ -3230,58 +3234,53 @@ Image Symbol Table
     [Anonymous Symbol]                       0x080056d4   Section        0  controller.o(.text._ZN10ControllerC2EP7Chassis)
     [Anonymous Symbol]                       0x0800570c   Section        0  pid_controller.o(.text._ZN14PID_Controller7HandlerEv)
     [Anonymous Symbol]                       0x0800577c   Section        0  pid_controller.o(.text._ZN14PID_ControllerC2EP7Chassis)
-    [Anonymous Symbol]                       0x080057b0   Section        0  ccd.o(.text._ZN3CCD4initEv)
-    [Anonymous Symbol]                       0x080057c0   Section        0  ccd.o(.text._ZN3CCD7HandlerEv)
-    [Anonymous Symbol]                       0x08005804   Section        0  ccd.o(.text._ZN3CCD7SI_sendEv)
-    [Anonymous Symbol]                       0x08005874   Section        0  imu.o(.text._ZN3IMU4initEv)
-    [Anonymous Symbol]                       0x08005940   Section        0  imu.o(.text._ZN3IMU7HandlerEv)
-    [Anonymous Symbol]                       0x0800594c   Section        0  imu.o(.text._ZN3IMU8get_dataEv)
-    [Anonymous Symbol]                       0x08005ab0   Section        0  remote.o(.text._ZN6Remote12process_dataEv)
-    [Anonymous Symbol]                       0x08005d74   Section        0  remote.o(.text._ZN6Remote7HandlerEv)
-    [Anonymous Symbol]                       0x08005d78   Section        0  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
-    [Anonymous Symbol]                       0x08005da0   Section        0  chassis.o(.text._ZN7Chassis7HandlerEv)
-    [Anonymous Symbol]                       0x08006150   Section        0  chassis.o(.text._ZN7Chassis7processEv)
-    __arm_cp.0_6                             0x08006598   Number         4  chassis.o(.text._ZN7Chassis7processEv)
-    [Anonymous Symbol]                       0x0800672c   Section        0  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUP3CCDf)
-    [Anonymous Symbol]                       0x08006780   Section        0  encoder.o(.text._ZN7Encoder15overflow_updateEv)
-    [Anonymous Symbol]                       0x080067a4   Section        0  encoder.o(.text._ZN7Encoder4initEv)
-    [Anonymous Symbol]                       0x080067bc   Section        0  encoder.o(.text._ZN7Encoder7HandlerEv)
-    [Anonymous Symbol]                       0x080067e0   Section        0  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
-    [Anonymous Symbol]                       0x080067f0   Section        0  tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e)
-    [Anonymous Symbol]                       0x080069a8   Section        0  tracking.o(.text._ZN8Tracking7HandlerEv)
-    [Anonymous Symbol]                       0x08006a74   Section        0  tracking.o(.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller)
-    [Anonymous Symbol]                       0x08006ad4   Section        0  n20_motor.o(.text._ZN9N20_Motor16output_intensityEv)
-    [Anonymous Symbol]                       0x08006d30   Section        0  n20_motor.o(.text._ZN9N20_Motor17measure_parameterEv)
-    [Anonymous Symbol]                       0x08006e20   Section        0  n20_motor.o(.text._ZN9N20_Motor4initEv)
-    [Anonymous Symbol]                       0x08006e38   Section        0  n20_motor.o(.text._ZN9N20_Motor7HandlerEv)
-    [Anonymous Symbol]                       0x08006e4c   Section        0  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
-    [Anonymous Symbol]                       0x08006e74   Section        0  arm_sin_cos_f32.o(.text.arm_sin_cos_f32)
-    [Anonymous Symbol]                       0x08006f94   Section        0  imu660.o(.text.imu660ra_get_acc)
-    [Anonymous Symbol]                       0x08006ff4   Section        0  imu660.o(.text.imu660ra_get_gyro)
-    [Anonymous Symbol]                       0x08007054   Section        0  imu660.o(.text.imu660ra_init)
-    [Anonymous Symbol]                       0x08007270   Section        0  task.o(.text.loop)
-    [Anonymous Symbol]                       0x08007424   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x08007494   Section        0  task.o(.text.setup)
-    [Anonymous Symbol]                       0x08007500   Section        0  hal.o(.text.spi_read_8bit_registers)
-    [Anonymous Symbol]                       0x08007530   Section        0  hal.o(.text.spi_write_8bit_register)
-    [Anonymous Symbol]                       0x08007564   Section        0  hal.o(.text.spi_write_8bit_registers)
-    [Anonymous Symbol]                       0x08007594   Section        0  task.o(.text.task_handler)
-    i.__ARM_fpclassifyf                      0x08007658   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
-    i.__hardfp_acosf                         0x08007680   Section        0  acosf.o(i.__hardfp_acosf)
-    i.__hardfp_atan2f                        0x08007798   Section        0  atan2f.o(i.__hardfp_atan2f)
-    i.__hardfp_sqrtf                         0x08007a2c   Section        0  sqrtf.o(i.__hardfp_sqrtf)
-    i.__mathlib_flt_infnan                   0x08007a66   Section        0  funder.o(i.__mathlib_flt_infnan)
-    i.__mathlib_flt_infnan2                  0x08007a6c   Section        0  funder.o(i.__mathlib_flt_infnan2)
-    i.__mathlib_flt_invalid                  0x08007a74   Section        0  funder.o(i.__mathlib_flt_invalid)
-    i.__mathlib_flt_underflow                0x08007a84   Section        0  funder.o(i.__mathlib_flt_underflow)
-    i.__scatterload_copy                     0x08007a94   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08007aa2   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08007aa4   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.__set_errno                            0x08007ab4   Section        0  errno.o(i.__set_errno)
-    i.sqrtf                                  0x08007ac0   Section        0  sqrtf.o(i.sqrtf)
-    .Lconstinit                              0x08007b18   Data          32  tracking.o(.rodata.cst32)
-    DMA_CalcBaseAndBitshift.flagBitshiftOffset 0x08007b38   Data           8  stm32f4xx_hal_dma.o(.rodata.cst8)
-    .init_array                              0x0800a368   Section        0  cpp_init.o(.init_array)
+    [Anonymous Symbol]                       0x080057b8   Section        0  ccd.o(.text._ZN3CCD4initEv)
+    [Anonymous Symbol]                       0x080057c8   Section        0  ccd.o(.text._ZN3CCD7HandlerEv)
+    [Anonymous Symbol]                       0x0800580c   Section        0  ccd.o(.text._ZN3CCD7SI_sendEv)
+    [Anonymous Symbol]                       0x0800587c   Section        0  imu.o(.text._ZN3IMU4initEv)
+    [Anonymous Symbol]                       0x08005948   Section        0  imu.o(.text._ZN3IMU7HandlerEv)
+    [Anonymous Symbol]                       0x08005954   Section        0  imu.o(.text._ZN3IMU8get_dataEv)
+    [Anonymous Symbol]                       0x08005ab8   Section        0  remote.o(.text._ZN6Remote12process_dataEv)
+    [Anonymous Symbol]                       0x08005d7c   Section        0  remote.o(.text._ZN6Remote7HandlerEv)
+    [Anonymous Symbol]                       0x08005d80   Section        0  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
+    [Anonymous Symbol]                       0x08005da8   Section        0  chassis.o(.text._ZN7Chassis7HandlerEv)
+    [Anonymous Symbol]                       0x08006158   Section        0  chassis.o(.text._ZN7Chassis7processEv)
+    __arm_cp.0_6                             0x080065a0   Number         4  chassis.o(.text._ZN7Chassis7processEv)
+    [Anonymous Symbol]                       0x08006734   Section        0  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUP3CCDf)
+    [Anonymous Symbol]                       0x08006788   Section        0  encoder.o(.text._ZN7Encoder15overflow_updateEv)
+    [Anonymous Symbol]                       0x080067ac   Section        0  encoder.o(.text._ZN7Encoder4initEv)
+    [Anonymous Symbol]                       0x080067c4   Section        0  encoder.o(.text._ZN7Encoder7HandlerEv)
+    [Anonymous Symbol]                       0x080067e8   Section        0  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
+    [Anonymous Symbol]                       0x080067f8   Section        0  tracking.o(.text._ZN8Tracking7HandlerEv)
+    [Anonymous Symbol]                       0x080068c4   Section        0  tracking.o(.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller)
+    [Anonymous Symbol]                       0x08006924   Section        0  n20_motor.o(.text._ZN9N20_Motor16output_intensityEv)
+    [Anonymous Symbol]                       0x08006b80   Section        0  n20_motor.o(.text._ZN9N20_Motor17measure_parameterEv)
+    [Anonymous Symbol]                       0x08006c70   Section        0  n20_motor.o(.text._ZN9N20_Motor4initEv)
+    [Anonymous Symbol]                       0x08006c88   Section        0  n20_motor.o(.text._ZN9N20_Motor7HandlerEv)
+    [Anonymous Symbol]                       0x08006c9c   Section        0  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
+    [Anonymous Symbol]                       0x08006cc4   Section        0  arm_sin_cos_f32.o(.text.arm_sin_cos_f32)
+    [Anonymous Symbol]                       0x08006de4   Section        0  imu660.o(.text.imu660ra_get_acc)
+    [Anonymous Symbol]                       0x08006e44   Section        0  imu660.o(.text.imu660ra_get_gyro)
+    [Anonymous Symbol]                       0x08006ea4   Section        0  imu660.o(.text.imu660ra_init)
+    [Anonymous Symbol]                       0x080070c0   Section        0  task.o(.text.loop)
+    [Anonymous Symbol]                       0x08007274   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x080072e4   Section        0  task.o(.text.setup)
+    [Anonymous Symbol]                       0x08007350   Section        0  hal.o(.text.spi_read_8bit_registers)
+    [Anonymous Symbol]                       0x08007380   Section        0  hal.o(.text.spi_write_8bit_register)
+    [Anonymous Symbol]                       0x080073b4   Section        0  hal.o(.text.spi_write_8bit_registers)
+    [Anonymous Symbol]                       0x080073e4   Section        0  task.o(.text.task_handler)
+    i.__ARM_fpclassifyf                      0x080074a8   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
+    i.__hardfp_atan2f                        0x080074d0   Section        0  atan2f.o(i.__hardfp_atan2f)
+    i.__hardfp_sqrtf                         0x08007764   Section        0  sqrtf.o(i.__hardfp_sqrtf)
+    i.__mathlib_flt_infnan2                  0x0800779e   Section        0  funder.o(i.__mathlib_flt_infnan2)
+    i.__mathlib_flt_underflow                0x080077a4   Section        0  funder.o(i.__mathlib_flt_underflow)
+    i.__scatterload_copy                     0x080077b4   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080077c2   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080077c4   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__set_errno                            0x080077d4   Section        0  errno.o(i.__set_errno)
+    .Lconstinit                              0x080077f8   Data          32  tracking.o(.rodata.cst32)
+    DMA_CalcBaseAndBitshift.flagBitshiftOffset 0x08007818   Data           8  stm32f4xx_hal_dma.o(.rodata.cst8)
+    .init_array                              0x0800a048   Section        0  cpp_init.o(.init_array)
     _errno                                   0x20000000   Data           4  errno.o(.data)
     .data                                    0x20000000   Section        4  errno.o(.data)
     HAL_RCC_CAN1_CLK_ENABLED                 0x20000228   Data           4  can.o(.bss.HAL_RCC_CAN1_CLK_ENABLED)
@@ -3539,69 +3538,64 @@ Image Symbol Table
     Controller::Controller(Chassis*)         0x080056d5   Thumb Code    56  controller.o(.text._ZN10ControllerC2EP7Chassis)
     Controller::Controller__sub_object(Chassis*) 0x080056d5   Thumb Code    56  controller.o(.text._ZN10ControllerC2EP7Chassis)
     PID_Controller::Handler()                0x0800570d   Thumb Code   110  pid_controller.o(.text._ZN14PID_Controller7HandlerEv)
-    PID_Controller::PID_Controller(Chassis*) 0x0800577d   Thumb Code    52  pid_controller.o(.text._ZN14PID_ControllerC2EP7Chassis)
-    PID_Controller::PID_Controller__sub_object(Chassis*) 0x0800577d   Thumb Code    52  pid_controller.o(.text._ZN14PID_ControllerC2EP7Chassis)
-    CCD::init()                              0x080057b1   Thumb Code    14  ccd.o(.text._ZN3CCD4initEv)
-    CCD::Handler()                           0x080057c1   Thumb Code    68  ccd.o(.text._ZN3CCD7HandlerEv)
-    CCD::SI_send()                           0x08005805   Thumb Code   110  ccd.o(.text._ZN3CCD7SI_sendEv)
-    IMU::init()                              0x08005875   Thumb Code   204  imu.o(.text._ZN3IMU4initEv)
-    IMU::Handler()                           0x08005941   Thumb Code    12  imu.o(.text._ZN3IMU7HandlerEv)
-    IMU::get_data()                          0x0800594d   Thumb Code   354  imu.o(.text._ZN3IMU8get_dataEv)
-    Remote::process_data()                   0x08005ab1   Thumb Code   708  remote.o(.text._ZN6Remote12process_dataEv)
-    Remote::Handler()                        0x08005d75   Thumb Code     4  remote.o(.text._ZN6Remote7HandlerEv)
-    Remote::Remote(__UART_HandleTypeDef*)    0x08005d79   Thumb Code    34  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
-    Remote::Remote__sub_object(__UART_HandleTypeDef*) 0x08005d79   Thumb Code    34  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
-    Chassis::Handler()                       0x08005da1   Thumb Code   940  chassis.o(.text._ZN7Chassis7HandlerEv)
-    Chassis::process()                       0x08006151   Thumb Code  1500  chassis.o(.text._ZN7Chassis7processEv)
-    Chassis::Chassis(N20_Motor*, N20_Motor*, IMU*, CCD*, float) 0x0800672d   Thumb Code    84  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUP3CCDf)
-    Chassis::Chassis__sub_object(N20_Motor*, N20_Motor*, IMU*, CCD*, float) 0x0800672d   Thumb Code    84  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUP3CCDf)
-    Encoder::overflow_update()               0x08006781   Thumb Code    34  encoder.o(.text._ZN7Encoder15overflow_updateEv)
-    Encoder::init()                          0x080067a5   Thumb Code    22  encoder.o(.text._ZN7Encoder4initEv)
-    Encoder::Handler()                       0x080067bd   Thumb Code    34  encoder.o(.text._ZN7Encoder7HandlerEv)
-    Encoder::Encoder(TIM_HandleTypeDef*)     0x080067e1   Thumb Code    14  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
-    Encoder::Encoder__sub_object(TIM_HandleTypeDef*) 0x080067e1   Thumb Code    14  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
-    Tracking::calibrate_pos(Point, Point, ref_point_e) 0x080067f1   Thumb Code   440  tracking.o(.text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e)
-    Tracking::Handler()                      0x080069a9   Thumb Code   202  tracking.o(.text._ZN8Tracking7HandlerEv)
-    Tracking::Tracking(Chassis*, Controller*, PID_Controller*) 0x08006a75   Thumb Code    94  tracking.o(.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller)
-    Tracking::Tracking__sub_object(Chassis*, Controller*, PID_Controller*) 0x08006a75   Thumb Code    94  tracking.o(.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller)
-    N20_Motor::output_intensity()            0x08006ad5   Thumb Code   600  n20_motor.o(.text._ZN9N20_Motor16output_intensityEv)
-    N20_Motor::measure_parameter()           0x08006d31   Thumb Code   240  n20_motor.o(.text._ZN9N20_Motor17measure_parameterEv)
-    N20_Motor::init()                        0x08006e21   Thumb Code    24  n20_motor.o(.text._ZN9N20_Motor4initEv)
-    N20_Motor::Handler()                     0x08006e39   Thumb Code    18  n20_motor.o(.text._ZN9N20_Motor7HandlerEv)
-    N20_Motor::N20_Motor(TIM_HandleTypeDef*, unsigned, unsigned, Encoder*, float, float, float) 0x08006e4d   Thumb Code    40  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
-    N20_Motor::N20_Motor__sub_object(TIM_HandleTypeDef*, unsigned, unsigned, Encoder*, float, float, float) 0x08006e4d   Thumb Code    40  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
-    arm_sin_cos_f32                          0x08006e75   Thumb Code   288  arm_sin_cos_f32.o(.text.arm_sin_cos_f32)
-    imu660ra_get_acc                         0x08006f95   Thumb Code    96  imu660.o(.text.imu660ra_get_acc)
-    imu660ra_get_gyro                        0x08006ff5   Thumb Code    96  imu660.o(.text.imu660ra_get_gyro)
-    imu660ra_init                            0x08007055   Thumb Code   536  imu660.o(.text.imu660ra_init)
-    loop                                     0x08007271   Thumb Code   436  task.o(.text.loop)
-    main                                     0x08007425   Thumb Code   110  main.o(.text.main)
-    setup                                    0x08007495   Thumb Code   108  task.o(.text.setup)
-    spi_read_8bit_registers                  0x08007501   Thumb Code    46  hal.o(.text.spi_read_8bit_registers)
-    spi_write_8bit_register                  0x08007531   Thumb Code    50  hal.o(.text.spi_write_8bit_register)
-    spi_write_8bit_registers                 0x08007565   Thumb Code    46  hal.o(.text.spi_write_8bit_registers)
-    task_handler                             0x08007595   Thumb Code   196  task.o(.text.task_handler)
-    __ARM_fpclassifyf                        0x08007659   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
-    __hardfp_acosf                           0x08007681   Thumb Code   234  acosf.o(i.__hardfp_acosf)
-    __hardfp_atan2f                          0x08007799   Thumb Code   572  atan2f.o(i.__hardfp_atan2f)
-    __hardfp_sqrtf                           0x08007a2d   Thumb Code    58  sqrtf.o(i.__hardfp_sqrtf)
-    __mathlib_flt_infnan                     0x08007a67   Thumb Code     6  funder.o(i.__mathlib_flt_infnan)
-    __mathlib_flt_infnan2                    0x08007a6d   Thumb Code     6  funder.o(i.__mathlib_flt_infnan2)
-    __mathlib_flt_invalid                    0x08007a75   Thumb Code    10  funder.o(i.__mathlib_flt_invalid)
-    __mathlib_flt_underflow                  0x08007a85   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
-    __scatterload_copy                       0x08007a95   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08007aa3   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08007aa5   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    __set_errno                              0x08007ab5   Thumb Code     6  errno.o(i.__set_errno)
-    sqrtf                                    0x08007ac1   Thumb Code    62  sqrtf.o(i.sqrtf)
-    AHBPrescTable                            0x08007afe   Data          16  system_stm32f4xx.o(.rodata.AHBPrescTable)
-    APBPrescTable                            0x08007b0e   Data           8  system_stm32f4xx.o(.rodata.APBPrescTable)
-    imu660ra_config_file                     0x08007b40   Data        8192  imu660.o(.rodata.imu660ra_config_file)
-    sinTable_f32                             0x08009b40   Data        2052  arm_common_tables.o(.rodata.sinTable_f32)
-    Region$$Table$$Base                      0x0800a344   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800a364   Number         0  anon$$obj.o(Region$$Table)
-    SHT$$INIT_ARRAY$$Base                    0x0800a364   Number         0  task.o(.init_array)
-    SHT$$INIT_ARRAY$$Limit                   0x0800a368   Number         0  cpp_init.o(.init_array)
+    PID_Controller::PID_Controller(Chassis*) 0x0800577d   Thumb Code    60  pid_controller.o(.text._ZN14PID_ControllerC2EP7Chassis)
+    PID_Controller::PID_Controller__sub_object(Chassis*) 0x0800577d   Thumb Code    60  pid_controller.o(.text._ZN14PID_ControllerC2EP7Chassis)
+    CCD::init()                              0x080057b9   Thumb Code    14  ccd.o(.text._ZN3CCD4initEv)
+    CCD::Handler()                           0x080057c9   Thumb Code    68  ccd.o(.text._ZN3CCD7HandlerEv)
+    CCD::SI_send()                           0x0800580d   Thumb Code   110  ccd.o(.text._ZN3CCD7SI_sendEv)
+    IMU::init()                              0x0800587d   Thumb Code   204  imu.o(.text._ZN3IMU4initEv)
+    IMU::Handler()                           0x08005949   Thumb Code    12  imu.o(.text._ZN3IMU7HandlerEv)
+    IMU::get_data()                          0x08005955   Thumb Code   354  imu.o(.text._ZN3IMU8get_dataEv)
+    Remote::process_data()                   0x08005ab9   Thumb Code   708  remote.o(.text._ZN6Remote12process_dataEv)
+    Remote::Handler()                        0x08005d7d   Thumb Code     4  remote.o(.text._ZN6Remote7HandlerEv)
+    Remote::Remote(__UART_HandleTypeDef*)    0x08005d81   Thumb Code    34  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
+    Remote::Remote__sub_object(__UART_HandleTypeDef*) 0x08005d81   Thumb Code    34  remote.o(.text._ZN6RemoteC2EP20__UART_HandleTypeDef)
+    Chassis::Handler()                       0x08005da9   Thumb Code   940  chassis.o(.text._ZN7Chassis7HandlerEv)
+    Chassis::process()                       0x08006159   Thumb Code  1500  chassis.o(.text._ZN7Chassis7processEv)
+    Chassis::Chassis(N20_Motor*, N20_Motor*, IMU*, CCD*, float) 0x08006735   Thumb Code    84  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUP3CCDf)
+    Chassis::Chassis__sub_object(N20_Motor*, N20_Motor*, IMU*, CCD*, float) 0x08006735   Thumb Code    84  chassis.o(.text._ZN7ChassisC2EP9N20_MotorS1_P3IMUP3CCDf)
+    Encoder::overflow_update()               0x08006789   Thumb Code    34  encoder.o(.text._ZN7Encoder15overflow_updateEv)
+    Encoder::init()                          0x080067ad   Thumb Code    22  encoder.o(.text._ZN7Encoder4initEv)
+    Encoder::Handler()                       0x080067c5   Thumb Code    34  encoder.o(.text._ZN7Encoder7HandlerEv)
+    Encoder::Encoder(TIM_HandleTypeDef*)     0x080067e9   Thumb Code    14  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
+    Encoder::Encoder__sub_object(TIM_HandleTypeDef*) 0x080067e9   Thumb Code    14  encoder.o(.text._ZN7EncoderC2EP17TIM_HandleTypeDef)
+    Tracking::Handler()                      0x080067f9   Thumb Code   202  tracking.o(.text._ZN8Tracking7HandlerEv)
+    Tracking::Tracking(Chassis*, Controller*, PID_Controller*) 0x080068c5   Thumb Code    94  tracking.o(.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller)
+    Tracking::Tracking__sub_object(Chassis*, Controller*, PID_Controller*) 0x080068c5   Thumb Code    94  tracking.o(.text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller)
+    N20_Motor::output_intensity()            0x08006925   Thumb Code   600  n20_motor.o(.text._ZN9N20_Motor16output_intensityEv)
+    N20_Motor::measure_parameter()           0x08006b81   Thumb Code   240  n20_motor.o(.text._ZN9N20_Motor17measure_parameterEv)
+    N20_Motor::init()                        0x08006c71   Thumb Code    24  n20_motor.o(.text._ZN9N20_Motor4initEv)
+    N20_Motor::Handler()                     0x08006c89   Thumb Code    18  n20_motor.o(.text._ZN9N20_Motor7HandlerEv)
+    N20_Motor::N20_Motor(TIM_HandleTypeDef*, unsigned, unsigned, Encoder*, float, float, float) 0x08006c9d   Thumb Code    40  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
+    N20_Motor::N20_Motor__sub_object(TIM_HandleTypeDef*, unsigned, unsigned, Encoder*, float, float, float) 0x08006c9d   Thumb Code    40  n20_motor.o(.text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff)
+    arm_sin_cos_f32                          0x08006cc5   Thumb Code   288  arm_sin_cos_f32.o(.text.arm_sin_cos_f32)
+    imu660ra_get_acc                         0x08006de5   Thumb Code    96  imu660.o(.text.imu660ra_get_acc)
+    imu660ra_get_gyro                        0x08006e45   Thumb Code    96  imu660.o(.text.imu660ra_get_gyro)
+    imu660ra_init                            0x08006ea5   Thumb Code   536  imu660.o(.text.imu660ra_init)
+    loop                                     0x080070c1   Thumb Code   436  task.o(.text.loop)
+    main                                     0x08007275   Thumb Code   110  main.o(.text.main)
+    setup                                    0x080072e5   Thumb Code   108  task.o(.text.setup)
+    spi_read_8bit_registers                  0x08007351   Thumb Code    46  hal.o(.text.spi_read_8bit_registers)
+    spi_write_8bit_register                  0x08007381   Thumb Code    50  hal.o(.text.spi_write_8bit_register)
+    spi_write_8bit_registers                 0x080073b5   Thumb Code    46  hal.o(.text.spi_write_8bit_registers)
+    task_handler                             0x080073e5   Thumb Code   196  task.o(.text.task_handler)
+    __ARM_fpclassifyf                        0x080074a9   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
+    __hardfp_atan2f                          0x080074d1   Thumb Code   572  atan2f.o(i.__hardfp_atan2f)
+    __hardfp_sqrtf                           0x08007765   Thumb Code    58  sqrtf.o(i.__hardfp_sqrtf)
+    __mathlib_flt_infnan2                    0x0800779f   Thumb Code     6  funder.o(i.__mathlib_flt_infnan2)
+    __mathlib_flt_underflow                  0x080077a5   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
+    __scatterload_copy                       0x080077b5   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080077c3   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080077c5   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    __set_errno                              0x080077d5   Thumb Code     6  errno.o(i.__set_errno)
+    AHBPrescTable                            0x080077e0   Data          16  system_stm32f4xx.o(.rodata.AHBPrescTable)
+    APBPrescTable                            0x080077f0   Data           8  system_stm32f4xx.o(.rodata.APBPrescTable)
+    imu660ra_config_file                     0x08007820   Data        8192  imu660.o(.rodata.imu660ra_config_file)
+    sinTable_f32                             0x08009820   Data        2052  arm_common_tables.o(.rodata.sinTable_f32)
+    Region$$Table$$Base                      0x0800a024   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800a044   Number         0  anon$$obj.o(Region$$Table)
+    SHT$$INIT_ARRAY$$Base                    0x0800a044   Number         0  task.o(.init_array)
+    SHT$$INIT_ARRAY$$Limit                   0x0800a048   Number         0  cpp_init.o(.init_array)
     SystemCoreClock                          0x20000004   Data           4  system_stm32f4xx.o(.data.SystemCoreClock)
     ccd_norm                                 0x20000008   Data         512  chassis.o(.data.ccd_norm)
     end_flag                                 0x20000208   Data           2  task.o(.data.end_flag)
@@ -3669,43 +3663,43 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000a590, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000a270, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000a368, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000a048, Max: 0x00080000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000188   Data   RO            3    RESET               startup_stm32f407xx.o
-    0x08000188   0x08000188   0x00000000   Code   RO         1905  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000188   0x08000188   0x00000004   Code   RO         1951    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800018c   0x0800018c   0x00000004   Code   RO         1954    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000190   0x08000190   0x00000000   Code   RO         1956    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000190   0x08000190   0x00000004   Code   RO         1957    .ARM.Collect$$$$00000009  mc_w.l(entry8a.o)
-    0x08000194   0x08000194   0x00000000   Code   RO         1958    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000194   0x08000194   0x00000008   Code   RO         1959    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x0800019c   0x0800019c   0x00000000   Code   RO         1961    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x0800019c   0x0800019c   0x00000000   Code   RO         1963    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x0800019c   0x0800019c   0x00000004   Code   RO         1952    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000188   0x08000188   0x00000000   Code   RO         1907  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000188   0x08000188   0x00000004   Code   RO         1953    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800018c   0x0800018c   0x00000004   Code   RO         1956    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000190   0x08000190   0x00000000   Code   RO         1958    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000190   0x08000190   0x00000004   Code   RO         1959    .ARM.Collect$$$$00000009  mc_w.l(entry8a.o)
+    0x08000194   0x08000194   0x00000000   Code   RO         1960    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000194   0x08000194   0x00000008   Code   RO         1961    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x0800019c   0x0800019c   0x00000000   Code   RO         1963    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x0800019c   0x0800019c   0x00000000   Code   RO         1965    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x0800019c   0x0800019c   0x00000004   Code   RO         1954    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x080001a0   0x080001a0   0x00000024   Code   RO            4    .text               startup_stm32f407xx.o
-    0x080001c4   0x080001c4   0x00000062   Code   RO         1908    .text               mc_w.l(uldiv.o)
-    0x08000226   0x08000226   0x00000024   Code   RO         1910    .text               mc_w.l(memcpya.o)
-    0x0800024a   0x0800024a   0x00000024   Code   RO         1912    .text               mc_w.l(memseta.o)
+    0x080001c4   0x080001c4   0x00000062   Code   RO         1910    .text               mc_w.l(uldiv.o)
+    0x08000226   0x08000226   0x00000024   Code   RO         1912    .text               mc_w.l(memcpya.o)
+    0x0800024a   0x0800024a   0x00000024   Code   RO         1914    .text               mc_w.l(memseta.o)
     0x0800026e   0x0800026e   0x00000002   PAD
-    0x08000270   0x08000270   0x00000020   Code   RO         1919    .text               mc_w.l(cpp_init.o)
-    0x08000290   0x08000290   0x0000014e   Code   RO         1921    .text               mf_w.l(dadd.o)
-    0x080003de   0x080003de   0x000000e4   Code   RO         1923    .text               mf_w.l(dmul.o)
-    0x080004c2   0x080004c2   0x000000de   Code   RO         1925    .text               mf_w.l(ddiv.o)
-    0x080005a0   0x080005a0   0x00000022   Code   RO         1927    .text               mf_w.l(dflti.o)
-    0x080005c2   0x080005c2   0x0000003e   Code   RO         1929    .text               mf_w.l(dfixi.o)
-    0x08000600   0x08000600   0x00000026   Code   RO         1931    .text               mf_w.l(f2d.o)
-    0x08000626   0x08000626   0x00000038   Code   RO         1933    .text               mf_w.l(d2f.o)
-    0x0800065e   0x0800065e   0x0000001e   Code   RO         1965    .text               mc_w.l(llshl.o)
-    0x0800067c   0x0800067c   0x00000020   Code   RO         1967    .text               mc_w.l(llushr.o)
-    0x0800069c   0x0800069c   0x00000024   Code   RO         1969    .text               mc_w.l(llsshr.o)
-    0x080006c0   0x080006c0   0x00000000   Code   RO         1978    .text               mc_w.l(iusefp.o)
-    0x080006c0   0x080006c0   0x0000006e   Code   RO         1979    .text               mf_w.l(fepilogue.o)
-    0x0800072e   0x0800072e   0x000000ba   Code   RO         1981    .text               mf_w.l(depilogue.o)
-    0x080007e8   0x080007e8   0x00000024   Code   RO         1983    .text               mc_w.l(init.o)
+    0x08000270   0x08000270   0x00000020   Code   RO         1921    .text               mc_w.l(cpp_init.o)
+    0x08000290   0x08000290   0x0000014e   Code   RO         1923    .text               mf_w.l(dadd.o)
+    0x080003de   0x080003de   0x000000e4   Code   RO         1925    .text               mf_w.l(dmul.o)
+    0x080004c2   0x080004c2   0x000000de   Code   RO         1927    .text               mf_w.l(ddiv.o)
+    0x080005a0   0x080005a0   0x00000022   Code   RO         1929    .text               mf_w.l(dflti.o)
+    0x080005c2   0x080005c2   0x0000003e   Code   RO         1931    .text               mf_w.l(dfixi.o)
+    0x08000600   0x08000600   0x00000026   Code   RO         1933    .text               mf_w.l(f2d.o)
+    0x08000626   0x08000626   0x00000038   Code   RO         1935    .text               mf_w.l(d2f.o)
+    0x0800065e   0x0800065e   0x0000001e   Code   RO         1967    .text               mc_w.l(llshl.o)
+    0x0800067c   0x0800067c   0x00000020   Code   RO         1969    .text               mc_w.l(llushr.o)
+    0x0800069c   0x0800069c   0x00000024   Code   RO         1971    .text               mc_w.l(llsshr.o)
+    0x080006c0   0x080006c0   0x00000000   Code   RO         1980    .text               mc_w.l(iusefp.o)
+    0x080006c0   0x080006c0   0x0000006e   Code   RO         1981    .text               mf_w.l(fepilogue.o)
+    0x0800072e   0x0800072e   0x000000ba   Code   RO         1983    .text               mf_w.l(depilogue.o)
+    0x080007e8   0x080007e8   0x00000024   Code   RO         1985    .text               mc_w.l(init.o)
     0x0800080c   0x0800080c   0x00000068   Code   RO          269    .text.ADC_DMAConvCplt  stm32f4xx_hal_adc.o
     0x08000874   0x08000874   0x00000012   Code   RO          273    .text.ADC_DMAError  stm32f4xx_hal_adc.o
     0x08000886   0x08000886   0x00000002   PAD
@@ -3893,116 +3887,109 @@ Memory Map of the image
     0x08005374   0x08005374   0x00000002   Code   RO          199    .text.UsageFault_Handler  stm32f4xx_it.o
     0x08005376   0x08005376   0x00000002   PAD
     0x08005378   0x08005378   0x00000140   Code   RO         1524    .text._GLOBAL__sub_I_task.cpp  task.o
-    0x080054b8   0x080054b8   0x0000021c   Code   RO         1758    .text._ZN10Controller7HandlerEv  controller.o
-    0x080056d4   0x080056d4   0x00000038   Code   RO         1756    .text._ZN10ControllerC2EP7Chassis  controller.o
-    0x0800570c   0x0800570c   0x0000006e   Code   RO         1769    .text._ZN14PID_Controller7HandlerEv  pid_controller.o
+    0x080054b8   0x080054b8   0x0000021c   Code   RO         1760    .text._ZN10Controller7HandlerEv  controller.o
+    0x080056d4   0x080056d4   0x00000038   Code   RO         1758    .text._ZN10ControllerC2EP7Chassis  controller.o
+    0x0800570c   0x0800570c   0x0000006e   Code   RO         1771    .text._ZN14PID_Controller7HandlerEv  pid_controller.o
     0x0800577a   0x0800577a   0x00000002   PAD
-    0x0800577c   0x0800577c   0x00000034   Code   RO         1771    .text._ZN14PID_ControllerC2EP7Chassis  pid_controller.o
-    0x080057b0   0x080057b0   0x0000000e   Code   RO         1634    .text._ZN3CCD4initEv  ccd.o
-    0x080057be   0x080057be   0x00000002   PAD
-    0x080057c0   0x080057c0   0x00000044   Code   RO         1632    .text._ZN3CCD7HandlerEv  ccd.o
-    0x08005804   0x08005804   0x0000006e   Code   RO         1630    .text._ZN3CCD7SI_sendEv  ccd.o
-    0x08005872   0x08005872   0x00000002   PAD
-    0x08005874   0x08005874   0x000000cc   Code   RO         1666    .text._ZN3IMU4initEv  imu.o
-    0x08005940   0x08005940   0x0000000c   Code   RO         1668    .text._ZN3IMU7HandlerEv  imu.o
-    0x0800594c   0x0800594c   0x00000162   Code   RO         1664    .text._ZN3IMU8get_dataEv  imu.o
-    0x08005aae   0x08005aae   0x00000002   PAD
-    0x08005ab0   0x08005ab0   0x000002c4   Code   RO         1645    .text._ZN6Remote12process_dataEv  remote.o
-    0x08005d74   0x08005d74   0x00000004   Code   RO         1649    .text._ZN6Remote7HandlerEv  remote.o
-    0x08005d78   0x08005d78   0x00000022   Code   RO         1647    .text._ZN6RemoteC2EP20__UART_HandleTypeDef  remote.o
-    0x08005d9a   0x08005d9a   0x00000006   PAD
-    0x08005da0   0x08005da0   0x000003ac   Code   RO         1739    .text._ZN7Chassis7HandlerEv  chassis.o
-    0x0800614c   0x0800614c   0x00000004   PAD
-    0x08006150   0x08006150   0x000005dc   Code   RO         1733    .text._ZN7Chassis7processEv  chassis.o
-    0x0800672c   0x0800672c   0x00000054   Code   RO         1735    .text._ZN7ChassisC2EP9N20_MotorS1_P3IMUP3CCDf  chassis.o
-    0x08006780   0x08006780   0x00000022   Code   RO         1598    .text._ZN7Encoder15overflow_updateEv  encoder.o
-    0x080067a2   0x080067a2   0x00000002   PAD
-    0x080067a4   0x080067a4   0x00000016   Code   RO         1596    .text._ZN7Encoder4initEv  encoder.o
-    0x080067ba   0x080067ba   0x00000002   PAD
-    0x080067bc   0x080067bc   0x00000022   Code   RO         1592    .text._ZN7Encoder7HandlerEv  encoder.o
-    0x080067de   0x080067de   0x00000002   PAD
-    0x080067e0   0x080067e0   0x0000000e   Code   RO         1594    .text._ZN7EncoderC2EP17TIM_HandleTypeDef  encoder.o
-    0x080067ee   0x080067ee   0x00000002   PAD
-    0x080067f0   0x080067f0   0x000001b8   Code   RO         1561    .text._ZN8Tracking13calibrate_posE5PointS0_11ref_point_e  tracking.o
-    0x080069a8   0x080069a8   0x000000ca   Code   RO         1557    .text._ZN8Tracking7HandlerEv  tracking.o
-    0x08006a72   0x08006a72   0x00000002   PAD
-    0x08006a74   0x08006a74   0x0000005e   Code   RO         1555    .text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller  tracking.o
-    0x08006ad2   0x08006ad2   0x00000002   PAD
-    0x08006ad4   0x08006ad4   0x00000258   Code   RO         1613    .text._ZN9N20_Motor16output_intensityEv  n20_motor.o
-    0x08006d2c   0x08006d2c   0x00000004   PAD
-    0x08006d30   0x08006d30   0x000000f0   Code   RO         1611    .text._ZN9N20_Motor17measure_parameterEv  n20_motor.o
-    0x08006e20   0x08006e20   0x00000018   Code   RO         1619    .text._ZN9N20_Motor4initEv  n20_motor.o
-    0x08006e38   0x08006e38   0x00000012   Code   RO         1609    .text._ZN9N20_Motor7HandlerEv  n20_motor.o
-    0x08006e4a   0x08006e4a   0x00000002   PAD
-    0x08006e4c   0x08006e4c   0x00000028   Code   RO         1617    .text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff  n20_motor.o
-    0x08006e74   0x08006e74   0x00000120   Code   RO         1795    .text.arm_sin_cos_f32  arm_cortexM4lf_math.lib(arm_sin_cos_f32.o)
-    0x08006f94   0x08006f94   0x00000060   Code   RO         1679    .text.imu660ra_get_acc  imu660.o
-    0x08006ff4   0x08006ff4   0x00000060   Code   RO         1681    .text.imu660ra_get_gyro  imu660.o
-    0x08007054   0x08007054   0x00000218   Code   RO         1683    .text.imu660ra_init  imu660.o
-    0x0800726c   0x0800726c   0x00000004   PAD
-    0x08007270   0x08007270   0x000001b4   Code   RO         1512    .text.loop          task.o
-    0x08007424   0x08007424   0x0000006e   Code   RO           11    .text.main          main.o
-    0x08007492   0x08007492   0x00000002   PAD
-    0x08007494   0x08007494   0x0000006c   Code   RO         1510    .text.setup         task.o
-    0x08007500   0x08007500   0x0000002e   Code   RO         1581    .text.spi_read_8bit_registers  hal.o
-    0x0800752e   0x0800752e   0x00000002   PAD
-    0x08007530   0x08007530   0x00000032   Code   RO         1575    .text.spi_write_8bit_register  hal.o
-    0x08007562   0x08007562   0x00000002   PAD
-    0x08007564   0x08007564   0x0000002e   Code   RO         1577    .text.spi_write_8bit_registers  hal.o
-    0x08007592   0x08007592   0x00000002   PAD
-    0x08007594   0x08007594   0x000000c4   Code   RO         1514    .text.task_handler  task.o
-    0x08007658   0x08007658   0x00000026   Code   RO         1935    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
-    0x0800767e   0x0800767e   0x00000002   PAD
-    0x08007680   0x08007680   0x00000118   Code   RO         1869    i.__hardfp_acosf    m_wm.l(acosf.o)
-    0x08007798   0x08007798   0x00000294   Code   RO         1881    i.__hardfp_atan2f   m_wm.l(atan2f.o)
-    0x08007a2c   0x08007a2c   0x0000003a   Code   RO         1893    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
-    0x08007a66   0x08007a66   0x00000006   Code   RO         1938    i.__mathlib_flt_infnan  m_wm.l(funder.o)
-    0x08007a6c   0x08007a6c   0x00000006   Code   RO         1939    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
-    0x08007a72   0x08007a72   0x00000002   PAD
-    0x08007a74   0x08007a74   0x00000010   Code   RO         1940    i.__mathlib_flt_invalid  m_wm.l(funder.o)
-    0x08007a84   0x08007a84   0x00000010   Code   RO         1943    i.__mathlib_flt_underflow  m_wm.l(funder.o)
-    0x08007a94   0x08007a94   0x0000000e   Code   RO         1987    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08007aa2   0x08007aa2   0x00000002   Code   RO         1988    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08007aa4   0x08007aa4   0x0000000e   Code   RO         1989    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08007ab2   0x08007ab2   0x00000002   PAD
-    0x08007ab4   0x08007ab4   0x0000000c   Code   RO         1973    i.__set_errno       mc_w.l(errno.o)
-    0x08007ac0   0x08007ac0   0x0000003e   Code   RO         1895    i.sqrtf             m_wm.l(sqrtf.o)
-    0x08007afe   0x08007afe   0x00000010   Data   RO         1497    .rodata.AHBPrescTable  system_stm32f4xx.o
-    0x08007b0e   0x08007b0e   0x00000008   Data   RO         1498    .rodata.APBPrescTable  system_stm32f4xx.o
-    0x08007b16   0x08007b16   0x00000002   PAD
-    0x08007b18   0x08007b18   0x00000020   Data   RO         1563    .rodata.cst32       tracking.o
-    0x08007b38   0x08007b38   0x00000008   Data   RO          516    .rodata.cst8        stm32f4xx_hal_dma.o
-    0x08007b40   0x08007b40   0x00002000   Data   RO         1685    .rodata.imu660ra_config_file  imu660.o
-    0x08009b40   0x08009b40   0x00000804   Data   RO         1861    .rodata.sinTable_f32  arm_cortexM4lf_math.lib(arm_common_tables.o)
-    0x0800a344   0x0800a344   0x00000020   Data   RO         1986    Region$$Table       anon$$obj.o
-    0x0800a364   0x0800a364   0x00000004   Data   RO         1545    .init_array         task.o
-    0x0800a368   0x0800a364   0x00000000   Data   RO         1917    .init_array         mc_w.l(cpp_init.o)
+    0x0800577c   0x0800577c   0x0000003c   Code   RO         1773    .text._ZN14PID_ControllerC2EP7Chassis  pid_controller.o
+    0x080057b8   0x080057b8   0x0000000e   Code   RO         1636    .text._ZN3CCD4initEv  ccd.o
+    0x080057c6   0x080057c6   0x00000002   PAD
+    0x080057c8   0x080057c8   0x00000044   Code   RO         1634    .text._ZN3CCD7HandlerEv  ccd.o
+    0x0800580c   0x0800580c   0x0000006e   Code   RO         1632    .text._ZN3CCD7SI_sendEv  ccd.o
+    0x0800587a   0x0800587a   0x00000002   PAD
+    0x0800587c   0x0800587c   0x000000cc   Code   RO         1668    .text._ZN3IMU4initEv  imu.o
+    0x08005948   0x08005948   0x0000000c   Code   RO         1670    .text._ZN3IMU7HandlerEv  imu.o
+    0x08005954   0x08005954   0x00000162   Code   RO         1666    .text._ZN3IMU8get_dataEv  imu.o
+    0x08005ab6   0x08005ab6   0x00000002   PAD
+    0x08005ab8   0x08005ab8   0x000002c4   Code   RO         1647    .text._ZN6Remote12process_dataEv  remote.o
+    0x08005d7c   0x08005d7c   0x00000004   Code   RO         1651    .text._ZN6Remote7HandlerEv  remote.o
+    0x08005d80   0x08005d80   0x00000022   Code   RO         1649    .text._ZN6RemoteC2EP20__UART_HandleTypeDef  remote.o
+    0x08005da2   0x08005da2   0x00000006   PAD
+    0x08005da8   0x08005da8   0x000003ac   Code   RO         1741    .text._ZN7Chassis7HandlerEv  chassis.o
+    0x08006154   0x08006154   0x00000004   PAD
+    0x08006158   0x08006158   0x000005dc   Code   RO         1735    .text._ZN7Chassis7processEv  chassis.o
+    0x08006734   0x08006734   0x00000054   Code   RO         1737    .text._ZN7ChassisC2EP9N20_MotorS1_P3IMUP3CCDf  chassis.o
+    0x08006788   0x08006788   0x00000022   Code   RO         1600    .text._ZN7Encoder15overflow_updateEv  encoder.o
+    0x080067aa   0x080067aa   0x00000002   PAD
+    0x080067ac   0x080067ac   0x00000016   Code   RO         1598    .text._ZN7Encoder4initEv  encoder.o
+    0x080067c2   0x080067c2   0x00000002   PAD
+    0x080067c4   0x080067c4   0x00000022   Code   RO         1594    .text._ZN7Encoder7HandlerEv  encoder.o
+    0x080067e6   0x080067e6   0x00000002   PAD
+    0x080067e8   0x080067e8   0x0000000e   Code   RO         1596    .text._ZN7EncoderC2EP17TIM_HandleTypeDef  encoder.o
+    0x080067f6   0x080067f6   0x00000002   PAD
+    0x080067f8   0x080067f8   0x000000ca   Code   RO         1557    .text._ZN8Tracking7HandlerEv  tracking.o
+    0x080068c2   0x080068c2   0x00000002   PAD
+    0x080068c4   0x080068c4   0x0000005e   Code   RO         1555    .text._ZN8TrackingC2EP7ChassisP10ControllerP14PID_Controller  tracking.o
+    0x08006922   0x08006922   0x00000002   PAD
+    0x08006924   0x08006924   0x00000258   Code   RO         1615    .text._ZN9N20_Motor16output_intensityEv  n20_motor.o
+    0x08006b7c   0x08006b7c   0x00000004   PAD
+    0x08006b80   0x08006b80   0x000000f0   Code   RO         1613    .text._ZN9N20_Motor17measure_parameterEv  n20_motor.o
+    0x08006c70   0x08006c70   0x00000018   Code   RO         1621    .text._ZN9N20_Motor4initEv  n20_motor.o
+    0x08006c88   0x08006c88   0x00000012   Code   RO         1611    .text._ZN9N20_Motor7HandlerEv  n20_motor.o
+    0x08006c9a   0x08006c9a   0x00000002   PAD
+    0x08006c9c   0x08006c9c   0x00000028   Code   RO         1619    .text._ZN9N20_MotorC2EP17TIM_HandleTypeDefjjP7Encoderfff  n20_motor.o
+    0x08006cc4   0x08006cc4   0x00000120   Code   RO         1797    .text.arm_sin_cos_f32  arm_cortexM4lf_math.lib(arm_sin_cos_f32.o)
+    0x08006de4   0x08006de4   0x00000060   Code   RO         1681    .text.imu660ra_get_acc  imu660.o
+    0x08006e44   0x08006e44   0x00000060   Code   RO         1683    .text.imu660ra_get_gyro  imu660.o
+    0x08006ea4   0x08006ea4   0x00000218   Code   RO         1685    .text.imu660ra_init  imu660.o
+    0x080070bc   0x080070bc   0x00000004   PAD
+    0x080070c0   0x080070c0   0x000001b4   Code   RO         1512    .text.loop          task.o
+    0x08007274   0x08007274   0x0000006e   Code   RO           11    .text.main          main.o
+    0x080072e2   0x080072e2   0x00000002   PAD
+    0x080072e4   0x080072e4   0x0000006c   Code   RO         1510    .text.setup         task.o
+    0x08007350   0x08007350   0x0000002e   Code   RO         1583    .text.spi_read_8bit_registers  hal.o
+    0x0800737e   0x0800737e   0x00000002   PAD
+    0x08007380   0x08007380   0x00000032   Code   RO         1577    .text.spi_write_8bit_register  hal.o
+    0x080073b2   0x080073b2   0x00000002   PAD
+    0x080073b4   0x080073b4   0x0000002e   Code   RO         1579    .text.spi_write_8bit_registers  hal.o
+    0x080073e2   0x080073e2   0x00000002   PAD
+    0x080073e4   0x080073e4   0x000000c4   Code   RO         1514    .text.task_handler  task.o
+    0x080074a8   0x080074a8   0x00000026   Code   RO         1937    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
+    0x080074ce   0x080074ce   0x00000002   PAD
+    0x080074d0   0x080074d0   0x00000294   Code   RO         1883    i.__hardfp_atan2f   m_wm.l(atan2f.o)
+    0x08007764   0x08007764   0x0000003a   Code   RO         1895    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
+    0x0800779e   0x0800779e   0x00000006   Code   RO         1941    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
+    0x080077a4   0x080077a4   0x00000010   Code   RO         1945    i.__mathlib_flt_underflow  m_wm.l(funder.o)
+    0x080077b4   0x080077b4   0x0000000e   Code   RO         1989    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x080077c2   0x080077c2   0x00000002   Code   RO         1990    i.__scatterload_null  mc_w.l(handlers.o)
+    0x080077c4   0x080077c4   0x0000000e   Code   RO         1991    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x080077d2   0x080077d2   0x00000002   PAD
+    0x080077d4   0x080077d4   0x0000000c   Code   RO         1975    i.__set_errno       mc_w.l(errno.o)
+    0x080077e0   0x080077e0   0x00000010   Data   RO         1497    .rodata.AHBPrescTable  system_stm32f4xx.o
+    0x080077f0   0x080077f0   0x00000008   Data   RO         1498    .rodata.APBPrescTable  system_stm32f4xx.o
+    0x080077f8   0x080077f8   0x00000020   Data   RO         1565    .rodata.cst32       tracking.o
+    0x08007818   0x08007818   0x00000008   Data   RO          516    .rodata.cst8        stm32f4xx_hal_dma.o
+    0x08007820   0x08007820   0x00002000   Data   RO         1687    .rodata.imu660ra_config_file  imu660.o
+    0x08009820   0x08009820   0x00000804   Data   RO         1863    .rodata.sinTable_f32  arm_cortexM4lf_math.lib(arm_common_tables.o)
+    0x0800a024   0x0800a024   0x00000020   Data   RO         1988    Region$$Table       anon$$obj.o
+    0x0800a044   0x0800a044   0x00000004   Data   RO         1545    .init_array         task.o
+    0x0800a048   0x0800a044   0x00000000   Data   RO         1919    .init_array         mc_w.l(cpp_init.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800a368, Size: 0x000012c0, Max: 0x0001c000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800a048, Size: 0x000012c0, Max: 0x0001c000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x0800a368   0x00000004   Data   RW         1974    .data               mc_w.l(errno.o)
-    0x20000004   0x0800a36c   0x00000004   Data   RW         1496    .data.SystemCoreClock  system_stm32f4xx.o
-    0x20000008   0x0800a370   0x00000200   Data   RW         1741    .data.ccd_norm      chassis.o
-    0x20000208   0x0800a570   0x00000002   Data   RW         1544    .data.end_flag      task.o
-    0x2000020a   0x0800a572   0x00000002   PAD
-    0x2000020c   0x0800a574   0x00000008   Data   RW         1692    .data.imu660ra_transition_factor  imu660.o
-    0x20000214   0x0800a57c   0x00000002   Data   RW         1543    .data.start_flag    task.o
-    0x20000216   0x0800a57e   0x00000001   Data   RW          692    .data.uwTickFreq    stm32f4xx_hal.o
-    0x20000217   0x0800a57f   0x00000001   PAD
-    0x20000218   0x0800a580   0x00000004   Data   RW          691    .data.uwTickPrio    stm32f4xx_hal.o
-    0x2000021c   0x0800a584   0x00000004   Data   RW         1540    .data.vpwr          task.o
-    0x20000220   0x0800a588   0x00000004   Data   RW         1541    .data.vpwr_th       task.o
-    0x20000224   0x0800a58c   0x00000004   PAD
+    0x20000000   0x0800a048   0x00000004   Data   RW         1976    .data               mc_w.l(errno.o)
+    0x20000004   0x0800a04c   0x00000004   Data   RW         1496    .data.SystemCoreClock  system_stm32f4xx.o
+    0x20000008   0x0800a050   0x00000200   Data   RW         1743    .data.ccd_norm      chassis.o
+    0x20000208   0x0800a250   0x00000002   Data   RW         1544    .data.end_flag      task.o
+    0x2000020a   0x0800a252   0x00000002   PAD
+    0x2000020c   0x0800a254   0x00000008   Data   RW         1694    .data.imu660ra_transition_factor  imu660.o
+    0x20000214   0x0800a25c   0x00000002   Data   RW         1543    .data.start_flag    task.o
+    0x20000216   0x0800a25e   0x00000001   Data   RW          692    .data.uwTickFreq    stm32f4xx_hal.o
+    0x20000217   0x0800a25f   0x00000001   PAD
+    0x20000218   0x0800a260   0x00000004   Data   RW          691    .data.uwTickPrio    stm32f4xx_hal.o
+    0x2000021c   0x0800a264   0x00000004   Data   RW         1540    .data.vpwr          task.o
+    0x20000220   0x0800a268   0x00000004   Data   RW         1541    .data.vpwr_th       task.o
+    0x20000224   0x0800a26c   0x00000004   PAD
     0x20000228        -       0x00000004   Zero   RW           71    .bss.HAL_RCC_CAN1_CLK_ENABLED  can.o
     0x2000022c        -       0x00000110   Zero   RW         1533    .bss.ccd            task.o
     0x2000033c        -       0x000002d8   Zero   RW         1536    .bss.chassis        task.o
     0x20000614        -       0x00000050   Zero   RW         1537    .bss.controller     task.o
-    0x20000664        -       0x00000002   Zero   RW         1652    .bss.crc            remote.o
-    0x20000666        -       0x00000002   Zero   RW         1653    .bss.crc1           remote.o
-    0x20000668        -       0x00000004   Zero   RW         1654    .bss.crc_err        remote.o
+    0x20000664        -       0x00000002   Zero   RW         1654    .bss.crc            remote.o
+    0x20000666        -       0x00000002   Zero   RW         1655    .bss.crc1           remote.o
+    0x20000668        -       0x00000004   Zero   RW         1656    .bss.crc_err        remote.o
     0x2000066c        -       0x00000048   Zero   RW           48    .bss.hadc1          adc.o
     0x200006b4        -       0x00000048   Zero   RW           49    .bss.hadc2          adc.o
     0x200006fc        -       0x00000048   Zero   RW           50    .bss.hadc3          adc.o
@@ -4024,33 +4011,33 @@ Memory Map of the image
     0x20000b78        -       0x00000044   Zero   RW          180    .bss.huart2         usart.o
     0x20000bbc        -       0x00000044   Zero   RW          181    .bss.huart3         usart.o
     0x20000c00        -       0x00000050   Zero   RW         1535    .bss.imu            task.o
-    0x20000c50        -       0x00000002   Zero   RW         1689    .bss.imu660ra_acc_x  imu660.o
-    0x20000c52        -       0x00000002   Zero   RW         1690    .bss.imu660ra_acc_y  imu660.o
-    0x20000c54        -       0x00000002   Zero   RW         1691    .bss.imu660ra_acc_z  imu660.o
-    0x20000c56        -       0x00000002   Zero   RW         1686    .bss.imu660ra_gyro_x  imu660.o
-    0x20000c58        -       0x00000002   Zero   RW         1687    .bss.imu660ra_gyro_y  imu660.o
-    0x20000c5a        -       0x00000002   Zero   RW         1688    .bss.imu660ra_gyro_z  imu660.o
-    0x20000c5c        -       0x00000004   Zero   RW         1693    .bss.imu660ra_state  imu660.o
+    0x20000c50        -       0x00000002   Zero   RW         1691    .bss.imu660ra_acc_x  imu660.o
+    0x20000c52        -       0x00000002   Zero   RW         1692    .bss.imu660ra_acc_y  imu660.o
+    0x20000c54        -       0x00000002   Zero   RW         1693    .bss.imu660ra_acc_z  imu660.o
+    0x20000c56        -       0x00000002   Zero   RW         1688    .bss.imu660ra_gyro_x  imu660.o
+    0x20000c58        -       0x00000002   Zero   RW         1689    .bss.imu660ra_gyro_y  imu660.o
+    0x20000c5a        -       0x00000002   Zero   RW         1690    .bss.imu660ra_gyro_z  imu660.o
+    0x20000c5c        -       0x00000004   Zero   RW         1695    .bss.imu660ra_state  imu660.o
     0x20000c60        -       0x00000014   Zero   RW         1529    .bss.left_encoder   task.o
     0x20000c74        -       0x0000002c   Zero   RW         1531    .bss.left_motor     task.o
     0x20000ca0        -       0x0000002c   Zero   RW         1538    .bss.pid_controller  task.o
     0x20000ccc        -       0x00000004   Zero   RW         1542    .bss.pwr_cnt        task.o
     0x20000cd0        -       0x000000e4   Zero   RW         1534    .bss.remote         task.o
-    0x20000db4        -       0x00000004   Zero   RW         1651    .bss.remote_cnt     remote.o
+    0x20000db4        -       0x00000004   Zero   RW         1653    .bss.remote_cnt     remote.o
     0x20000db8        -       0x00000014   Zero   RW         1530    .bss.right_encoder  task.o
     0x20000dcc        -       0x0000002c   Zero   RW         1532    .bss.right_motor    task.o
     0x20000df8        -       0x00000050   Zero   RW         1539    .bss.tracking       task.o
     0x20000e48        -       0x00000004   Zero   RW          221    .bss.uart1_cnt      stm32f4xx_it.o
     0x20000e4c        -       0x00000064   Zero   RW         1526    .bss.uart1_rx_buf   task.o
     0x20000eb0        -       0x00000002   Zero   RW         1527    .bss.uart1_rx_len   task.o
-    0x20000eb2   0x0800a58c   0x00000002   PAD
+    0x20000eb2   0x0800a26c   0x00000002   PAD
     0x20000eb4        -       0x00000004   Zero   RW         1528    .bss.uart1_state    task.o
     0x20000eb8        -       0x00000004   Zero   RW          693    .bss.uwTick         stm32f4xx_hal.o
-    0x20000ebc   0x0800a58c   0x00000004   PAD
+    0x20000ebc   0x0800a26c   0x00000004   PAD
     0x20000ec0        -       0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x2001c000, Load base: 0x0800a590, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x2001c000, Load base: 0x0800a270, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
@@ -4076,7 +4063,7 @@ Image component sizes
        728          0       8192          8         16       3547   imu660.o
        294          0          0          0          0       2779   main.o
        922         60          0          0          0      21055   n20_motor.o
-       162          0          0          0          0      16283   pid_controller.o
+       170          0          0          0          0      16284   pid_controller.o
        746         28          0          0         12      16636   remote.o
        248          0          0          0         88       4958   spi.o
         36          8        392          0       1024        820   startup_stm32f407xx.o
@@ -4095,15 +4082,15 @@ Image component sizes
       2668          0          0          0          0      27485   stm32f4xx_hal_uart.o
        126          0          0          0          4       1729   stm32f4xx_it.o
         18          0         24          4          0       2568   system_stm32f4xx.o
-      1356         36          4         12       1750      24276   task.o
+      1356         36          4         12       1750      24386   task.o
       2652          0          0          0        576      12133   tim.o
-       736         32         32          0          0      19119   tracking.o
+       296          0         32          0          0      20265   tracking.o
        522          0          0          0        204       7225   usart.o
 
     ----------------------------------------------------------------------
-     27984        360       8686        544       4252     472977   Object Totals
+     27552        328       8684        544       4252     474234   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-       174          8          2          3         10          0   (incl. Padding)
+       174          8          0          3         10          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -4111,11 +4098,10 @@ Image component sizes
 
          0          0       2052          0          0       3698   arm_common_tables.o
        288         12          0          0          0       1528   arm_sin_cos_f32.o
-       280         46          0          0          0        176   acosf.o
        660         88          0          0          0        208   atan2f.o
         38          0          0          0          0        116   fpclassifyf.o
-        44         12          0          0          0        464   funder.o
-       120          0          0          0          0        272   sqrtf.o
+        22          6          0          0          0        232   funder.o
+        58          0          0          0          0        136   sqrtf.o
         32         10          0          0          0         80   cpp_init.o
          0          0          0          0          0          0   entry.o
          0          0          0          0          0          0   entry10a.o
@@ -4147,20 +4133,20 @@ Image component sizes
        110          0          0          0          0        168   fepilogue.o
 
     ----------------------------------------------------------------------
-      3110        190       2052          4          0       8150   Library Totals
-         8          0          0          0          0          0   (incl. Padding)
+      2744        138       2052          4          0       7606   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
        288         12       2052          0          0       5226   arm_cortexM4lf_math.lib
-      1142        146          0          0          0       1236   m_wm.l
+       778         94          0          0          0        692   m_wm.l
        402         32          0          4          0        688   mc_w.l
       1270          0          0          0          0       1000   mf_w.l
 
     ----------------------------------------------------------------------
-      3110        190       2052          4          0       8150   Library Totals
+      2744        138       2052          4          0       7606   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -4169,15 +4155,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     31094        550      10738        548       4252     479175   Grand Totals
-     31094        550      10738        548       4252     479175   ELF Image Totals
-     31094        550      10738        548          0          0   ROM Totals
+     30296        466      10736        548       4252     480288   Grand Totals
+     30296        466      10736        548       4252     480288   ELF Image Totals
+     30296        466      10736        548          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                41832 (  40.85kB)
+    Total RO  Size (Code + RO Data)                41032 (  40.07kB)
     Total RW  Size (RW Data + ZI Data)              4800 (   4.69kB)
-    Total ROM Size (Code + RO Data + RW Data)      42380 (  41.39kB)
+    Total ROM Size (Code + RO Data + RW Data)      41580 (  40.61kB)
 
 ==============================================================================
 
