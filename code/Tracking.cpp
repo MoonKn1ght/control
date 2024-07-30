@@ -29,7 +29,10 @@ void Tracking::Handler() {
         } break;
         case 1:{
             chassis->state = CHASSIS_RUN;
-            chassis->v_set = 0.1;
+            controller->x_set = 1.0;
+            controller->y_set = 0;
+            controller->state = 1;
+            //chassis->v_set = 0.1;
 //            if(chassis->inrange){
 //                r2_set = true;
 //                r2.x = chassis->x_line;
@@ -51,6 +54,7 @@ void Tracking::Handler() {
                     r1.x = chassis->x_line;
                     r1.y = chassis->y_line;
 
+                    controller->state = 0;
                     pid_controller->dir = -1;
                     pid_controller->state = 1;
                 }else{
@@ -70,9 +74,9 @@ void Tracking::Handler() {
         } break;
         case 2:{
             controller->y_set = -0.8;
-            controller->x_set = 0;
+            controller->x_set = -0.0;
             controller->state = 1;
-            if(controller->reached){
+            if(controller->reached || chassis->inrange){
                 controller->state = 0;
                 chassis->v_set = 0;
                 chassis->w_set = 0;
