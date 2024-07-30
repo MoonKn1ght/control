@@ -49,6 +49,7 @@ Controller controller(&chassis); //位置控制器
 PID_Controller pid_controller(&chassis); //循迹控制器
 Tracking tracking(&chassis, &controller, &pid_controller); //控制逻辑
 
+int car_start = 0;
 
 float vpwr = 12, vpwr_th = 9;
 int pwr_cnt = 0;
@@ -132,7 +133,10 @@ void task_handler(){
 	controller.Handler();
 	pid_controller.Handler();
 
-
+    if(!car_start && imu.state == IMU_RUN){
+        car_start = 1;
+        tracking.state = 1;
+    }
 	if(HAL_GetTick() % 500 == 0 && imu.state == IMU_RUN) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
 #ifdef USE_REMOTE //遥控器

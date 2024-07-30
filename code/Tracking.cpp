@@ -29,7 +29,7 @@ void Tracking::Handler() {
         } break;
         case 1:{
             chassis->state = CHASSIS_RUN;
-            chassis->v_set = 0.05;
+            chassis->v_set = 0.1;
 //            if(chassis->inrange){
 //                r2_set = true;
 //                r2.x = chassis->x_line;
@@ -63,9 +63,39 @@ void Tracking::Handler() {
                     pid_controller->state = 0;
                     chassis->v_set = 0;
                     chassis->w_set = 0;
-                    calibrate_pos2(r1, r2, POINT_A, POINT_B);
-                    state = 2;
+                    calibrate_pos2(r1, r2, POINT_B, POINT_C);
+                    state++;
                 }
+            }
+        } break;
+        case 2:{
+            controller->y_set = -0.8;
+            controller->x_set = 0;
+            controller->state = 1;
+            if(controller->reached){
+                controller->state = 0;
+                chassis->v_set = 0;
+                chassis->w_set = 0;
+                state++;
+            }
+        } break;
+        case 3:{
+            if(!chassis->inrange){
+                chassis->w_set = 0.05;
+            }else{
+                chassis->w_set = 0;
+                r1_set = false;
+                r2_set = false;
+                pid_controller->state = 1;
+                state++;
+            }
+        } break;
+        case 4:{
+            if(!chassis->inrange){
+                pid_controller->state = 0;
+                chassis->w_set = 0;
+                chassis->v_set = 0;
+                state++;
             }
         } break;
     }
@@ -124,6 +154,18 @@ void Tracking::calibrate_pos2(Point r1, Point r2, ref_point_e ref1, ref_point_e 
     Point ref_r2 = ref_points[ref2];
 
     //calc_dist(r1, r2);
+    chassis->x += ref_r2.x - r2.x;
+    chassis->y += ref_r2.y - r2.y;
+
+    Point ref_r21 = {ref_r2.x - ref_r1.x, ref_r2.y - ref_r1.y};
+    Point r21 = {r2.x - r1.x, r2.y - r1.y};
+    //计算两向量夹角
+    float ang = acosf((ref_r21.x * r21.x + ref_r21.y + r21.y) / (dist * dist)) / M_PI * 180;
+    //计算向量旋转方向
+    float dir = r21.x * ref_r21.y - r21.y * ref_r21.x;
+    if(dir < 0) ang = -ang;
+    chassis->ang += ang;
+    MOD(chassis->ang, 360);
 
 
 }
