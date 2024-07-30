@@ -94,6 +94,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/asus/Desktop/contest2024/control/code/IMU.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/IMU.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/N20_Motor.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/PID.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/PID.cpp.obj"
+  "C:/Users/asus/Desktop/contest2024/control/code/PID_Controller.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/PID_Controller.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/Remote.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/Remote.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/Tracking.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/Tracking.cpp.obj"
   "C:/Users/asus/Desktop/contest2024/control/code/task.cpp" "C:/Users/asus/Desktop/contest2024/control/cmake-build-debug/CMakeFiles/control.elf.dir/code/task.cpp.obj"

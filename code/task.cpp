@@ -16,8 +16,9 @@
 #include "hal.h"
 #include "module.h"
 #include "device.h"
+#include "Tracking.h"
 
-#define USE_REMOTE
+//#define USE_REMOTE
 
 
 #define UART1_BUF_LEN 100
@@ -43,10 +44,10 @@ N20_Motor right_motor(&htim1, TIM_CHANNEL_4, TIM_CHANNEL_3,
 CCD ccd;
 Remote remote(&huart1);
 IMU imu;
-Chassis chassis(&left_motor, &right_motor, &imu, 112.5 / 1000);
-Controller controller(&chassis);
-PID tracking_PID(0.004,0,0,0.1,0.005,0.1,0.1);
-Tracking tracking(&chassis,&ccd,&tracking_PID,&controller);
+Chassis chassis(&left_motor, &right_motor, &imu, &ccd, 112.5 / 1000);
+Controller controller(&chassis); //位置控制器
+PID_Controller pid_controller(&chassis); //循迹控制器
+
 
 float vpwr = 12, vpwr_th = 9;
 int pwr_cnt = 0;
@@ -70,7 +71,6 @@ void setup(){
     imu.init();
 	HAL_UART_Receive_IT(&huart1,(uint8_t *)(uart1_rx_buf), 1);//接收一个字节
 
-	tracking.init();
 
 }
 
@@ -85,8 +85,8 @@ void loop(){
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.x, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.y, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.ang, 4, 0xffff);
-		HAL_UART_Transmit(&huart1, (uint8_t *)&tracking.x_line, 4, 0xffff);
-		HAL_UART_Transmit(&huart1, (uint8_t *)&tracking.y_line, 4, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.x_line, 4, 0xffff);
+		HAL_UART_Transmit(&huart1, (uint8_t *)&chassis.y_line, 4, 0xffff);
 		HAL_UART_Transmit(&huart1, end_flag, 2, 0xffff);
         ccd.sample_complete = false;
 	}
@@ -126,9 +126,9 @@ void task_handler(){
 	imu.Handler();
 	chassis.Handler();
 
-	tracking.Handler();
 
 	controller.Handler();
+	pid_controller.Handler();
 
 	if(HAL_GetTick() % 500 == 0 && imu.state == IMU_RUN) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
@@ -153,7 +153,7 @@ void task_handler(){
 			static float y_array[] = {0, 0, -l, -l};
 			static int array_len = 4, index = 0;
 
-            controller.x_set = 0.95;
+            controller.x_set = 0.96;
 //			if(controller.reached == true){
 //				if(++index >= array_len) index = 0;
 //				controller.x_set = x_array[index];
@@ -164,15 +164,16 @@ void task_handler(){
 			chassis.state = CHASSIS_RUN;
 			controller.Handler();
         } break;
-        case 3: { //上位机按照一定频率发送轨迹坐标
-            controller.x_set = remote.x;
-            controller.y_set = remote.y;
-            chassis.state = CHASSIS_RUN;
+        case 3: {
+//            controller.x_set = remote.x;
+//            controller.y_set = remote.y;
+//            chassis.state = CHASSIS_RUN;
 
 
         }break;
             controller.Handler();
     }
+#else
 
 #endif
 
@@ -221,6 +222,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
     if(hadc == &hadc3){
         ccd.sample_complete = true;
-        tracking.process();
+        chassis.process();
     }
 }

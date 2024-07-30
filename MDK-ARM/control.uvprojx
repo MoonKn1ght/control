@@ -673,9 +673,9 @@
               <FilePath>..\code\Controller.cpp</FilePath>
             </File>
             <File>
-              <FileName>Tracking.cpp</FileName>
+              <FileName>PID_Controller.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>..\code\Tracking.cpp</FilePath>
+              <FilePath>..\code\PID_Controller.cpp</FilePath>
             </File>
           </Files>
         </Group>

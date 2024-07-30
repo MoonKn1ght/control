@@ -496,6 +496,12 @@
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/PID.h">
 			<Option target="control.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/PID_Controller.cpp">
+			<Option target="control.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/PID_Controller.h">
+			<Option target="control.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/asus/Desktop/contest2024/control/code/Remote.cpp">
 			<Option target="control.elf"/>
 		</Unit>

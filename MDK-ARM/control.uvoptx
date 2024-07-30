@@ -280,6 +280,11 @@
           <WinNumber>1</WinNumber>
           <ItemText>tracking</ItemText>
         </Ww>
+        <Ww>
+          <count>25</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pid_controller</ItemText>
+        </Ww>
       </WatchWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
@@ -1014,8 +1019,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\code\Tracking.cpp</PathWithFileName>
-      <FilenameWithoutPath>Tracking.cpp</FilenameWithoutPath>
+      <PathWithFileName>..\code\PID_Controller.cpp</PathWithFileName>
+      <FilenameWithoutPath>PID_Controller.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

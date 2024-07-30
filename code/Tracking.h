@@ -1,66 +1,59 @@
-/*
- * Tracking.h
- *
- *  Created on: Jul 25, 2024
- *      Author: pc
- */
+/**
+  ******************************************************************************
+  * @FileName			    Tracking.h
+  * @Description
+  * @author                 Yu Xinyi
+  * @note
+  ******************************************************************************
+  *
+  * Copyright (c) 2023 Team JiaoLong-ShanghaiJiaoTong University
+  * All rights reserved.
+  *
+  ******************************************************************************
+**/
 
-#ifndef TRACKING_H_
-#define TRACKING_H_
+#ifndef CONTROL_TRACKING_H
+#define CONTROL_TRACKING_H
 
-#include "Chassis.h"
-#include "CCD.h"
-#include "PID.h"
-#include "Controller.h"
+#include "device.h"
 
-class Tracking
-{
+#define TRACK_L 1.0
+#define TRACK_R 0.4
+
+typedef struct{
+    float x;
+    float y;
+} Point;
+
+typedef enum{
+    POINT_A = 0,
+    POINT_B,
+    POINT_C,
+    POINT_D
+} ref_point_e;
+
+class Tracking {
 public:
-    bool state = false;
+    Chassis* chassis;
+    Controller* controller;
+    PID_Controller* pid_controller;
 
-	PID* tracking_PID;
-	CCD* ccd;
-	Chassis* chassis;
-	Controller* controller;
+    int state = 0; //0: stop; 1: task1; 2: task2; 3: task3; 4. task4
 
-	//视野参数
-	float D = 8.8 / 100;
-	float dl = 8.0 / 100 / 88;
+    Tracking(Chassis* chassis, Controller* controller, PID_Controller* pid_controller);
+    void Handler();
 
-	//轨道识别信息
-	bool inrange = false;
-	float mid_point = 0;
-    float x_line = 0, y_line = 0;	//轨道坐标
+private:
+    Point ref_points[4] = {{0.0, 0.0},
+                           {TRACK_L, 0.0},
+                           {TRACK_L, -TRACK_R * 2},
+                           {0, -TRACK_R * 2}};
 
-	float data_norm[128];
-	uint8_t bin_ccd[128];
-	float dir_filtered;
-	float k_filter = 0.1;
-    uint16_t dir;	//黑线位置
-    uint16_t last_dir;
-    float threshold;
-	uint16_t Left,Right;
-	float input;
-
-    float v;
-
-    float last_x_line,last_y_line;
-    bool start_flag = 0;
-
-	float x_line_array[1000] = {0};
-	float y_line_array[1000] = {0};
-
-
-	Tracking(Chassis* chassis, CCD* ccd,PID* tracking_PID,Controller* controller);
-	void Handler();
-	void init();
-	void process();
-
+    //dir 1: 进轨道；-1：出轨道
+    //r1: 位置参考点，对应ref_r
+    void calibrate_pos(Point r1, Point r2, ref_point_e ref_r, int dir);
 
 };
 
 
-
-
-
-#endif /* TRACKING_H_ */
+#endif //CONTROL_TRACKING_H

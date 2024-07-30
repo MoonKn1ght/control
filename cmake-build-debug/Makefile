@@ -1339,6 +1339,33 @@ code/PID.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/PID.cpp.s
 .PHONY : code/PID.cpp.s
 
+code/PID_Controller.obj: code/PID_Controller.cpp.obj
+
+.PHONY : code/PID_Controller.obj
+
+# target to build an object file
+code/PID_Controller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/PID_Controller.cpp.obj
+.PHONY : code/PID_Controller.cpp.obj
+
+code/PID_Controller.i: code/PID_Controller.cpp.i
+
+.PHONY : code/PID_Controller.i
+
+# target to preprocess a source file
+code/PID_Controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/PID_Controller.cpp.i
+.PHONY : code/PID_Controller.cpp.i
+
+code/PID_Controller.s: code/PID_Controller.cpp.s
+
+.PHONY : code/PID_Controller.s
+
+# target to generate assembly for a file
+code/PID_Controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\control.elf.dir\build.make CMakeFiles/control.elf.dir/code/PID_Controller.cpp.s
+.PHONY : code/PID_Controller.cpp.s
+
 code/Remote.obj: code/Remote.cpp.obj
 
 .PHONY : code/Remote.obj
@@ -1643,6 +1670,9 @@ help:
 	@echo ... code/PID.obj
 	@echo ... code/PID.i
 	@echo ... code/PID.s
+	@echo ... code/PID_Controller.obj
+	@echo ... code/PID_Controller.i
+	@echo ... code/PID_Controller.s
 	@echo ... code/Remote.obj
 	@echo ... code/Remote.i
 	@echo ... code/Remote.s

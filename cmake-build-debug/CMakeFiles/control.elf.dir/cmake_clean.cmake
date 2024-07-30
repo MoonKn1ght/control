@@ -44,6 +44,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/control.elf.dir/code/IMU.cpp.obj"
   "CMakeFiles/control.elf.dir/code/N20_Motor.cpp.obj"
   "CMakeFiles/control.elf.dir/code/PID.cpp.obj"
+  "CMakeFiles/control.elf.dir/code/PID_Controller.cpp.obj"
   "CMakeFiles/control.elf.dir/code/Remote.cpp.obj"
   "CMakeFiles/control.elf.dir/code/Tracking.cpp.obj"
   "CMakeFiles/control.elf.dir/code/hal.c.obj"
