@@ -40,7 +40,10 @@ public:
     PID_Controller* pid_controller;
 
     int state = 0; //0: stop; 1: task1; 2: task2; 3: task3; 4. task4
-    float v_set = 0.05;
+    float v_set = 0.1;
+
+    float init_x = 0, init_y = 0, init_ang = 0;
+    bool init_pos = false;
 
     Tracking(Chassis* chassis, Controller* controller, PID_Controller* pid_controller);
     void Handler();

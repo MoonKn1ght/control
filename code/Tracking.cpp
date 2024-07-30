@@ -171,6 +171,15 @@ void Tracking::calibrate_pos2(Point r1, Point r2, ref_point_e ref1, ref_point_e 
     chassis->ang += ang;
     MOD(chassis->ang, 360);
 
+    if(!init_pos){
+        init_x = ref_r2.x - r2.x;
+        init_y = ref_r2.y - r2.y;
+        init_ang = ang;
+        MOD(init_ang, 360);
+        init_pos = true;
+    }
+
+
 
 }
 
