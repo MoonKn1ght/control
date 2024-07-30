@@ -18,6 +18,8 @@
 #include "Motor.h"
 #include "Encoder.h"
 
+#define PWM_DUTY_MAX 10000
+
 class N20_Motor: public Motor {
 public:
     Encoder* encoder;

@@ -592,6 +592,11 @@
               <FileType>5</FileType>
               <FilePath>..\code\config.h</FilePath>
             </File>
+            <File>
+              <FileName>Tracking.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\code\Tracking.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

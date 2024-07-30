@@ -47,6 +47,7 @@ IMU imu;
 Chassis chassis(&left_motor, &right_motor, &imu, &ccd, 112.5 / 1000);
 Controller controller(&chassis); //位置控制器
 PID_Controller pid_controller(&chassis); //循迹控制器
+Tracking tracking(&chassis, &controller, &pid_controller); //控制逻辑
 
 
 float vpwr = 12, vpwr_th = 9;
@@ -126,9 +127,11 @@ void task_handler(){
 	imu.Handler();
 	chassis.Handler();
 
+    tracking.Handler();
 
 	controller.Handler();
 	pid_controller.Handler();
+
 
 	if(HAL_GetTick() % 500 == 0 && imu.state == IMU_RUN) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 

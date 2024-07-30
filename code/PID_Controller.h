@@ -27,7 +27,7 @@ public:
     float *feedback;
     float err = 0;
 
-    float kp = 0;
+    float kp = 0.001;
     float kv = 0.1375;
     float dir = -1;
 

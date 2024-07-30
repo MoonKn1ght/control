@@ -27,21 +27,73 @@ void Tracking::Handler() {
             chassis->v_set = 0;
             chassis->w_set = 0;
         } break;
+        case 1:{
+            chassis->state = CHASSIS_RUN;
+            chassis->v_set = 0.05;
+            if(chassis->inrange){
+                r2_set = true;
+                r2.x = chassis->x_line;
+                r2.y = chassis->y_line;
+                if(!r1_set){ //看到第一个点
+                    r1_set = true;
+                    r1.x = chassis->x_line;
+                    r1.y = chassis->y_line;
+                }else if(calc_dist(r1, r2) >= ref_dist){
+                    //先测试能否校准零位
+                    calibrate_pos(r1, r2, POINT_B);
+                    chassis->v_set = 0;
+                    state = 2;
+                }
+            }
+        } break;
     }
 }
 
-void Tracking::calibrate_pos(Point r1, Point r2, ref_point_e ref_r, int dir) {
-    Point ref_point = ref_points[ref_r];
+void Tracking::calibrate_pos(Point r1, Point r2, ref_point_e ref_r) {
+    Point ref_r1 = ref_points[ref_r];
+    //根据距离算向量
+    float temp_cos = dist / 2 / TRACK_R;
+    float temp_sin;
+    arm_sqrt_f32(1 - temp_cos * temp_cos, &temp_sin);
+    float dx = dist * temp_sin;
+    float dy = dist * temp_cos;
+    switch (ref_r) {
+        case POINT_A:{
+            dy = -dy;
+        } break;
+        case POINT_B:{
+
+        } break;
+        case POINT_C:{
+            dx = -dx;
+        } break;
+        case POINT_D:{
+            dx = -dx;
+            dy = -dy;
+        } break;
+
+    }
+    Point ref_r21 = {dx, dy};
+    Point r21 = {r2.x - r1.x, r2.y - r1.y};
+    //计算两向量夹角
+    float ang = acosf((ref_r21.x * r21.x + ref_r21.y + r21.y) / (dist * dist)) / M_PI * 180;
+    //计算向量旋转方向
+    float dir = r21.x * ref_r21.y - r21.y * ref_r21.x;
+    if(dir < 0) ang = -ang;
+    //比较两个向量校正小车
+    chassis->x += ref_r1.x - r1.x;
+    chassis->y += ref_r1.y - r1.y;
+    chassis->ang += ang;
+    MOD(chassis->ang, 360);
+
+
+
+}
+
+float Tracking::calc_dist(Point r1, Point r2) {
     float x_diff = r2.x - r1.x;
     float y_diff = r2.y - r1.y;
-    float dist;
     arm_sqrt_f32(x_diff * x_diff + y_diff * y_diff, &dist);
-    //根据距离算参考向量
-
-    //比较两个向量校正小车
-
-    if(dir == 1){
-
-    }
-
+    return dist;
 }
+

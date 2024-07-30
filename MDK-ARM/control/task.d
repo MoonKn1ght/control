@@ -61,4 +61,4 @@ control/task.o: ..\code\task.cpp ..\code\task.h ..\code\hal.h \
   ..\code\Encoder.h ..\code\Motor.h ..\code\N20_Motor.h ..\code\CCD.h \
   ..\code\Remote.h ..\code\IMU.h ..\code\device.h ..\code\Chassis.h \
   ..\code\algorithm.h ..\code\PID.h ..\code\Controller.h \
-  ..\code\PID_Controller.h
+  ..\code\PID_Controller.h ..\code\Tracking.h

@@ -32,7 +32,6 @@ void N20_Motor::measure_parameter() {
     }
 }
 
-#define PWM_DUTY_MAX 10000
 void N20_Motor::pwm_set_duty(uint32_t channel, uint16_t duty){ //0-10000 TODO cube配置
     switch (channel) {
         case TIM_CHANNEL_1: htim->Instance->CCR1 = duty; break;

@@ -23,6 +23,7 @@ extern "C" {
 #include "main.h"
 #include "arm_math.h"
 #include "string.h"
+#include "math.h"
 
 
 #define MAIN_LOOP_FREQ 1000

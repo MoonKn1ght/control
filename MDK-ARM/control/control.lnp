@@ -36,6 +36,7 @@
 "control\stm32f4xx_hal_uart.o"
 "control\system_stm32f4xx.o"
 "control\task.o"
+"control\tracking.o"
 "control\hal.o"
 "control\encoder.o"
 "control\n20_motor.o"
