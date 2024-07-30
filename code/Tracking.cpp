@@ -14,6 +14,9 @@
 
 #include "Tracking.h"
 
+//#define QUESTION_2
+#define QUESTION_3
+
 Tracking::Tracking(Chassis *chassis, Controller *controller, PID_Controller *pid_controller) {
     this->chassis = chassis;
     this->controller = controller;
@@ -21,6 +24,7 @@ Tracking::Tracking(Chassis *chassis, Controller *controller, PID_Controller *pid
 }
 
 void Tracking::Handler() {
+#ifdef QUESTION_2
     switch (state) {
         case 0:{
             chassis->state = CHASSIS_STOP;
@@ -32,22 +36,6 @@ void Tracking::Handler() {
             controller->x_set = 1.0;
             controller->y_set = 0;
             controller->state = 1;
-            //chassis->v_set = 0.1;
-//            if(chassis->inrange){
-//                r2_set = true;
-//                r2.x = chassis->x_line;
-//                r2.y = chassis->y_line;
-//                if(!r1_set){ //看到第一个点
-//                    r1_set = true;
-//                    r1.x = chassis->x_line;
-//                    r1.y = chassis->y_line;
-//                }else if(calc_dist(r1, r2) >= ref_dist){
-//                    //先测试能否校准零位
-//                    calibrate_pos(r1, r2, POINT_B);
-//                    chassis->v_set = 0;
-//                    state = 2;
-//                }
-//            }
             if(chassis->inrange){
                 if(!r1_set){ //看到第一个点
                     r1_set = true;
@@ -103,6 +91,92 @@ void Tracking::Handler() {
             }
         } break;
     }
+#endif
+#ifdef QUESTION_3
+    switch (state) {
+        case 0:{
+            chassis->state = CHASSIS_STOP;
+            chassis->v_set = 0;
+            chassis->w_set = 0;
+        } break;
+        case 1:{ // A->C->B
+            chassis->state = CHASSIS_RUN;
+            if(!init_pos){
+                chassis->x = init_x;
+                chassis->y = init_y;
+                init_pos = 1;
+            }
+            controller->x_set = 1;
+            controller->y_set = -0.8;
+            controller->state = 1;
+
+            if(chassis->inrange){
+                if(!r1_set){ //看到第一个点
+                    r1_set = true;
+                    r1.x = chassis->x_line;
+                    r1.y = chassis->y_line;
+
+                    controller->state = 0;
+                    pid_controller->dir = 1;
+                    pid_controller->state = 1;
+                }else{
+                    r2.x = chassis->x_line;
+                    r2.y = chassis->y_line;
+                }
+            } else{
+                if(r1_set){ //看不到第二个点
+                    r2_set = true;
+                    pid_controller->state = 0;
+                    chassis->v_set = 0;
+                    chassis->w_set = 0;
+                    calibrate_pos2(r1, r2, POINT_C, POINT_B);
+                    state++;
+                }
+            }
+        } break;
+        case 2:{ // B->D
+            controller->y_set = -0.8;
+            controller->x_set = -0.0;
+            controller->state = 1;
+            if(controller->reached || chassis->inrange){
+                controller->state = 0;
+                chassis->v_set = 0;
+                chassis->w_set = 0;
+                state++;
+            }
+        } break;
+        case 3: {
+            if(!chassis->inrange){
+                chassis->w_set = 0.05;
+            }else{
+                chassis->w_set = 0;
+                r1_set = true;
+                r2_set = false;
+                r1.x = chassis->x_line;
+                r1.y = chassis->y_line;
+                pid_controller->dir = -1;
+                pid_controller->state = 1;
+                state++;
+            }
+        } break;
+        case 4:{ //D->A
+            if(!chassis->inrange){
+                r2_set = true;
+                pid_controller->state = 0;
+                chassis->v_set = 0;
+                chassis->w_set = 0;
+                calibrate_pos2(r1, r2, POINT_D, POINT_A);
+                r1_set = false;
+                r2_set = false;
+                state = 1;
+            }else{
+                r2.x = chassis->x_line;
+                r2.y = chassis->y_line;
+            }
+
+        } break;
+    }
+#endif
 }
 
 void Tracking::calibrate_pos(Point r1, Point r2, ref_point_e ref_r) {
@@ -171,13 +245,13 @@ void Tracking::calibrate_pos2(Point r1, Point r2, ref_point_e ref1, ref_point_e 
     chassis->ang += ang;
     MOD(chassis->ang, 360);
 
-    if(!init_pos){
+    /*if(!init_pos){
         init_x = ref_r2.x - r2.x;
         init_y = ref_r2.y - r2.y;
         init_ang = ang;
         MOD(init_ang, 360);
         init_pos = true;
-    }
+    }*/
 
 
 

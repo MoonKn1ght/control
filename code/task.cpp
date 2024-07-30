@@ -135,7 +135,7 @@ void task_handler(){
 
     if(!car_start && imu.state == IMU_RUN){
         car_start = 1;
-        tracking.state = 1;
+        //tracking.state = 1;
     }
 	if(HAL_GetTick() % 500 == 0 && imu.state == IMU_RUN) HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 
