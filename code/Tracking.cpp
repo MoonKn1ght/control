@@ -120,17 +120,22 @@ void Tracking::Handler() {
                     pid_controller->dir = 1;
                     pid_controller->state = 1;
                 }else{
+                    pid_controller->state = 1;
                     r2.x = chassis->x_line;
                     r2.y = chassis->y_line;
                 }
             } else{
-                if(r1_set){ //看不到第二个点
+                if(r1_set && ABS(chassis->y) < 0.2){ //看不到第二个点
                     r2_set = true;
                     pid_controller->state = 0;
                     chassis->v_set = 0;
                     chassis->w_set = 0;
                     calibrate_pos2(r1, r2, POINT_C, POINT_B);
                     state++;
+                }else if(controller->reached){
+                    pid_controller->state = 0;
+                    controller->state = 0;
+                    chassis->w_set = 0.05;
                 }
             }
         } break;
@@ -138,7 +143,7 @@ void Tracking::Handler() {
             controller->y_set = -0.8;
             controller->x_set = -0.0;
             controller->state = 1;
-            if(controller->reached || chassis->inrange){
+            if(chassis->inrange && ABS(chassis->x - controller->x_set) < 0.1){
                 controller->state = 0;
                 chassis->v_set = 0;
                 chassis->w_set = 0;
@@ -147,7 +152,7 @@ void Tracking::Handler() {
         } break;
         case 3: {
             if(!chassis->inrange){
-                chassis->w_set = 0.05;
+                chassis->w_set = -0.05;
             }else{
                 chassis->w_set = 0;
                 r1_set = true;
